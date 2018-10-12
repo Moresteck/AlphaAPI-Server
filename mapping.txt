@@ -17,3 +17,5 @@ do = BlockObsidian
 et = Block
 fj = EntityTracker
 hb = IBlockAccess
+hs = EntityMinecart
+cy = AxisAlignedBB
