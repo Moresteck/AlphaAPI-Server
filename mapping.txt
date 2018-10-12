@@ -31,3 +31,5 @@ fb = ServerGUI
 cx = BlockFurnace
 bk = ThreadShutdown
 bi = ThreadCommandReader
+ey = ConsoleLogManager
+gj = ConsoleLogFormatter
