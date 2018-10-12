@@ -1,0 +1,4 @@
+dq = EntityPlayerMP
+eq = EntityPlayer
+ic = EntityLiving
+db = Entity
