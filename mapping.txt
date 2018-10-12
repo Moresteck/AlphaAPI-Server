@@ -28,3 +28,4 @@ g = PlayerListBox
 dn = IUpdatePlayerListBox
 bh = ThreadServerApplication
 fb = ServerGUI
+cx = BlockFurnace
