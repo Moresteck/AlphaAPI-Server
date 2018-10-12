@@ -30,3 +30,4 @@ bh = ThreadServerApplication
 fb = ServerGUI
 cx = BlockFurnace
 bk = ThreadShutdown
+bi = ThreadCommandReader
