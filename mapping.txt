@@ -22,3 +22,5 @@ cy = AxisAlignedBB
 gr = PlayerManager
 ea = PlayerHash
 fl = EntityTrackerEntry
+c = Packet20NamedEntitySpawn
+ha = Packet
