@@ -20,3 +20,4 @@ hb = IBlockAccess
 hs = EntityMinecart
 cy = AxisAlignedBB
 gr = PlayerManager
+ea = PlayerHash
