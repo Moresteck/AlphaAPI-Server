@@ -1,0 +1,2 @@
+Summary for /www/javadecompilers/app/public/data/12.10.18/94b43708afd97a552c182bfc4a4519b6/minecraft_server.jar
+Decompiled with CFR 0_132
