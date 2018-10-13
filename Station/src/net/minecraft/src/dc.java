@@ -1,142 +1,124 @@
-package net.minecraft.src;/*
- * Decompiled with CFR 0_132.
- */
+package net.minecraft.src;
+
 import java.util.Random;
 
-public class dc
-extends ay {
-    public boolean a(World dp2, Random random, int n2, int n3, int n4) {
-        int n5;
-        Material hz2;
-        int n6;
-        int n7;
-        int n8 = 3;
-        int n9 = random.nextInt(2) + 2;
-        int n10 = random.nextInt(2) + 2;
-        int n11 = 0;
-        for (n7 = n2 - n9 - 1; n7 <= n2 + n9 + 1; ++n7) {
-            for (n6 = n3 - 1; n6 <= n3 + n8 + 1; ++n6) {
-                for (n5 = n4 - n10 - 1; n5 <= n4 + n10 + 1; ++n5) {
-                    hz2 = dp2.c(n7, n6, n5);
-                    if (n6 == n3 - 1 && !hz2.a()) {
-                        return false;
-                    }
-                    if (n6 == n3 + n8 + 1 && !hz2.a()) {
-                        return false;
-                    }
-                    if (n7 != n2 - n9 - 1 && n7 != n2 + n9 + 1 && n5 != n4 - n10 - 1 && n5 != n4 + n10 + 1 || n6 != n3 || dp2.a(n7, n6, n5) != 0 || dp2.a(n7, n6 + 1, n5) != 0) continue;
-                    ++n11;
-                }
-            }
-        }
-        if (n11 < 1 || n11 > 5) {
-            return false;
-        }
-        for (n7 = n2 - n9 - 1; n7 <= n2 + n9 + 1; ++n7) {
-            for (n6 = n3 + n8; n6 >= n3 - 1; --n6) {
-                for (n5 = n4 - n10 - 1; n5 <= n4 + n10 + 1; ++n5) {
-                    if (n7 == n2 - n9 - 1 || n6 == n3 - 1 || n5 == n4 - n10 - 1 || n7 == n2 + n9 + 1 || n6 == n3 + n8 + 1 || n5 == n4 + n10 + 1) {
-                        if (n6 >= 0 && !dp2.c(n7, n6 - 1, n5).a()) {
-                            dp2.d(n7, n6, n5, 0);
-                            continue;
-                        }
-                        if (!dp2.c(n7, n6, n5).a()) continue;
-                        if (n6 == n3 - 1 && random.nextInt(4) != 0) {
-                            dp2.d(n7, n6, n5, Block.ao.ba);
-                            continue;
-                        }
-                        dp2.d(n7, n6, n5, Block.w.ba);
-                        continue;
-                    }
-                    dp2.d(n7, n6, n5, 0);
-                }
-            }
-        }
-        block6 : for (n7 = 0; n7 < 2; ++n7) {
-            for (n6 = 0; n6 < 3; ++n6) {
-                int n12;
-                n5 = n2 + random.nextInt(n9 * 2 + 1) - n9;
-                if (dp2.a(n5, (int)(hz2 = (Material)n3), n12 = n4 + random.nextInt(n10 * 2 + 1) - n10) != 0) continue;
-                int n13 = 0;
-                if (dp2.c(n5 - 1, (int)hz2, n12).a()) {
-                    ++n13;
-                }
-                if (dp2.c(n5 + 1, (int)hz2, n12).a()) {
-                    ++n13;
-                }
-                if (dp2.c(n5, (int)hz2, n12 - 1).a()) {
-                    ++n13;
-                }
-                if (dp2.c(n5, (int)hz2, n12 + 1).a()) {
-                    ++n13;
-                }
-                if (n13 != 1) continue;
-                dp2.d(n5, (int)hz2, n12, Block.au.ba);
-                gn gn2 = (gn)dp2.k(n5, (int)hz2, n12);
-                for (int i2 = 0; i2 < 8; ++i2) {
-                    gc gc2 = this.a(random);
-                    if (gc2 == null) continue;
-                    gn2.a(random.nextInt(gn2.a()), gc2);
-                }
-                continue block6;
-            }
-        }
-        dp2.d(n2, n3, n4, Block.as.ba);
-        bm bm2 = (bm)dp2.k(n2, n3, n4);
-        bm2.f = this.b(random);
-        return true;
-    }
+public class dc extends ay {
 
-    private gc a(Random random) {
-        int n2 = random.nextInt(11);
-        if (n2 == 0) {
-            return new gc(en.ay);
-        }
-        if (n2 == 1) {
-            return new gc(en.m, random.nextInt(4) + 1);
-        }
-        if (n2 == 2) {
-            return new gc(en.S);
-        }
-        if (n2 == 3) {
-            return new gc(en.R, random.nextInt(4) + 1);
-        }
-        if (n2 == 4) {
-            return new gc(en.K, random.nextInt(4) + 1);
-        }
-        if (n2 == 5) {
-            return new gc(en.I, random.nextInt(4) + 1);
-        }
-        if (n2 == 6) {
-            return new gc(en.au);
-        }
-        if (n2 == 7 && random.nextInt(100) == 0) {
-            return new gc(en.ar);
-        }
-        if (n2 == 8 && random.nextInt(2) == 0) {
-            return new gc(en.aA, random.nextInt(4) + 1);
-        }
-        if (n2 == 9 && random.nextInt(10) == 0) {
-            return new gc(en.c[en.aO.aQ + random.nextInt(2)]);
-        }
-        return null;
-    }
+   public boolean a(World var1, Random var2, int var3, int var4, int var5) {
+      byte var6 = 3;
+      int var7 = var2.nextInt(2) + 2;
+      int var8 = var2.nextInt(2) + 2;
+      int var9 = 0;
 
-    private String b(Random random) {
-        int n2 = random.nextInt(4);
-        if (n2 == 0) {
-            return "Skeleton";
-        }
-        if (n2 == 1) {
-            return "Zombie";
-        }
-        if (n2 == 2) {
-            return "Zombie";
-        }
-        if (n2 == 3) {
-            return "Spider";
-        }
-        return "";
-    }
+      int var10;
+      int var11;
+      int var12;
+      for(var10 = var3 - var7 - 1; var10 <= var3 + var7 + 1; ++var10) {
+         for(var11 = var4 - 1; var11 <= var4 + var6 + 1; ++var11) {
+            for(var12 = var5 - var8 - 1; var12 <= var5 + var8 + 1; ++var12) {
+               Material var13 = var1.c(var10, var11, var12);
+               if(var11 == var4 - 1 && !var13.a()) {
+                  return false;
+               }
+
+               if(var11 == var4 + var6 + 1 && !var13.a()) {
+                  return false;
+               }
+
+               if((var10 == var3 - var7 - 1 || var10 == var3 + var7 + 1 || var12 == var5 - var8 - 1 || var12 == var5 + var8 + 1) && var11 == var4 && var1.a(var10, var11, var12) == 0 && var1.a(var10, var11 + 1, var12) == 0) {
+                  ++var9;
+               }
+            }
+         }
+      }
+
+      if(var9 >= 1 && var9 <= 5) {
+         for(var10 = var3 - var7 - 1; var10 <= var3 + var7 + 1; ++var10) {
+            for(var11 = var4 + var6; var11 >= var4 - 1; --var11) {
+               for(var12 = var5 - var8 - 1; var12 <= var5 + var8 + 1; ++var12) {
+                  if(var10 != var3 - var7 - 1 && var11 != var4 - 1 && var12 != var5 - var8 - 1 && var10 != var3 + var7 + 1 && var11 != var4 + var6 + 1 && var12 != var5 + var8 + 1) {
+                     var1.d(var10, var11, var12, 0);
+                  } else if(var11 >= 0 && !var1.c(var10, var11 - 1, var12).a()) {
+                     var1.d(var10, var11, var12, 0);
+                  } else if(var1.c(var10, var11, var12).a()) {
+                     if(var11 == var4 - 1 && var2.nextInt(4) != 0) {
+                        var1.d(var10, var11, var12, Block.ao.ba);
+                     } else {
+                        var1.d(var10, var11, var12, Block.w.ba);
+                     }
+                  }
+               }
+            }
+         }
+
+         var10 = 0;
+
+         while(var10 < 2) {
+            var11 = 0;
+
+            while(true) {
+               if(var11 < 3) {
+                  label204: {
+                     var12 = var3 + var2.nextInt(var7 * 2 + 1) - var7;
+                     int var14 = var5 + var2.nextInt(var8 * 2 + 1) - var8;
+                     if(var1.a(var12, var4, var14) == 0) {
+                        int var15 = 0;
+                        if(var1.c(var12 - 1, var4, var14).a()) {
+                           ++var15;
+                        }
+
+                        if(var1.c(var12 + 1, var4, var14).a()) {
+                           ++var15;
+                        }
+
+                        if(var1.c(var12, var4, var14 - 1).a()) {
+                           ++var15;
+                        }
+
+                        if(var1.c(var12, var4, var14 + 1).a()) {
+                           ++var15;
+                        }
+
+                        if(var15 == 1) {
+                           var1.d(var12, var4, var14, Block.au.ba);
+                           gn var16 = (gn)var1.k(var12, var4, var14);
+
+                           for(int var17 = 0; var17 < 8; ++var17) {
+                              gc var18 = this.a(var2);
+                              if(var18 != null) {
+                                 var16.a(var2.nextInt(var16.a()), var18);
+                              }
+                           }
+                           break label204;
+                        }
+                     }
+
+                     ++var11;
+                     continue;
+                  }
+               }
+
+               ++var10;
+               break;
+            }
+         }
+
+         var1.d(var3, var4, var5, Block.as.ba);
+         bm var19 = (bm)var1.k(var3, var4, var5);
+         var19.f = this.b(var2);
+         return true;
+      } else {
+         return false;
+      }
+   }
+
+   private gc a(Random var1) {
+      int var2 = var1.nextInt(11);
+      return var2 == 0?new gc(en.ay):(var2 == 1?new gc(en.m, var1.nextInt(4) + 1):(var2 == 2?new gc(en.S):(var2 == 3?new gc(en.R, var1.nextInt(4) + 1):(var2 == 4?new gc(en.K, var1.nextInt(4) + 1):(var2 == 5?new gc(en.I, var1.nextInt(4) + 1):(var2 == 6?new gc(en.au):(var2 == 7 && var1.nextInt(100) == 0?new gc(en.ar):(var2 == 8 && var1.nextInt(2) == 0?new gc(en.aA, var1.nextInt(4) + 1):(var2 == 9 && var1.nextInt(10) == 0?new gc(en.c[en.aO.aQ + var1.nextInt(2)]):null)))))))));
+   }
+
+   private String b(Random var1) {
+      int var2 = var1.nextInt(4);
+      return var2 == 0?"Skeleton":(var2 == 1?"Zombie":(var2 == 2?"Zombie":(var2 == 3?"Spider":"")));
+   }
 }
-
