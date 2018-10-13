@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Random;
 
 public class Chunk {
-    public static boolean a;
+    public static boolean isLit;
     public byte blocks[];
     public boolean isChunkLoaded;
     public World world;
@@ -261,7 +261,7 @@ public class Chunk {
         int n6;
         int n7 = this.f.a(n2, n3, n4);
         if (n7 > 0) {
-            a = true;
+            isLit = true;
         }
         if ((n6 = this.g.a(n2, n3, n4)) > (n7 -= n5)) {
             n7 = n6;
