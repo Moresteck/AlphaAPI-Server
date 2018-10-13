@@ -80,7 +80,7 @@ implements Runnable {
         catch (IOException iOException) {
             log.warning("**** FAILED TO BIND TO PORT!");
             log.log(Level.WARNING, "The exception was: " + iOException.toString());
-            log.warning("Perhaps isLit server is already running on that port?");
+            log.warning("Perhaps a server is already running on that port?");
             return false;
         }
         this.configManager = new ServerConfigurationManager(this);
@@ -240,15 +240,15 @@ implements Runnable {
             EntityPlayerMP entityplayermp2;
             String string = (String)this.commands.remove(0);
             if (string.toLowerCase().startsWith("help") || string.toLowerCase().startsWith("?")) {
-                log.info("To run the server without isLit gui, start it like this:");
+                log.info("To run the server without a gui, start it like this:");
                 log.info("   java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui");
                 log.info("Console commands:");
                 log.info("   help  or  ?          shows this message");
-                log.info("   kick <player>        removes isLit player from the server");
-                log.info("   give <player> <id>   gives isLit player isLit resource");
+                log.info("   kick <player>        removes a player from the server");
+                log.info("   give <player> <id>   gives a player a resource");
                 log.info("   stop                 gracefully stops the server");
                 log.info("   list                 lists all currently connected players");
-                log.info("   say <message>        broadcasts isLit message to all players");
+                log.info("   say <message>        broadcasts a message to all players");
                 continue;
             }
             if (string.toLowerCase().startsWith("list")) {
@@ -295,10 +295,10 @@ implements Runnable {
                             entityplayermp3.a(new gc(itemID, 1));
                             continue;
                         }
-                        log.log(Level.INFO, "There'lastSaveTime no item with id " + itemID);
+                        log.log(Level.INFO, "There's no item with id " + itemID);
                     }
                     catch (NumberFormatException numberFormatException) {
-                        log.log(Level.INFO, "There'lastSaveTime no item with id " + arrstring[2]);
+                        log.log(Level.INFO, "There's no item with id " + arrstring[2]);
                     }
                     continue;
                 }

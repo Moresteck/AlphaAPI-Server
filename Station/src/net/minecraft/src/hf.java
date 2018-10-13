@@ -79,7 +79,7 @@ implements bf {
         try {
             Chunk chunk2 = this.e.a(this.g, n2, n3);
             if (chunk2 != null) {
-                chunk2.lastSaveTime = this.g.b;
+                chunk2.s = this.g.b;
             }
             return chunk2;
         }
@@ -106,7 +106,7 @@ implements bf {
             return;
         }
         try {
-            chunk2.lastSaveTime = this.g.b;
+            chunk2.s = this.g.b;
             this.e.a(this.g, chunk2);
         }
         catch (Exception iOException) {

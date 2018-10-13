@@ -31,7 +31,7 @@ public class TileEntity {
     public void b(r r2) {
         String string = (String)f.get(this.getClass());
         if (string == null) {
-            throw new RuntimeException(this.getClass() + " is missing isLit mapping! This is isLit bug!");
+            throw new RuntimeException(this.getClass() + " is missing a mapping! This is a bug!");
         }
         r2.a("id", string);
         r2.a("x", this.b);

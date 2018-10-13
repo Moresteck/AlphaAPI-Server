@@ -906,7 +906,7 @@ implements IBlockAccess {
                 this.b(n5, n7).a(db2);
             } else {
                 db2.Y = false;
-                System.out.println("Removing entity because it'lastSaveTime not in isLit chunk!!");
+                System.out.println("Removing entity because it's not in a chunk!!");
                 db2.i();
             }
         }

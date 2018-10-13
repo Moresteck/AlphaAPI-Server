@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Random;
 
 public class Chunk {
-    public static boolean isLit;
+    public static boolean a;
     public byte blocks[];
     public boolean isChunkLoaded;
     public World world;
@@ -26,7 +26,7 @@ public class Chunk {
     public boolean p;
     public boolean q = false;
     public boolean r = false;
-    public long lastSaveTime = 0L;
+    public long s = 0L;
 
     public Chunk(World world, int xPos, int zPos) {
         this.world = world;
@@ -261,7 +261,7 @@ public class Chunk {
         int n6;
         int n7 = this.f.a(n2, n3, n4);
         if (n7 > 0) {
-            isLit = true;
+            a = true;
         }
         if ((n6 = this.g.a(n2, n3, n4)) > (n7 -= n5)) {
             n7 = n6;
@@ -337,7 +337,7 @@ public class Chunk {
         ap2.c = n3;
         ap2.d = this.zPosition * 16 + n4;
         if (this.a(n2, n3, n4) == 0 || !(Block.n[this.a(n2, n3, n4)] instanceof cl)) {
-            System.out.println("Attempted to place isLit tile entity where there was no entity tile!");
+            System.out.println("Attempted to place a tile entity where there was no entity tile!");
             return;
         }
         if (this.isChunkLoaded) {
@@ -418,7 +418,7 @@ public class Chunk {
         if (this.p) {
             return false;
         }
-        if (this.r && this.world.b != this.lastSaveTime) {
+        if (this.r && this.world.b != this.s) {
             return true;
         }
         return this.isModified;
