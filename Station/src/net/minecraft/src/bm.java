@@ -39,7 +39,7 @@ extends TileEntity {
         }
         int n2 = 4;
         for (int i2 = 0; i2 < n2; ++i2) {
-            EntityLiving ic2 = (EntityLiving)ge.a(this.f, this.a);
+            EntityLiving ic2 = (EntityLiving)EntityTypes.a(this.f, this.a);
             if (ic2 == null) {
                 return;
             }

@@ -166,7 +166,7 @@ extends Entity {
         this.x();
         double d2 = this.k - this.h;
         double d3 = this.m - this.j;
-        float f4 = fw.a(d2 * d2 + d3 * d3);
+        float f4 = MathHelper.a(d2 * d2 + d3 * d3);
         float f5 = this.au;
         float f6 = 0.0f;
         this.aw = this.ax;
@@ -301,7 +301,7 @@ extends Entity {
     }
 
     public void a(Entity db2, int n2, double d2, double d3) {
-        float f2 = fw.a(d2 * d2 + d3 * d3);
+        float f2 = MathHelper.a(d2 * d2 + d3 * d3);
         float f3 = 0.4f;
         this.n /= 2.0;
         this.o /= 2.0;
@@ -336,7 +336,7 @@ extends Entity {
         int n2 = (int)Math.ceil(f2 - 3.0f);
         if (n2 > 0) {
             this.a(null, n2);
-            int n3 = this.g.a(fw.b(this.k), fw.b(this.l - 0.20000000298023224 - (double)this.B), fw.b(this.m));
+            int n3 = this.g.a(MathHelper.b(this.k), MathHelper.b(this.l - 0.20000000298023224 - (double)this.B), MathHelper.b(this.m));
             if (n3 > 0) {
                 bl bl2 = Block.n[n3].bj;
                 this.g.a(this, bl2.c(), bl2.a() * 0.5f, bl2.b() * 0.75f);
@@ -372,7 +372,7 @@ extends Entity {
             float f4 = 0.91f;
             if (this.v) {
                 f4 = 0.54600006f;
-                int n2 = this.g.a(fw.b(this.k), fw.b(this.u.b) - 1, fw.b(this.m));
+                int n2 = this.g.a(MathHelper.b(this.k), MathHelper.b(this.u.b) - 1, MathHelper.b(this.m));
                 if (n2 > 0) {
                     f4 = Block.n[n2].bm * 0.91f;
                 }
@@ -382,7 +382,7 @@ extends Entity {
             f4 = 0.91f;
             if (this.v) {
                 f4 = 0.54600006f;
-                int n3 = this.g.a(fw.b(this.k), fw.b(this.u.b) - 1, fw.b(this.m));
+                int n3 = this.g.a(MathHelper.b(this.k), MathHelper.b(this.u.b) - 1, MathHelper.b(this.m));
                 if (n3 > 0) {
                     f4 = Block.n[n3].bm * 0.91f;
                 }
@@ -405,7 +405,7 @@ extends Entity {
         this.aW = this.aX;
         d2 = this.k - this.h;
         double d4 = this.m - this.j;
-        float f6 = fw.a(d2 * d2 + d4 * d4) * 4.0f;
+        float f6 = MathHelper.a(d2 * d2 + d4 * d4) * 4.0f;
         if (f6 > 1.0f) {
             f6 = 1.0f;
         }
@@ -416,8 +416,8 @@ extends Entity {
     public boolean D() {
         int n2;
         int n3;
-        int n4 = fw.b(this.k);
-        return this.g.a(n4, n2 = fw.b(this.u.b), n3 = fw.b(this.m)) == Block.aF.ba || this.g.a(n4, n2 + 1, n3) == Block.aF.ba;
+        int n4 = MathHelper.b(this.k);
+        return this.g.a(n4, n2 = MathHelper.b(this.u.b), n3 = MathHelper.b(this.m)) == Block.aF.ba || this.g.a(n4, n2 + 1, n3) == Block.aF.ba;
     }
 
     public void a(r r2) {
@@ -539,7 +539,7 @@ extends Entity {
         } else {
             d2 = (db2.u.b + db2.u.e) / 2.0 - (this.l + (double)this.n());
         }
-        double d5 = fw.a(d3 * d3 + d4 * d4);
+        double d5 = MathHelper.a(d3 * d3 + d4 * d4);
         float f3 = (float)(Math.atan2(d4, d3) * 180.0 / 3.1415927410125732) - 90.0f;
         float f4 = (float)(Math.atan2(d2, d5) * 180.0 / 3.1415927410125732);
         this.r = this.b(this.r, f4, f2);
@@ -585,18 +585,18 @@ extends Entity {
 
     public Vec3D d(float f2) {
         if (f2 == 1.0f) {
-            float f3 = fw.b((- this.q) * 0.017453292f - 3.1415927f);
-            float f4 = fw.a((- this.q) * 0.017453292f - 3.1415927f);
-            float f5 = - fw.b((- this.r) * 0.017453292f);
-            float f6 = fw.a((- this.r) * 0.017453292f);
+            float f3 = MathHelper.b((- this.q) * 0.017453292f - 3.1415927f);
+            float f4 = MathHelper.a((- this.q) * 0.017453292f - 3.1415927f);
+            float f5 = - MathHelper.b((- this.r) * 0.017453292f);
+            float f6 = MathHelper.a((- this.r) * 0.017453292f);
             return Vec3D.b(f4 * f5, f6, f3 * f5);
         }
         float f7 = this.t + (this.r - this.t) * f2;
         float f8 = this.s + (this.q - this.s) * f2;
-        float f9 = fw.b((- f8) * 0.017453292f - 3.1415927f);
-        float f10 = fw.a((- f8) * 0.017453292f - 3.1415927f);
-        float f11 = - fw.b((- f7) * 0.017453292f);
-        float f12 = fw.a((- f7) * 0.017453292f);
+        float f9 = MathHelper.b((- f8) * 0.017453292f - 3.1415927f);
+        float f10 = MathHelper.a((- f8) * 0.017453292f - 3.1415927f);
+        float f11 = - MathHelper.b((- f7) * 0.017453292f);
+        float f12 = MathHelper.a((- f7) * 0.017453292f);
         return Vec3D.b(f10 * f11, f12, f9 * f11);
     }
 

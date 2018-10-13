@@ -1,11 +1,16 @@
+<<<<<<< HEAD:Station/src/net/minecraft/src/EntityZombie.java
+package net.minecraft.src;
+/*
+=======
 package net.minecraft.src;/*
+>>>>>>> b77d6455ae9338e01f6531751a545b600c4f01b2:Station/src/net/minecraft/src/ez.java
  * Decompiled with CFR 0_132.
  */
 import java.util.Random;
 
-public class ez
-extends eu {
-    public ez(World dp2) {
+public class EntityZombie
+extends EntityMonster {
+    public EntityZombie(World dp2) {
         super(dp2);
         this.aB = "/mob/zombie.png";
         this.bf = 0.5f;
@@ -14,7 +19,7 @@ extends eu {
 
     public void x() {
         float f2;
-        if (this.g.a() && (f2 = this.b(1.0f)) > 0.5f && this.g.g(fw.b(this.k), fw.b(this.l), fw.b(this.m)) && this.Q.nextFloat() * 30.0f < (f2 - 0.4f) * 2.0f) {
+        if (this.g.a() && (f2 = this.b(1.0f)) > 0.5f && this.g.g(MathHelper.b(this.k), MathHelper.b(this.l), MathHelper.b(this.m)) && this.Q.nextFloat() * 30.0f < (f2 - 0.4f) * 2.0f) {
             this.T = 300;
         }
         super.x();

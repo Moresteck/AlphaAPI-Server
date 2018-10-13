@@ -37,7 +37,7 @@ extends en {
             return false;
         }
         if (n5 == 1) {
-            dp2.b(n2, n3, n4, Block.aD.ba, fw.b((double)((eq2.q + 180.0f) * 16.0f / 360.0f) + 0.5) & 15);
+            dp2.b(n2, n3, n4, Block.aD.ba, MathHelper.b((double)((eq2.q + 180.0f) * 16.0f / 360.0f) + 0.5) & 15);
         } else {
             dp2.b(n2, n3, n4, Block.aI.ba, n5);
         }

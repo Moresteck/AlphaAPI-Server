@@ -1,13 +1,18 @@
+<<<<<<< HEAD:Station/src/net/minecraft/src/EntitySheep.java
+package net.minecraft.src;
+/*
+=======
 package net.minecraft.src;/*
+>>>>>>> b77d6455ae9338e01f6531751a545b600c4f01b2:Station/src/net/minecraft/src/cd.java
  * Decompiled with CFR 0_132.
  */
 import java.util.Random;
 
-public class cd
-extends ao {
+public class EntitySheep
+extends EntityAnimal {
     public boolean a = false;
 
-    public cd(World dp2) {
+    public EntitySheep(World dp2) {
         super(dp2);
         this.aB = "/mob/sheep.png";
         this.a(0.9f, 1.3f);

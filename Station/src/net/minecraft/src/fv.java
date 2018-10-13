@@ -149,9 +149,9 @@ extends ay {
         int[] arrn4 = new int[]{0, 0, 0};
         int n6 = arrn3[n3] + n5;
         for (int i2 = 0; i2 != n6; i2 += n5) {
-            arrn4[n3] = fw.b((double)(arrn[n3] + i2) + 0.5);
-            arrn4[by2] = fw.b((double)arrn[by2] + (double)i2 * d2 + 0.5);
-            arrn4[by3] = fw.b((double)arrn[by3] + (double)i2 * d3 + 0.5);
+            arrn4[n3] = MathHelper.b((double)(arrn[n3] + i2) + 0.5);
+            arrn4[by2] = MathHelper.b((double)arrn[by2] + (double)i2 * d2 + 0.5);
+            arrn4[by3] = MathHelper.b((double)arrn[by3] + (double)i2 * d3 + 0.5);
             this.c.a(arrn4[0], arrn4[1], arrn4[2], n2);
         }
     }

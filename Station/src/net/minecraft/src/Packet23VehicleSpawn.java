@@ -19,9 +19,9 @@ extends Packet {
 
     public Packet23VehicleSpawn(Entity db2, int n2) {
         this.a = db2.c;
-        this.b = fw.b(db2.k * 32.0);
-        this.c = fw.b(db2.l * 32.0);
-        this.d = fw.b(db2.m * 32.0);
+        this.b = MathHelper.b(db2.k * 32.0);
+        this.c = MathHelper.b(db2.l * 32.0);
+        this.d = MathHelper.b(db2.m * 32.0);
         this.e = n2;
     }
 

@@ -1,13 +1,16 @@
 package net.minecraft.src;
+<<<<<<< HEAD:Station/src/net/minecraft/src/EntityPig.java
+=======
 
+>>>>>>> b77d6455ae9338e01f6531751a545b600c4f01b2:Station/src/net/minecraft/src/gg.java
 /*
  * Decompiled with CFR 0_132.
  */
-public class gg
-extends ao {
+public class EntityPig
+extends EntityAnimal {
     public boolean a = false;
 
-    public gg(World dp2) {
+    public EntityPig(World dp2) {
         super(dp2);
         this.aB = "/mob/pig.png";
         this.a(0.9f, 0.9f);

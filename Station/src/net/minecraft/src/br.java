@@ -41,8 +41,8 @@ public class br {
                     f4 = 0.3f;
                     for (float f6 = f2 * (0.7f + dp2.k.nextFloat() * 0.6f); f6 > 0.0f; f6 -= f4 * 0.75f) {
                         int n8;
-                        int n9 = fw.b(d6);
-                        n3 = dp2.a(n9, n6 = fw.b(d5), n8 = fw.b(d7));
+                        int n9 = MathHelper.b(d6);
+                        n3 = dp2.a(n9, n6 = MathHelper.b(d5), n8 = MathHelper.b(d7));
                         if (n3 > 0) {
                             f6 -= (Block.n[n3].a(db2) + 0.3f) * f4;
                         }
@@ -56,12 +56,12 @@ public class br {
                 }
             }
         }
-        n4 = fw.b(d2 - (double)(f2 *= 2.0f) - 1.0);
-        n2 = fw.b(d2 + (double)f2 + 1.0);
-        n5 = fw.b(d3 - (double)f2 - 1.0);
-        int n10 = fw.b(d3 + (double)f2 + 1.0);
-        int n11 = fw.b(d4 - (double)f2 - 1.0);
-        int n12 = fw.b(d4 + (double)f2 + 1.0);
+        n4 = MathHelper.b(d2 - (double)(f2 *= 2.0f) - 1.0);
+        n2 = MathHelper.b(d2 + (double)f2 + 1.0);
+        n5 = MathHelper.b(d3 - (double)f2 - 1.0);
+        int n10 = MathHelper.b(d3 + (double)f2 + 1.0);
+        int n11 = MathHelper.b(d4 - (double)f2 - 1.0);
+        int n12 = MathHelper.b(d4 + (double)f2 + 1.0);
         List list = dp2.b(db2, AxisAlignedBB.b(n4, n5, n11, n2, n10, n12));
         Vec3D as2 = Vec3D.b(d2, d3, d4);
         for (int i2 = 0; i2 < list.size(); ++i2) {
@@ -71,7 +71,7 @@ public class br {
             d6 = object.k - d2;
             d5 = object.l - d3;
             d7 = object.m - d4;
-            f4 = fw.a(d6 * d6 + d5 * d5 + d7 * d7);
+            f4 = MathHelper.a(d6 * d6 + d5 * d5 + d7 * d7);
             n6 = (int)dp2.a(as2, object.u);
             n3 = (int)((1.0 - d11) * n6);
             object.a(db2, (n3 * n3 + n3) / 2.0 * 8.0 * (double)f2 + 1.0);
@@ -96,7 +96,7 @@ public class br {
                 n3 = (int)(d7 - d2);
                 f3 = f4 - d3;
                 int n17 = n6 - d4;
-                double d12 = fw.a((double)(n3 * n3 + f3 * f3 + n17 * n17));
+                double d12 = MathHelper.a((double)(n3 * n3 + f3 * f3 + n17 * n17));
                 n3 /= d12;
                 f3 /= d12;
                 n17 /= d12;

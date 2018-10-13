@@ -590,12 +590,12 @@ implements IBlockAccess {
         if (Double.isNaN(as3.a) || Double.isNaN(as3.b) || Double.isNaN(as3.c)) {
             return null;
         }
-        int n2 = fw.b(as3.a);
-        int n3 = fw.b(as3.b);
-        int n4 = fw.b(as3.c);
-        int n5 = fw.b(as2.a);
-        int n6 = fw.b(as2.b);
-        int n7 = fw.b(as2.c);
+        int n2 = MathHelper.b(as3.a);
+        int n3 = MathHelper.b(as3.b);
+        int n4 = MathHelper.b(as3.c);
+        int n5 = MathHelper.b(as2.a);
+        int n6 = MathHelper.b(as2.b);
+        int n7 = MathHelper.b(as2.c);
         int n8 = 20;
         while (n8-- >= 0) {
             fe fe2;
@@ -659,19 +659,19 @@ implements IBlockAccess {
                 as2.c = d4;
             }
             Vec3D as4 = Vec3D.b(as2.a, as2.b, as2.c);
-            as4.a = fw.b(as2.a);
+            as4.a = MathHelper.b(as2.a);
             n5 = (int)as4.a;
             if (n9 == 5) {
                 --n5;
                 as4.a += 1.0;
             }
-            as4.b = fw.b(as2.b);
+            as4.b = MathHelper.b(as2.b);
             n6 = (int)as4.b;
             if (n9 == 1) {
                 --n6;
                 as4.b += 1.0;
             }
-            as4.c = fw.b(as2.c);
+            as4.c = MathHelper.b(as2.c);
             n7 = (int)as4.c;
             if (n9 == 3) {
                 --n7;
@@ -711,8 +711,8 @@ implements IBlockAccess {
     }
 
     public boolean a(Entity entity) {
-        int n2 = fw.b(entity.k / 16.0);
-        int n3 = fw.b(entity.m / 16.0);
+        int n2 = MathHelper.b(entity.k / 16.0);
+        int n3 = MathHelper.b(entity.m / 16.0);
         boolean bl2 = false;
         if (entity instanceof EntityPlayer) {
             bl2 = true;
@@ -756,12 +756,12 @@ implements IBlockAccess {
 
     public List a(Entity db2, AxisAlignedBB cy2) {
         this.H.clear();
-        int n2 = fw.b(cy2.a);
-        int n3 = fw.b(cy2.d + 1.0);
-        int n4 = fw.b(cy2.b);
-        int n5 = fw.b(cy2.e + 1.0);
-        int n6 = fw.b(cy2.c);
-        int n7 = fw.b(cy2.f + 1.0);
+        int n2 = MathHelper.b(cy2.a);
+        int n3 = MathHelper.b(cy2.d + 1.0);
+        int n4 = MathHelper.b(cy2.b);
+        int n5 = MathHelper.b(cy2.e + 1.0);
+        int n6 = MathHelper.b(cy2.c);
+        int n7 = MathHelper.b(cy2.f + 1.0);
         for (int i2 = n2; i2 < n3; ++i2) {
             for (int i3 = n6; i3 < n7; ++i3) {
                 if (!this.e(i2, 64, i3)) continue;
@@ -787,7 +787,7 @@ implements IBlockAccess {
 
     public int a(float f2) {
         float f3 = this.b(f2);
-        float f4 = 1.0f - (fw.b(f3 * 3.1415927f * 2.0f) * 2.0f + 0.5f);
+        float f4 = 1.0f - (MathHelper.b(f3 * 3.1415927f * 2.0f) * 2.0f + 0.5f);
         if (f4 < 0.0f) {
             f4 = 0.0f;
         }
@@ -885,8 +885,8 @@ implements IBlockAccess {
     protected void e(Entity db2) {
         int n2;
         int n3;
-        int n4 = fw.b(db2.k);
-        if (!this.a(n4 - (n2 = 16), 0, (n3 = fw.b(db2.m)) - n2, n4 + n2, 128, n3 + n2)) {
+        int n4 = MathHelper.b(db2.k);
+        if (!this.a(n4 - (n2 = 16), 0, (n3 = MathHelper.b(db2.m)) - n2, n4 + n2, 128, n3 + n2)) {
             return;
         }
         db2.I = db2.k;
@@ -899,9 +899,9 @@ implements IBlockAccess {
         } else {
             db2.b_();
         }
-        int n5 = fw.b(db2.k / 16.0);
-        int n6 = fw.b(db2.l / 16.0);
-        int n7 = fw.b(db2.m / 16.0);
+        int n5 = MathHelper.b(db2.k / 16.0);
+        int n6 = MathHelper.b(db2.l / 16.0);
+        int n7 = MathHelper.b(db2.m / 16.0);
         if (!db2.Y || db2.Z != n5 || db2.aa != n6 || db2.ab != n7) {
             if (db2.Y && this.g(db2.Z, db2.ab)) {
                 this.b(db2.Z, db2.ab).a(db2, db2.aa);
@@ -950,12 +950,12 @@ implements IBlockAccess {
     }
 
     public boolean b(AxisAlignedBB cy2) {
-        int n2 = fw.b(cy2.a);
-        int n3 = fw.b(cy2.d + 1.0);
-        int n4 = fw.b(cy2.b);
-        int n5 = fw.b(cy2.e + 1.0);
-        int n6 = fw.b(cy2.c);
-        int n7 = fw.b(cy2.f + 1.0);
+        int n2 = MathHelper.b(cy2.a);
+        int n3 = MathHelper.b(cy2.d + 1.0);
+        int n4 = MathHelper.b(cy2.b);
+        int n5 = MathHelper.b(cy2.e + 1.0);
+        int n6 = MathHelper.b(cy2.c);
+        int n7 = MathHelper.b(cy2.f + 1.0);
         if (cy2.a < 0.0) {
             --n2;
         }
@@ -978,12 +978,12 @@ implements IBlockAccess {
     }
 
     public boolean c(AxisAlignedBB cy2) {
-        int n2 = fw.b(cy2.a);
-        int n3 = fw.b(cy2.d + 1.0);
-        int n4 = fw.b(cy2.b);
-        int n5 = fw.b(cy2.e + 1.0);
-        int n6 = fw.b(cy2.c);
-        int n7 = fw.b(cy2.f + 1.0);
+        int n2 = MathHelper.b(cy2.a);
+        int n3 = MathHelper.b(cy2.d + 1.0);
+        int n4 = MathHelper.b(cy2.b);
+        int n5 = MathHelper.b(cy2.e + 1.0);
+        int n6 = MathHelper.b(cy2.c);
+        int n7 = MathHelper.b(cy2.f + 1.0);
         for (int i2 = n2; i2 < n3; ++i2) {
             for (int i3 = n4; i3 < n5; ++i3) {
                 for (int i4 = n6; i4 < n7; ++i4) {
@@ -997,12 +997,12 @@ implements IBlockAccess {
     }
 
     public boolean a(AxisAlignedBB cy2, hz hz2, Entity db2) {
-        int n2 = fw.b(cy2.a);
-        int n3 = fw.b(cy2.d + 1.0);
-        int n4 = fw.b(cy2.b);
-        int n5 = fw.b(cy2.e + 1.0);
-        int n6 = fw.b(cy2.c);
-        int n7 = fw.b(cy2.f + 1.0);
+        int n2 = MathHelper.b(cy2.a);
+        int n3 = MathHelper.b(cy2.d + 1.0);
+        int n4 = MathHelper.b(cy2.b);
+        int n5 = MathHelper.b(cy2.e + 1.0);
+        int n6 = MathHelper.b(cy2.c);
+        int n7 = MathHelper.b(cy2.f + 1.0);
         boolean bl2 = false;
         Vec3D as2 = Vec3D.b(0.0, 0.0, 0.0);
         for (int i2 = n2; i2 < n3; ++i2) {
@@ -1027,12 +1027,12 @@ implements IBlockAccess {
     }
 
     public boolean a(AxisAlignedBB cy2, hz hz2) {
-        int n2 = fw.b(cy2.a);
-        int n3 = fw.b(cy2.d + 1.0);
-        int n4 = fw.b(cy2.b);
-        int n5 = fw.b(cy2.e + 1.0);
-        int n6 = fw.b(cy2.c);
-        int n7 = fw.b(cy2.f + 1.0);
+        int n2 = MathHelper.b(cy2.a);
+        int n3 = MathHelper.b(cy2.d + 1.0);
+        int n4 = MathHelper.b(cy2.b);
+        int n5 = MathHelper.b(cy2.e + 1.0);
+        int n6 = MathHelper.b(cy2.c);
+        int n7 = MathHelper.b(cy2.f + 1.0);
         for (int i2 = n2; i2 < n3; ++i2) {
             for (int i3 = n4; i3 < n5; ++i3) {
                 for (int i4 = n6; i4 < n7; ++i4) {
@@ -1046,12 +1046,12 @@ implements IBlockAccess {
     }
 
     public boolean b(AxisAlignedBB cy2, hz hz2) {
-        int n2 = fw.b(cy2.a);
-        int n3 = fw.b(cy2.d + 1.0);
-        int n4 = fw.b(cy2.b);
-        int n5 = fw.b(cy2.e + 1.0);
-        int n6 = fw.b(cy2.c);
-        int n7 = fw.b(cy2.f + 1.0);
+        int n2 = MathHelper.b(cy2.a);
+        int n3 = MathHelper.b(cy2.d + 1.0);
+        int n4 = MathHelper.b(cy2.b);
+        int n5 = MathHelper.b(cy2.e + 1.0);
+        int n6 = MathHelper.b(cy2.c);
+        int n7 = MathHelper.b(cy2.f + 1.0);
         for (int i2 = n2; i2 < n3; ++i2) {
             for (int i3 = n4; i3 < n5; ++i3) {
                 for (int i4 = n6; i4 < n7; ++i4) {
@@ -1205,8 +1205,8 @@ implements IBlockAccess {
         this.I.clear();
         for (int i2 = 0; i2 < this.i.size(); ++i2) {
             EntityPlayer entityplayer = (EntityPlayer)this.i.get(i2);
-            n2 = fw.b(entityplayer.k / 16.0);
-            n4 = fw.b(entityplayer.m / 16.0);
+            n2 = MathHelper.b(entityplayer.k / 16.0);
+            n4 = MathHelper.b(entityplayer.m / 16.0);
             int n6 = 9;
             for (n5 = - n6; n5 <= n6; ++n5) {
                 for (n3 = - n6; n3 <= n6; ++n3) {
@@ -1289,10 +1289,10 @@ implements IBlockAccess {
 
     public List b(Entity db2, AxisAlignedBB cy2) {
         this.K.clear();
-        int n2 = fw.b((cy2.a - 2.0) / 16.0);
-        int n3 = fw.b((cy2.d + 2.0) / 16.0);
-        int n4 = fw.b((cy2.c - 2.0) / 16.0);
-        int n5 = fw.b((cy2.f + 2.0) / 16.0);
+        int n2 = MathHelper.b((cy2.a - 2.0) / 16.0);
+        int n3 = MathHelper.b((cy2.d + 2.0) / 16.0);
+        int n4 = MathHelper.b((cy2.c - 2.0) / 16.0);
+        int n5 = MathHelper.b((cy2.f + 2.0) / 16.0);
         for (int i2 = n2; i2 <= n3; ++i2) {
             for (int i3 = n4; i3 <= n5; ++i3) {
                 if (!this.g(i2, i3)) continue;
@@ -1303,10 +1303,10 @@ implements IBlockAccess {
     }
 
     public List a(Class class_, AxisAlignedBB cy2) {
-        int n2 = fw.b((cy2.a - 2.0) / 16.0);
-        int n3 = fw.b((cy2.d + 2.0) / 16.0);
-        int n4 = fw.b((cy2.c - 2.0) / 16.0);
-        int n5 = fw.b((cy2.f + 2.0) / 16.0);
+        int n2 = MathHelper.b((cy2.a - 2.0) / 16.0);
+        int n3 = MathHelper.b((cy2.d + 2.0) / 16.0);
+        int n4 = MathHelper.b((cy2.c - 2.0) / 16.0);
+        int n5 = MathHelper.b((cy2.f + 2.0) / 16.0);
         ArrayList arrayList = new ArrayList();
         for (int i2 = n2; i2 <= n3; ++i2) {
             for (int i3 = n4; i3 <= n5; ++i3) {
@@ -1355,9 +1355,9 @@ implements IBlockAccess {
     }
 
     public bx a(Entity db2, Entity db3, float f2) {
-        int n2 = fw.b(db2.k);
-        int n3 = fw.b(db2.l);
-        int n4 = fw.b(db2.m);
+        int n2 = MathHelper.b(db2.k);
+        int n3 = MathHelper.b(db2.l);
+        int n4 = MathHelper.b(db2.m);
         int n5 = (int)(f2 + 16.0f);
         int n6 = n2 - n5;
         int n7 = n3 - n5;
@@ -1370,9 +1370,9 @@ implements IBlockAccess {
     }
 
     public bx a(Entity db2, int n2, int n3, int n4, float f2) {
-        int n5 = fw.b(db2.k);
-        int n6 = fw.b(db2.l);
-        int n7 = fw.b(db2.m);
+        int n5 = MathHelper.b(db2.k);
+        int n6 = MathHelper.b(db2.l);
+        int n7 = MathHelper.b(db2.m);
         int n8 = (int)(f2 + 8.0f);
         int n9 = n5 - n8;
         int n10 = n6 - n8;

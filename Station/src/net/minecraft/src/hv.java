@@ -277,12 +277,12 @@ public class hv {
             return;
         }
         this.r = true;
-        int n3 = fw.b(db2.k / 16.0);
-        int n4 = fw.b(db2.m / 16.0);
+        int n3 = MathHelper.b(db2.k / 16.0);
+        int n4 = MathHelper.b(db2.m / 16.0);
         if (n3 != this.j || n4 != this.k) {
             System.out.println("Wrong location! " + db2);
         }
-        if ((n2 = fw.b(db2.l / 16.0)) < 0) {
+        if ((n2 = MathHelper.b(db2.l / 16.0)) < 0) {
             n2 = 0;
         }
         if (n2 >= this.m.length) {
@@ -379,8 +379,8 @@ public class hv {
     }
 
     public void a(Entity db2, AxisAlignedBB cy2, List list) {
-        int n2 = fw.b((cy2.b - 2.0) / 16.0);
-        int n3 = fw.b((cy2.e + 2.0) / 16.0);
+        int n2 = MathHelper.b((cy2.b - 2.0) / 16.0);
+        int n3 = MathHelper.b((cy2.e + 2.0) / 16.0);
         if (n2 < 0) {
             n2 = 0;
         }
@@ -398,8 +398,8 @@ public class hv {
     }
 
     public void a(Class class_, AxisAlignedBB cy2, List list) {
-        int n2 = fw.b((cy2.b - 2.0) / 16.0);
-        int n3 = fw.b((cy2.e + 2.0) / 16.0);
+        int n2 = MathHelper.b((cy2.b - 2.0) / 16.0);
+        int n3 = MathHelper.b((cy2.e + 2.0) / 16.0);
         if (n2 < 0) {
             n2 = 0;
         }

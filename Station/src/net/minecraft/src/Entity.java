@@ -122,12 +122,12 @@ public abstract class Entity {
             if (!this.V && !this.ac) {
                 float f2;
                 float f3;
-                float f4 = fw.a(this.n * this.n * 0.20000000298023224 + this.o * this.o + this.p * this.p * 0.20000000298023224) * 0.2f;
+                float f4 = MathHelper.a(this.n * this.n * 0.20000000298023224 + this.o * this.o + this.p * this.p * 0.20000000298023224) * 0.2f;
                 if (f4 > 1.0f) {
                     f4 = 1.0f;
                 }
                 this.g.a(this, "random.splash", f4, 1.0f + (this.Q.nextFloat() - this.Q.nextFloat()) * 0.4f);
-                float f5 = fw.b(this.u.b);
+                float f5 = MathHelper.b(this.u.b);
                 int n2 = 0;
                 while ((float)n2 < 1.0f + this.C * 20.0f) {
                     f3 = (this.Q.nextFloat() * 2.0f - 1.0f) * this.C;
@@ -301,11 +301,11 @@ public abstract class Entity {
         }
         double d13 = this.k - d6;
         d5 = this.m - d7;
-        this.F = (float)((double)this.F + (double)fw.a(d13 * d13 + d5 * d5) * 0.6);
+        this.F = (float)((double)this.F + (double)MathHelper.a(d13 * d13 + d5 * d5) * 0.6);
         if (this.G) {
-            int n6 = fw.b(this.k);
-            n5 = fw.b(this.l - 0.20000000298023224 - (double)this.B);
-            int n7 = fw.b(this.m);
+            int n6 = MathHelper.b(this.k);
+            n5 = MathHelper.b(this.l - 0.20000000298023224 - (double)this.B);
+            int n7 = MathHelper.b(this.m);
             n3 = this.g.a(n6, n5, n7);
             if (this.F > (float)this.b && n3 > 0) {
                 ++this.b;
@@ -319,12 +319,12 @@ public abstract class Entity {
                 Block.n[n3].b(this.g, n6, n5, n7, this);
             }
         }
-        int n8 = fw.b(this.u.a);
-        n5 = fw.b(this.u.b);
-        int n9 = fw.b(this.u.c);
-        n3 = fw.b(this.u.d);
-        int n10 = fw.b(this.u.e);
-        int n11 = fw.b(this.u.f);
+        int n8 = MathHelper.b(this.u.a);
+        n5 = MathHelper.b(this.u.b);
+        int n9 = MathHelper.b(this.u.c);
+        n3 = MathHelper.b(this.u.d);
+        int n10 = MathHelper.b(this.u.e);
+        int n11 = MathHelper.b(this.u.f);
         for (int i2 = n8; i2 <= n3; ++i2) {
             for (int i3 = n5; i3 <= n10; ++i3) {
                 for (int i4 = n9; i4 <= n11; ++i4) {
@@ -372,8 +372,8 @@ public abstract class Entity {
         int n2;
         int n3;
         double d2 = this.l + (double)this.n();
-        int n4 = fw.b(this.k);
-        int n5 = this.g.a(n4, n3 = fw.d(fw.b(d2)), n2 = fw.b(this.m));
+        int n4 = MathHelper.b(this.k);
+        int n5 = this.g.a(n4, n3 = MathHelper.d(MathHelper.b(d2)), n2 = MathHelper.b(this.m));
         if (n5 != 0 && Block.n[n5].bl == hz2) {
             float f2 = cg.b(this.g.b(n4, n3, n2)) - 0.11111111f;
             float f3 = (float)(n3 + 1) - f2;
@@ -391,7 +391,7 @@ public abstract class Entity {
     }
 
     public void a(float f2, float f3, float f4) {
-        float f5 = fw.c(f2 * f2 + f3 * f3);
+        float f5 = MathHelper.c(f2 * f2 + f3 * f3);
         if (f5 < 0.01f) {
             return;
         }
@@ -399,17 +399,17 @@ public abstract class Entity {
             f5 = 1.0f;
         }
         f5 = f4 / f5;
-        float f6 = fw.a(this.q * 3.1415927f / 180.0f);
-        float f7 = fw.b(this.q * 3.1415927f / 180.0f);
+        float f6 = MathHelper.a(this.q * 3.1415927f / 180.0f);
+        float f7 = MathHelper.b(this.q * 3.1415927f / 180.0f);
         this.n += (double)((f2 *= f5) * f7 - (f3 *= f5) * f6);
         this.p += (double)(f3 * f7 + f2 * f6);
     }
 
     public float b(float f2) {
-        int n2 = fw.b(this.k);
+        int n2 = MathHelper.b(this.k);
         double d2 = (this.u.e - this.u.b) * 0.66;
-        int n3 = fw.b(this.l - (double)this.B + d2);
-        int n4 = fw.b(this.m);
+        int n3 = MathHelper.b(this.l - (double)this.B + d2);
+        int n4 = MathHelper.b(this.m);
         return this.g.j(n2, n3, n4);
     }
 
@@ -443,7 +443,7 @@ public abstract class Entity {
         float f2 = (float)(this.k - db2.k);
         float f3 = (float)(this.l - db2.l);
         float f4 = (float)(this.m - db2.m);
-        return fw.c(f2 * f2 + f3 * f3 + f4 * f4);
+        return MathHelper.c(f2 * f2 + f3 * f3 + f4 * f4);
     }
 
     public double d(double d2, double d3, double d4) {
@@ -457,7 +457,7 @@ public abstract class Entity {
         double d5 = this.k - d2;
         double d6 = this.l - d3;
         double d7 = this.m - d4;
-        return fw.a(d5 * d5 + d6 * d6 + d7 * d7);
+        return MathHelper.a(d5 * d5 + d6 * d6 + d7 * d7);
     }
 
     public double b(Entity db2) {
@@ -476,9 +476,9 @@ public abstract class Entity {
         }
         double d2 = db2.k - this.k;
         double d3 = db2.m - this.m;
-        double d4 = fw.a(d2, d3);
+        double d4 = MathHelper.a(d2, d3);
         if (d4 >= 0.009999999776482582) {
-            d4 = fw.a(d4);
+            d4 = MathHelper.a(d4);
             d2 /= d4;
             d3 /= d4;
             double d5 = 1.0 / d4;
@@ -561,7 +561,7 @@ public abstract class Entity {
     }
 
     protected final String q() {
-        return ge.a(this);
+        return EntityTypes.a(this);
     }
 
     protected abstract void b(r var1);
@@ -600,9 +600,9 @@ public abstract class Entity {
     }
 
     public boolean s() {
-        int n2 = fw.b(this.k);
-        int n3 = fw.b(this.l + (double)this.n());
-        int n4 = fw.b(this.m);
+        int n2 = MathHelper.b(this.k);
+        int n3 = MathHelper.b(this.l + (double)this.n());
+        int n4 = MathHelper.b(this.m);
         return this.g.d(n2, n3, n4);
     }
 

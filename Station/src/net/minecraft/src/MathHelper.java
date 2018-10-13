@@ -1,9 +1,12 @@
 package net.minecraft.src;
+<<<<<<< HEAD:Station/src/net/minecraft/src/MathHelper.java
+=======
 
+>>>>>>> b77d6455ae9338e01f6531751a545b600c4f01b2:Station/src/net/minecraft/src/fw.java
 /*
  * Decompiled with CFR 0_132.
  */
-public class fw {
+public class MathHelper {
     private static float[] a = new float[65536];
 
     public static final float a(float f2) {
@@ -48,7 +51,7 @@ public class fw {
 
     static {
         for (int i2 = 0; i2 < 65536; ++i2) {
-            fw.a[i2] = (float)Math.sin((double)i2 * 3.141592653589793 * 2.0 / 65536.0);
+            MathHelper.a[i2] = (float)Math.sin((double)i2 * 3.141592653589793 * 2.0 / 65536.0);
         }
     }
 }

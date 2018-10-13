@@ -141,8 +141,8 @@ implements IInventory {
         this.i = this.l;
         this.j = this.m;
         this.o -= 0.03999999910593033;
-        int n4 = fw.b(this.k);
-        if (this.g.a(n4, (n3 = fw.b(this.l)) - 1, n2 = fw.b(this.m)) == Block.aG.ba) {
+        int n4 = MathHelper.b(this.k);
+        if (this.g.a(n4, (n3 = MathHelper.b(this.l)) - 1, n2 = MathHelper.b(this.m)) == Block.aG.ba) {
             --n3;
         }
         double d7 = 0.4;
@@ -223,9 +223,9 @@ implements IInventory {
                 d12 = d7;
             }
             this.c(d10, 0.0, d12);
-            if (arrn[0][1] != 0 && fw.b(this.k) - n4 == arrn[0][0] && fw.b(this.m) - n2 == arrn[0][2]) {
+            if (arrn[0][1] != 0 && MathHelper.b(this.k) - n4 == arrn[0][0] && MathHelper.b(this.m) - n2 == arrn[0][2]) {
                 this.a(this.k, this.l + (double)arrn[0][1], this.m);
-            } else if (arrn[1][1] != 0 && fw.b(this.k) - n4 == arrn[1][0] && fw.b(this.m) - n2 == arrn[1][2]) {
+            } else if (arrn[1][1] != 0 && MathHelper.b(this.k) - n4 == arrn[1][0] && MathHelper.b(this.m) - n2 == arrn[1][2]) {
                 this.a(this.k, this.l + (double)arrn[1][1], this.m);
             }
             if (this.e != null) {
@@ -234,7 +234,7 @@ implements IInventory {
                 this.p *= 0.996999979019165;
             } else {
                 if (this.ad == 2) {
-                    d9 = fw.a(this.af * this.af + this.ag * this.ag);
+                    d9 = MathHelper.a(this.af * this.af + this.ag * this.ag);
                     if (d9 > 0.01) {
                         bl2 = true;
                         this.af /= d9;
@@ -265,14 +265,14 @@ implements IInventory {
                 }
                 this.a(this.k, vec3d2.b, this.m);
             }
-            int n6 = fw.b(this.k);
-            int n7 = fw.b(this.m);
+            int n6 = MathHelper.b(this.k);
+            int n7 = MathHelper.b(this.m);
             if (n6 != n4 || n7 != n2) {
                 d17 = Math.sqrt(this.n * this.n + this.p * this.p);
                 this.n = d17 * (double)(n6 - n4);
                 this.p = d17 * (double)(n7 - n2);
             }
-            if (this.ad == 2 && (d11 = (double)fw.a(this.af * this.af + this.ag * this.ag)) > 0.01 && this.n * this.n + this.p * this.p > 0.001) {
+            if (this.ad == 2 && (d11 = (double)MathHelper.a(this.af * this.af + this.ag * this.ag)) > 0.01 && this.n * this.n + this.p * this.p > 0.001) {
                 this.af /= d11;
                 this.ag /= d11;
                 if (this.af * this.n + this.ag * this.p < 0.0) {
@@ -351,8 +351,8 @@ implements IInventory {
     public Vec3D g(double d2, double d3, double d4) {
         int n2;
         int n3;
-        int n4 = fw.b(d2);
-        if (this.g.a(n4, (n3 = fw.b(d3)) - 1, n2 = fw.b(d4)) == Block.aG.ba) {
+        int n4 = MathHelper.b(d2);
+        if (this.g.a(n4, (n3 = MathHelper.b(d3)) - 1, n2 = MathHelper.b(d4)) == Block.aG.ba) {
             --n3;
         }
         if (this.g.a(n4, n3, n2) == Block.aG.ba) {
@@ -446,7 +446,7 @@ implements IInventory {
             entity.e(this);
         }
         if ((d2 = (d4 = entity.k - this.k) * d4 + (d3 = entity.m - this.m) * d3) >= 9.999999747378752E-5) {
-            d2 = fw.a(d2);
+            d2 = MathHelper.a(d2);
             d4 /= d2;
             d3 /= d2;
             double d5 = 1.0 / d2;

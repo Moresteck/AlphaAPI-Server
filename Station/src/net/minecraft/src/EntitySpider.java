@@ -1,11 +1,16 @@
+<<<<<<< HEAD:Station/src/net/minecraft/src/EntitySpider.java
+package net.minecraft.src;
+/*
+=======
 package net.minecraft.src;/*
+>>>>>>> b77d6455ae9338e01f6531751a545b600c4f01b2:Station/src/net/minecraft/src/bg.java
  * Decompiled with CFR 0_132.
  */
 import java.util.Random;
 
-public class bg
-extends eu {
-    public bg(World dp2) {
+public class EntitySpider
+extends EntityMonster {
+    public EntitySpider(World dp2) {
         super(dp2);
         this.aB = "/mob/spider.png";
         this.a(1.4f, 0.9f);
@@ -43,7 +48,7 @@ extends eu {
             if (this.v) {
                 double d2 = db2.k - this.k;
                 double d3 = db2.m - this.m;
-                float f4 = fw.a(d2 * d2 + d3 * d3);
+                float f4 = MathHelper.a(d2 * d2 + d3 * d3);
                 this.n = d2 / (double)f4 * 0.5 * 0.800000011920929 + this.n * 0.20000000298023224;
                 this.p = d3 / (double)f4 * 0.5 * 0.800000011920929 + this.p * 0.20000000298023224;
                 this.o = 0.4000000059604645;

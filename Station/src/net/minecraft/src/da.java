@@ -27,19 +27,19 @@ extends Entity {
         this.ag = ic2;
         this.a(0.5f, 0.5f);
         this.c(ic2.k, ic2.l, ic2.m, ic2.q, ic2.r);
-        this.k -= (double)(fw.b(this.q / 180.0f * 3.1415927f) * 0.16f);
+        this.k -= (double)(MathHelper.b(this.q / 180.0f * 3.1415927f) * 0.16f);
         this.l -= 0.10000000149011612;
-        this.m -= (double)(fw.a(this.q / 180.0f * 3.1415927f) * 0.16f);
+        this.m -= (double)(MathHelper.a(this.q / 180.0f * 3.1415927f) * 0.16f);
         this.a(this.k, this.l, this.m);
         this.B = 0.0f;
-        this.n = (- fw.a(this.q / 180.0f * 3.1415927f)) * fw.b(this.r / 180.0f * 3.1415927f);
-        this.p = fw.b(this.q / 180.0f * 3.1415927f) * fw.b(this.r / 180.0f * 3.1415927f);
-        this.o = - fw.a(this.r / 180.0f * 3.1415927f);
+        this.n = (- MathHelper.a(this.q / 180.0f * 3.1415927f)) * MathHelper.b(this.r / 180.0f * 3.1415927f);
+        this.p = MathHelper.b(this.q / 180.0f * 3.1415927f) * MathHelper.b(this.r / 180.0f * 3.1415927f);
+        this.o = - MathHelper.a(this.r / 180.0f * 3.1415927f);
         this.a(this.n, this.o, this.p, 1.5f, 1.0f);
     }
 
     public void a(double d2, double d3, double d4, float f2, float f3) {
-        float f4 = fw.a(d2 * d2 + d3 * d3 + d4 * d4);
+        float f4 = MathHelper.a(d2 * d2 + d3 * d3 + d4 * d4);
         d2 /= (double)f4;
         d3 /= (double)f4;
         d4 /= (double)f4;
@@ -49,7 +49,7 @@ extends Entity {
         this.n = d2 *= (double)f2;
         this.o = d3 *= (double)f2;
         this.p = d4 *= (double)f2;
-        float f5 = fw.a(d2 * d2 + d4 * d4);
+        float f5 = MathHelper.a(d2 * d2 + d4 * d4);
         this.s = this.q = (float)(Math.atan2(d2, d4) * 180.0 / 3.1415927410125732);
         this.t = this.r = (float)(Math.atan2(d3, f5) * 180.0 / 3.1415927410125732);
         this.ah = 0;
@@ -126,7 +126,7 @@ extends Entity {
                 this.n = (float)(fe2.f.a - this.k);
                 this.o = (float)(fe2.f.b - this.l);
                 this.p = (float)(fe2.f.c - this.m);
-                float f3 = fw.a(this.n * this.n + this.o * this.o + this.p * this.p);
+                float f3 = MathHelper.a(this.n * this.n + this.o * this.o + this.p * this.p);
                 this.k -= this.n / (double)f3 * 0.05000000074505806;
                 this.l -= this.o / (double)f3 * 0.05000000074505806;
                 this.m -= this.p / (double)f3 * 0.05000000074505806;
@@ -138,7 +138,7 @@ extends Entity {
         this.k += this.n;
         this.l += this.o;
         this.m += this.p;
-        float f4 = fw.a(this.n * this.n + this.p * this.p);
+        float f4 = MathHelper.a(this.n * this.n + this.p * this.p);
         this.q = (float)(Math.atan2(this.n, this.p) * 180.0 / 3.1415927410125732);
         this.r = (float)(Math.atan2(this.o, f4) * 180.0 / 3.1415927410125732);
         while (this.r - this.t < -180.0f) {

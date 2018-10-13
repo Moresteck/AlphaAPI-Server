@@ -50,7 +50,7 @@ public class Vec3D {
     }
 
     public Vec3D b() {
-        double d2 = fw.a(this.a * this.a + this.b * this.b + this.c * this.c);
+        double d2 = MathHelper.a(this.a * this.a + this.b * this.b + this.c * this.c);
         if (d2 < 1.0E-4) {
             return Vec3D.b(0.0, 0.0, 0.0);
         }
@@ -65,7 +65,7 @@ public class Vec3D {
         double d2 = as2.a - this.a;
         double d3 = as2.b - this.b;
         double d4 = as2.c - this.c;
-        return fw.a(d2 * d2 + d3 * d3 + d4 * d4);
+        return MathHelper.a(d2 * d2 + d3 * d3 + d4 * d4);
     }
 
     public double b(Vec3D as2) {
@@ -83,7 +83,7 @@ public class Vec3D {
     }
 
     public double c() {
-        return fw.a(this.a * this.a + this.b * this.b + this.c * this.c);
+        return MathHelper.a(this.a * this.a + this.b * this.b + this.c * this.c);
     }
 
     public Vec3D a(Vec3D as2, double d2) {

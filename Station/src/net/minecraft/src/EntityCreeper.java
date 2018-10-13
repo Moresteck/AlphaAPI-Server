@@ -1,16 +1,21 @@
+<<<<<<< HEAD:Station/src/net/minecraft/src/EntityCreeper.java
+package net.minecraft.src;
+/*
+=======
 package net.minecraft.src;/*
+>>>>>>> b77d6455ae9338e01f6531751a545b600c4f01b2:Station/src/net/minecraft/src/ei.java
  * Decompiled with CFR 0_132.
  */
 import java.util.Random;
 
-public class ei
-extends eu {
+public class EntityCreeper
+extends EntityMonster {
     int a;
     int b;
     int ac = 30;
     int ad = -1;
 
-    public ei(World dp2) {
+    public EntityCreeper(World dp2) {
         super(dp2);
         this.aB = "/mob/creeper.png";
     }
@@ -47,7 +52,7 @@ extends eu {
 
     public void f(Entity db2) {
         super.f(db2);
-        if (db2 instanceof dz) {
+        if (db2 instanceof EntitySkeleton) {
             this.a(en.aO.aQ + this.Q.nextInt(2), 1);
         }
     }

@@ -28,11 +28,11 @@ public class EntityTrackerEntry {
         this.a = db2;
         this.b = n2;
         this.c = n3;
-        this.d = fw.b(db2.k * 32.0);
-        this.e = fw.b(db2.l * 32.0);
-        this.f = fw.b(db2.m * 32.0);
-        this.g = fw.d(db2.q * 256.0f / 360.0f);
-        this.h = fw.d(db2.r * 256.0f / 360.0f);
+        this.d = MathHelper.b(db2.k * 32.0);
+        this.e = MathHelper.b(db2.l * 32.0);
+        this.f = MathHelper.b(db2.m * 32.0);
+        this.g = MathHelper.d(db2.q * 256.0f / 360.0f);
+        this.h = MathHelper.d(db2.r * 256.0f / 360.0f);
     }
 
     public boolean equals(Object object) {
@@ -57,11 +57,11 @@ public class EntityTrackerEntry {
             this.j = true;
         }
         if (this.i++ % this.c == 0) {
-            int n2 = fw.b(this.a.k * 32.0);
-            int n3 = fw.b(this.a.l * 32.0);
-            int n4 = fw.b(this.a.m * 32.0);
-            int n5 = fw.d(this.a.q * 256.0f / 360.0f);
-            int n6 = fw.d(this.a.r * 256.0f / 360.0f);
+            int n2 = MathHelper.b(this.a.k * 32.0);
+            int n3 = MathHelper.b(this.a.l * 32.0);
+            int n4 = MathHelper.b(this.a.m * 32.0);
+            int n5 = MathHelper.d(this.a.q * 256.0f / 360.0f);
+            int n6 = MathHelper.d(this.a.r * 256.0f / 360.0f);
             boolean bl2 = n2 != this.d || n3 != this.e || n4 != this.f;
             boolean bl3 = n5 != this.g || n6 != this.h;
             int n7 = n2 - this.d;

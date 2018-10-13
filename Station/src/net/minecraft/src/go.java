@@ -46,9 +46,9 @@ extends Entity {
         this.n *= 0.9800000190734863;
         this.o *= 0.9800000190734863;
         this.p *= 0.9800000190734863;
-        int n2 = fw.b(this.k);
-        int n3 = fw.b(this.l);
-        int n4 = fw.b(this.m);
+        int n2 = MathHelper.b(this.k);
+        int n3 = MathHelper.b(this.l);
+        int n4 = MathHelper.b(this.m);
         if (this.g.a(n2, n3, n4) == this.a) {
             this.g.d(n2, n3, n4, 0);
         }

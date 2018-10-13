@@ -4,7 +4,7 @@ package net.minecraft.src;
  * Decompiled with CFR 0_132.
  */
 public class p
-extends eu {
+extends EntityMonster {
     public p(World dp2) {
         super(dp2);
         this.aB = "/mob/zombie.png";

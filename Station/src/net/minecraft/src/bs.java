@@ -18,9 +18,9 @@ extends Entity {
         this(dp2);
         this.a((double)f2, (double)f3, (double)f4);
         float f5 = (float)(Math.random() * 3.1415927410125732 * 2.0);
-        this.n = (- fw.a(f5 * 3.1415927f / 180.0f)) * 0.02f;
+        this.n = (- MathHelper.a(f5 * 3.1415927f / 180.0f)) * 0.02f;
         this.o = 0.20000000298023224;
-        this.p = (- fw.b(f5 * 3.1415927f / 180.0f)) * 0.02f;
+        this.p = (- MathHelper.b(f5 * 3.1415927f / 180.0f)) * 0.02f;
         this.G = false;
         this.a = 80;
         this.h = f2;
