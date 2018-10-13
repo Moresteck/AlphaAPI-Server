@@ -83,3 +83,4 @@ ab = PlayerInstance
 fw = MathHelper
 ge = EntityTypes
 hv = Chunk
+hz = Material
