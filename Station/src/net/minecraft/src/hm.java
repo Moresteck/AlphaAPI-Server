@@ -149,8 +149,8 @@ extends NetHandler {
         int n4 = gp2.b;
         int n5 = gp2.c;
         int n6 = gp2.d;
-        int n7 = (int)fw.e(n3 - this.d.e.WANDERER);
-        if (n7 > (n2 = (int)fw.e(n5 - this.d.e.BUST))) {
+        int n7 = (int)MathHelper.e(n3 - this.d.e.WANDERER);
+        if (n7 > (n2 = (int)MathHelper.e(n5 - this.d.e.BUST))) {
             n2 = n7;
         }
         if (gp2.e == 0) {
@@ -174,8 +174,8 @@ extends NetHandler {
         int n4 = es2.c;
         int n5 = es2.d;
         int n6 = es2.e;
-        int n7 = (int)fw.e(n3 - this.d.e.WANDERER);
-        if (n7 > (n2 = (int)fw.e(n5 - this.d.e.BUST))) {
+        int n7 = (int)MathHelper.e(n3 - this.d.e.WANDERER);
+        if (n7 > (n2 = (int)MathHelper.e(n5 - this.d.e.BUST))) {
             n2 = n7;
         }
         if (n2 > 16) {

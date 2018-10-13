@@ -40,7 +40,7 @@ extends Entity {
         this.i = this.l;
         this.j = this.m;
         this.o -= 0.03999999910593033;
-        if (this.g.c(fw.b(this.k), fw.b(this.l), fw.b(this.m)) == hz.PlayerListBox) {
+        if (this.g.c(MathHelper.b(this.k), MathHelper.b(this.l), MathHelper.b(this.m)) == hz.PlayerListBox) {
             this.o = 0.20000000298023224;
             this.n = (this.Q.nextFloat() - this.Q.nextFloat()) * 0.2f;
             this.p = (this.Q.nextFloat() - this.Q.nextFloat()) * 0.2f;
@@ -52,7 +52,7 @@ extends Entity {
         float f2 = 0.98f;
         if (this.v) {
             f2 = 0.58800006f;
-            int n2 = this.g.a(fw.b(this.k), fw.b(this.u.b) - 1, fw.b(this.m));
+            int n2 = this.g.a(MathHelper.b(this.k), MathHelper.b(this.u.b) - 1, MathHelper.b(this.m));
             if (n2 > 0) {
                 f2 = Block.n[n2].bm * 0.98f;
             }
@@ -75,9 +75,9 @@ extends Entity {
     }
 
     private boolean g(double d2, double d3, double d4) {
-        int n2 = fw.b(d2);
-        int n3 = fw.b(d3);
-        int n4 = fw.b(d4);
+        int n2 = MathHelper.b(d2);
+        int n3 = MathHelper.b(d3);
+        int n4 = MathHelper.b(d4);
         double d5 = d2 - (double)n2;
         double d6 = d3 - (double)n3;
         double d7 = d4 - (double)n4;

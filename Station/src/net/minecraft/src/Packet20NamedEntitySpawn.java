@@ -23,9 +23,9 @@ extends Packet {
     public Packet20NamedEntitySpawn(EntityPlayer entityplayer) {
         this.a = entityplayer.c;
         this.b = entityplayer.ap;
-        this.c = fw.b(entityplayer.k * 32.0);
-        this.d = fw.b(entityplayer.l * 32.0);
-        this.e = fw.b(entityplayer.m * 32.0);
+        this.c = MathHelper.b(entityplayer.k * 32.0);
+        this.d = MathHelper.b(entityplayer.l * 32.0);
+        this.e = MathHelper.b(entityplayer.m * 32.0);
         this.f = (byte)(entityplayer.q * 256.0f / 360.0f);
         this.g = (byte)(entityplayer.r * 256.0f / 360.0f);
         gc gc2 = entityplayer.ai.b();

@@ -1,11 +1,12 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
-public class au
-extends ao {
+public class EntityCow
+extends EntityAnimal {
     public boolean a = false;
 
-    public au(World dp2) {
+    public EntityCow(World dp2) {
         super(dp2);
         this.aB = "/mob/cow.png";
         this.a(0.9f, 1.3f);

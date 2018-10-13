@@ -1,13 +1,14 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.util.Random;
 
-public class cd
-extends ao {
+public class EntitySheep
+extends EntityAnimal {
     public boolean a = false;
 
-    public cd(World dp2) {
+    public EntitySheep(World dp2) {
         super(dp2);
         this.aB = "/mob/sheep.png";
         this.a(0.9f, 1.3f);

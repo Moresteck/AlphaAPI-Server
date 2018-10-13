@@ -55,7 +55,7 @@ extends EntityLiving {
         this.ai.c();
         this.al = this.am;
         super.x();
-        float f2 = fw.a(this.n * this.n + this.p * this.p);
+        float f2 = MathHelper.a(this.n * this.n + this.p * this.p);
         float f3 = (float)Math.atan((- this.o) * 0.20000000298023224) * 15.0f;
         if (f2 > 0.1f) {
             f2 = 0.1f;
@@ -88,8 +88,8 @@ extends EntityLiving {
         }
         this.ai.f();
         if (db2 != null) {
-            this.n = (- fw.b((this.aO + this.q) * 3.1415927f / 180.0f)) * 0.1f;
-            this.p = (- fw.a((this.aO + this.q) * 3.1415927f / 180.0f)) * 0.1f;
+            this.n = (- MathHelper.b((this.aO + this.q) * 3.1415927f / 180.0f)) * 0.1f;
+            this.p = (- MathHelper.a((this.aO + this.q) * 3.1415927f / 180.0f)) * 0.1f;
         } else {
             this.p = 0.0;
             this.n = 0.0;
@@ -115,14 +115,14 @@ extends EntityLiving {
         if (bl2) {
             float f3 = this.Q.nextFloat() * 0.5f;
             float f4 = this.Q.nextFloat() * 3.1415927f * 2.0f;
-            fa2.n = (- fw.a(f4)) * f3;
-            fa2.p = fw.b(f4) * f3;
+            fa2.n = (- MathHelper.a(f4)) * f3;
+            fa2.p = MathHelper.b(f4) * f3;
             fa2.o = 0.20000000298023224;
         } else {
             f2 = 0.3f;
-            fa2.n = (- fw.a(this.q / 180.0f * 3.1415927f)) * fw.b(this.r / 180.0f * 3.1415927f) * f2;
-            fa2.p = fw.b(this.q / 180.0f * 3.1415927f) * fw.b(this.r / 180.0f * 3.1415927f) * f2;
-            fa2.o = (- fw.a(this.r / 180.0f * 3.1415927f)) * f2 + 0.1f;
+            fa2.n = (- MathHelper.a(this.q / 180.0f * 3.1415927f)) * MathHelper.b(this.r / 180.0f * 3.1415927f) * f2;
+            fa2.p = MathHelper.b(this.q / 180.0f * 3.1415927f) * MathHelper.b(this.r / 180.0f * 3.1415927f) * f2;
+            fa2.o = (- MathHelper.a(this.r / 180.0f * 3.1415927f)) * f2 + 0.1f;
             f2 = 0.02f;
             float f5 = this.Q.nextFloat() * 3.1415927f * 2.0f;
             fa2.n += Math.cos(f5) * (double)(f2 *= this.Q.nextFloat());
@@ -180,7 +180,7 @@ extends EntityLiving {
         if ((float)this.W > (float)this.aq / 2.0f) {
             return false;
         }
-        if (db2 instanceof eu || db2 instanceof da) {
+        if (db2 instanceof EntityMonster || db2 instanceof da) {
             if (this.g.j == 0) {
                 n2 = 0;
             }

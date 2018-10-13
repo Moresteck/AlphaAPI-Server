@@ -20,9 +20,9 @@ extends Packet {
 
     public Packet34EntityTeleport(Entity db2) {
         this.a = db2.c;
-        this.b = fw.b(db2.k * 32.0);
-        this.c = fw.b(db2.l * 32.0);
-        this.d = fw.b(db2.m * 32.0);
+        this.b = MathHelper.b(db2.k * 32.0);
+        this.c = MathHelper.b(db2.l * 32.0);
+        this.d = MathHelper.b(db2.m * 32.0);
         this.e = (byte)(db2.q * 256.0f / 360.0f);
         this.f = (byte)(db2.r * 256.0f / 360.0f);
     }

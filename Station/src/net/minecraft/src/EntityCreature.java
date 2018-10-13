@@ -1,15 +1,16 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.util.Random;
 
-public class fu
+public class EntityCreature
 extends EntityLiving {
     private bx a;
     protected Entity af;
     protected boolean ag = false;
 
-    public fu(World dp2) {
+    public EntityCreature(World dp2) {
         super(dp2);
     }
 
@@ -42,8 +43,8 @@ extends EntityLiving {
             for (int i2 = 0; i2 < 10; ++i2) {
                 int n5;
                 int n6;
-                int n7 = fw.b(this.k + (double)this.Q.nextInt(13) - 6.0);
-                float f5 = this.a(n7, n6 = fw.b(this.l + (double)this.Q.nextInt(7) - 3.0), n5 = fw.b(this.m + (double)this.Q.nextInt(13) - 6.0));
+                int n7 = MathHelper.b(this.k + (double)this.Q.nextInt(13) - 6.0);
+                float f5 = this.a(n7, n6 = MathHelper.b(this.l + (double)this.Q.nextInt(7) - 3.0), n5 = MathHelper.b(this.m + (double)this.Q.nextInt(13) - 6.0));
                 if (f5 <= f4) continue;
                 f4 = f5;
                 n2 = n7;
@@ -55,7 +56,7 @@ extends EntityLiving {
                 this.a = this.g.a((Entity)this, n2, n3, n4, 10.0f);
             }
         }
-        int n8 = fw.b(this.u.b);
+        int n8 = MathHelper.b(this.u.b);
         n2 = this.m() ? 1 : 0;
         n3 = this.o() ? 1 : 0;
         this.r = 0.0f;
@@ -101,8 +102,8 @@ extends EntityLiving {
                 float f8 = this.q;
                 this.q = (float)(Math.atan2(d7, d6) * 180.0 / 3.1415927410125732) - 90.0f;
                 f6 = (f8 - this.q + 90.0f) * 3.1415927f / 180.0f;
-                this.ba = (- fw.a(f6)) * this.bb * 1.0f;
-                this.bb = fw.b(f6) * this.bb * 1.0f;
+                this.ba = (- MathHelper.a(f6)) * this.bb * 1.0f;
+                this.bb = MathHelper.b(f6) * this.bb * 1.0f;
             }
             if (d5 > 0.0) {
                 this.bd = true;
@@ -131,9 +132,9 @@ extends EntityLiving {
     }
 
     public boolean a() {
-        int n2 = fw.b(this.k);
-        int n3 = fw.b(this.u.b);
-        int n4 = fw.b(this.m);
+        int n2 = MathHelper.b(this.k);
+        int n3 = MathHelper.b(this.u.b);
+        int n4 = MathHelper.b(this.m);
         return super.a() && this.a(n2, n3, n4) >= 0.0f;
     }
 }

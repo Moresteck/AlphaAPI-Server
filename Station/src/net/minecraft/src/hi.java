@@ -195,13 +195,13 @@ implements bf {
         int n7 = random.nextInt(n5 / 2) + n5 / 4;
         boolean bl3 = bl2 = random.nextInt(6) == 0;
         while (n4 < n5) {
-            double d8 = 1.5 + (double)(fw.a((float)n4 * 3.1415927f / (float)n5) * f2 * 1.0f);
+            double d8 = 1.5 + (double)(MathHelper.a((float)n4 * 3.1415927f / (float)n5) * f2 * 1.0f);
             double d9 = d8 * d5;
-            float f7 = fw.b(f4);
-            float f8 = fw.a(f4);
-            d2 += (double)(fw.b(f3) * f7);
+            float f7 = MathHelper.b(f4);
+            float f8 = MathHelper.a(f4);
+            d2 += (double)(MathHelper.b(f3) * f7);
             d3 += (double)f8;
-            d4 += (double)(fw.a(f3) * f7);
+            d4 += (double)(MathHelper.a(f3) * f7);
             f4 = bl2 ? (f4 *= 0.92f) : (f4 *= 0.7f);
             f4 += f6 * 0.1f;
             f3 += f5 * 0.1f;
@@ -225,12 +225,12 @@ implements bf {
                 if (d2 >= d6 - 16.0 - d8 * 2.0 && d4 >= d7 - 16.0 - d8 * 2.0 && d2 <= d6 + 16.0 + d8 * 2.0 && d4 <= d7 + 16.0 + d8 * 2.0) {
                     int n8;
                     int n9;
-                    int n10 = fw.b(d2 - d8) - n2 * 16 - 1;
-                    int n11 = fw.b(d2 + d8) - n2 * 16 + 1;
-                    int n12 = fw.b(d3 - d9) - 1;
-                    int n13 = fw.b(d3 + d9) + 1;
-                    int n14 = fw.b(d4 - d8) - n3 * 16 - 1;
-                    int n15 = fw.b(d4 + d8) - n3 * 16 + 1;
+                    int n10 = MathHelper.b(d2 - d8) - n2 * 16 - 1;
+                    int n11 = MathHelper.b(d2 + d8) - n2 * 16 + 1;
+                    int n12 = MathHelper.b(d3 - d9) - 1;
+                    int n13 = MathHelper.b(d3 + d9) + 1;
+                    int n14 = MathHelper.b(d4 - d8) - n3 * 16 - 1;
+                    int n15 = MathHelper.b(d4 + d8) - n3 * 16 + 1;
                     if (n10 < 0) {
                         n10 = 0;
                     }

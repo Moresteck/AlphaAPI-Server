@@ -1,13 +1,14 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.util.Random;
 
-public class eu
-extends fu {
+public class EntityMonster
+extends EntityCreature {
     protected int ae = 2;
 
-    public eu(World dp2) {
+    public EntityMonster(World dp2) {
         super(dp2);
         this.aK = 20;
     }
@@ -22,13 +23,13 @@ extends fu {
 
     public void b_() {
         super.b_();
-        if (this.g.SEA == 0) {
+        if (this.g.j == 0) {
             this.i();
         }
     }
 
     protected Entity h() {
-        eq eq2 = this.g.a((Entity)this, 16.0);
+        EntityPlayer eq2 = this.g.a((Entity)this, 16.0);
         if (eq2 != null && this.g(eq2)) {
             return eq2;
         }
@@ -46,7 +47,7 @@ extends fu {
     }
 
     protected void a(Entity db2, float f2) {
-        if ((double)f2 < 2.5 && db2.u.e > this.u.b && db2.u.b < this.u.BOMB) {
+        if ((double)f2 < 2.5 && db2.u.e > this.u.b && db2.u.b < this.u.e) {
             this.aQ = 20;
             db2.a(this, this.ae);
         }
@@ -67,8 +68,8 @@ extends fu {
     public boolean a() {
         int n2;
         int n3;
-        int n4 = fw.b(this.k);
-        if (this.g.a(cr.a, n4, n2 = fw.b(this.u.b), n3 = fw.b(this.m)) > this.Q.nextInt(32)) {
+        int n4 = MathHelper.b(this.k);
+        if (this.g.a(cr.a, n4, n2 = MathHelper.b(this.u.b), n3 = MathHelper.b(this.m)) > this.Q.nextInt(32)) {
             return false;
         }
         int n5 = this.g.h(n4, n2, n3);

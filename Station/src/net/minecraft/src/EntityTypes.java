@@ -1,12 +1,8 @@
-/*
- * Decompiled with CFR 0_132.
- */
-import java.io.PrintStream;
-import java.lang.reflect.Constructor;
+package net.minecraft.src;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ge {
+public class EntityTypes {
     private static Map a = new HashMap();
     private static Map b = new HashMap();
 
@@ -53,26 +49,26 @@ public class ge {
     }
 
     static {
-        ge.a(da.class, "Arrow");
-        ge.a(av.class, "Snowball");
-        ge.a(fa.class, "Item");
-        ge.a(EntityPainting.class, "Painting");
-        ge.a(EntityLiving.class, "Mob");
-        ge.a(eu.class, "Monster");
-        ge.a(ei.class, "Creeper");
-        ge.a(dz.class, "Skeleton");
-        ge.a(bg.class, "Spider");
-        ge.a(p.class, "Giant");
-        ge.a(ez.class, "Zombie");
-        ge.a(ev.class, "Slime");
-        ge.a(gg.class, "Pig");
-        ge.a(cd.class, "Sheep");
-        ge.a(au.class, "Cow");
-        ge.a(gt.class, "Chicken");
-        ge.a(bs.class, "PrimedTnt");
-        ge.a(go.class, "FallingSand");
-        ge.a(EntityMinecart.class, "Minecart");
-        ge.a(eg.class, "Boat");
+        EntityTypes.a(da.class, "Arrow");
+        EntityTypes.a(av.class, "Snowball");
+        EntityTypes.a(fa.class, "Item");
+        EntityTypes.a(EntityPainting.class, "Painting");
+        EntityTypes.a(EntityLiving.class, "Mob");
+        EntityTypes.a(EntityMonster.class, "Monster");
+        EntityTypes.a(EntityCreeper.class, "Creeper");
+        EntityTypes.a(EntitySkeleton.class, "Skeleton");
+        EntityTypes.a(EntitySpider.class, "Spider");
+        EntityTypes.a(p.class, "Giant");
+        EntityTypes.a(EntityZombie.class, "Zombie");
+        EntityTypes.a(EntitySlime.class, "Slime");
+        EntityTypes.a(EntityPig.class, "Pig");
+        EntityTypes.a(EntitySheep.class, "Sheep");
+        EntityTypes.a(EntityCow.class, "Cow");
+        EntityTypes.a(EntityChicken.class, "Chicken");
+        EntityTypes.a(bs.class, "PrimedTnt");
+        EntityTypes.a(go.class, "FallingSand");
+        EntityTypes.a(EntityMinecart.class, "Minecart");
+        EntityTypes.a(eg.class, "Boat");
     }
 }
 

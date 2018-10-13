@@ -22,9 +22,9 @@ public class ed {
     private bx a(Entity db2, double d2, double d3, double d4, float f2) {
         this.b.a();
         this.c.a();
-        a a2 = this.a(fw.b(db2.u.a), fw.b(db2.u.b), fw.b(db2.u.c));
-        a a3 = this.a(fw.b(d2 - (double)(db2.C / 2.0f)), fw.b(d3), fw.b(d4 - (double)(db2.C / 2.0f)));
-        a a4 = new a(fw.d(db2.C + 1.0f), fw.d(db2.D + 1.0f), fw.d(db2.C + 1.0f));
+        a a2 = this.a(MathHelper.b(db2.u.a), MathHelper.b(db2.u.b), MathHelper.b(db2.u.c));
+        a a3 = this.a(MathHelper.b(d2 - (double)(db2.C / 2.0f)), MathHelper.b(d3), MathHelper.b(d4 - (double)(db2.C / 2.0f)));
+        a a4 = new a(MathHelper.d(db2.C + 1.0f), MathHelper.d(db2.D + 1.0f), MathHelper.d(db2.C + 1.0f));
         bx bx2 = this.a(db2, a2, a3, a4, f2);
         return bx2;
     }

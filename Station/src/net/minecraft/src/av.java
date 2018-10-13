@@ -85,7 +85,7 @@ extends Entity {
         this.k += this.n;
         this.l += this.o;
         this.m += this.p;
-        float f3 = fw.a(this.n * this.n + this.p * this.p);
+        float f3 = MathHelper.a(this.n * this.n + this.p * this.p);
         this.q = (float)(Math.atan2(this.n, this.p) * 180.0 / 3.1415927410125732);
         this.r = (float)(Math.atan2(this.o, f3) * 180.0 / 3.1415927410125732);
         while (this.r - this.t < -180.0f) {

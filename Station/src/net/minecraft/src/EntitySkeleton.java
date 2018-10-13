@@ -1,11 +1,12 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.util.Random;
 
-public class dz
-extends eu {
-    public dz(World dp2) {
+public class EntitySkeleton
+extends EntityMonster {
+    public EntitySkeleton(World dp2) {
         super(dp2);
         this.aB = "/mob/skeleton.png";
     }
@@ -24,7 +25,7 @@ extends eu {
 
     public void x() {
         float f2;
-        if (this.g.a() && (f2 = this.b(1.0f)) > 0.5f && this.g.g(fw.b(this.k), fw.b(this.l), fw.b(this.m)) && this.Q.nextFloat() * 30.0f < (f2 - 0.4f) * 2.0f) {
+        if (this.g.a() && (f2 = this.b(1.0f)) > 0.5f && this.g.g(MathHelper.b(this.k), MathHelper.b(this.l), MathHelper.b(this.m)) && this.Q.nextFloat() * 30.0f < (f2 - 0.4f) * 2.0f) {
             this.T = 300;
         }
         super.x();
@@ -38,7 +39,7 @@ extends eu {
                 da da2 = new da(this.g, this);
                 da2.l += 1.399999976158142;
                 double d4 = db2.l - 0.20000000298023224 - da2.l;
-                float f3 = fw.a(d2 * d2 + d3 * d3) * 0.2f;
+                float f3 = MathHelper.a(d2 * d2 + d3 * d3) * 0.2f;
                 this.g.a(this, "random.bow", 1.0f, 1.0f / (this.Q.nextFloat() * 0.4f + 0.8f));
                 this.g.a(da2);
                 da2.a(d2, d4 + (double)f3, d3, 0.6f, 12.0f);

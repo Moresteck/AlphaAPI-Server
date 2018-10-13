@@ -1,10 +1,11 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.util.Random;
 
-public class gt
-extends ao {
+public class EntityChicken
+extends EntityAnimal {
     public boolean a = false;
     public float b = 0.0f;
     public float ac = 0.0f;
@@ -13,7 +14,7 @@ extends ao {
     public float ah = 1.0f;
     public int ai;
 
-    public gt(World dp2) {
+    public EntityChicken(World dp2) {
         super(dp2);
         this.aB = "/mob/chicken.png";
         this.a(0.3f, 0.4f);

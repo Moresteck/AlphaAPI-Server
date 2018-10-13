@@ -24,7 +24,7 @@ public class a {
         float f2 = a2.a - this.a;
         float f3 = a2.b - this.b;
         float f4 = a2.c - this.c;
-        return fw.c(f2 * f2 + f3 * f3 + f4 * f4);
+        return MathHelper.c(f2 * f2 + f3 * f3 + f4 * f4);
     }
 
     public boolean equals(Object object) {

@@ -161,7 +161,7 @@ implements am {
         if ((de2 = r2.k("Entities")) != null) {
             for (int i2 = 0; i2 < de2.b(); ++i2) {
                 r r3 = (r)de2.a(i2);
-                object = ge.a(r3, dp2);
+                object = EntityTypes.a(r3, dp2);
                 hv2.r = true;
                 if (object == null) continue;
                 hv2.a((Entity)object);

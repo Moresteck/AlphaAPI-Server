@@ -20,7 +20,7 @@ extends en {
         if (!et2.a(dp2, n2, ++n3, n4)) {
             return false;
         }
-        int n6 = fw.b((double)((eq2.q + 180.0f) * 4.0f / 360.0f) - 0.5) & 3;
+        int n6 = MathHelper.b((double)((eq2.q + 180.0f) * 4.0f / 360.0f) - 0.5) & 3;
         int n7 = 0;
         int n8 = 0;
         if (n6 == 0) {

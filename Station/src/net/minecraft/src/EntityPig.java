@@ -1,11 +1,12 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
-public class gg
-extends ao {
+public class EntityPig
+extends EntityAnimal {
     public boolean a = false;
 
-    public gg(World dp2) {
+    public EntityPig(World dp2) {
         super(dp2);
         this.aB = "/mob/pig.png";
         this.a(0.9f, 0.9f);

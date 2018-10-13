@@ -18,10 +18,10 @@ extends ay {
             return false;
         }
         float f2 = random.nextFloat() * 3.1415927f;
-        double d2 = (float)(n2 + 8) + fw.a(f2) * (float)this.b / 8.0f;
-        double d3 = (float)(n2 + 8) - fw.a(f2) * (float)this.b / 8.0f;
-        double d4 = (float)(n4 + 8) + fw.b(f2) * (float)this.b / 8.0f;
-        double d5 = (float)(n4 + 8) - fw.b(f2) * (float)this.b / 8.0f;
+        double d2 = (float)(n2 + 8) + MathHelper.a(f2) * (float)this.b / 8.0f;
+        double d3 = (float)(n2 + 8) - MathHelper.a(f2) * (float)this.b / 8.0f;
+        double d4 = (float)(n4 + 8) + MathHelper.b(f2) * (float)this.b / 8.0f;
+        double d5 = (float)(n4 + 8) - MathHelper.b(f2) * (float)this.b / 8.0f;
         double d6 = n3 + random.nextInt(3) + 2;
         double d7 = n3 + random.nextInt(3) + 2;
         for (int i2 = 0; i2 <= this.b; ++i2) {
@@ -29,8 +29,8 @@ extends ay {
             double d9 = d6 + (d7 - d6) * (double)i2 / (double)this.b;
             double d10 = d4 + (d5 - d4) * (double)i2 / (double)this.b;
             double d11 = random.nextDouble() * (double)this.b / 16.0;
-            double d12 = (double)(fw.a((float)i2 * 3.1415927f / (float)this.b) + 1.0f) * d11 + 1.0;
-            double d13 = (double)(fw.a((float)i2 * 3.1415927f / (float)this.b) + 1.0f) * d11 + 1.0;
+            double d12 = (double)(MathHelper.a((float)i2 * 3.1415927f / (float)this.b) + 1.0f) * d11 + 1.0;
+            double d13 = (double)(MathHelper.a((float)i2 * 3.1415927f / (float)this.b) + 1.0f) * d11 + 1.0;
             for (int i3 = (int)(d8 - d12 / 2.0); i3 <= (int)(d8 + d12 / 2.0); ++i3) {
                 for (int i4 = (int)(d9 - d13 / 2.0); i4 <= (int)(d9 + d13 / 2.0); ++i4) {
                     for (int i5 = (int)(d10 - d12 / 2.0); i5 <= (int)(d10 + d12 / 2.0); ++i5) {

@@ -25,9 +25,9 @@ extends Packet {
         this.a = fa2.c;
         this.h = fa2.a.c;
         this.i = fa2.a.a;
-        this.b = fw.b(fa2.k * 32.0);
-        this.c = fw.b(fa2.l * 32.0);
-        this.d = fw.b(fa2.m * 32.0);
+        this.b = MathHelper.b(fa2.k * 32.0);
+        this.c = MathHelper.b(fa2.l * 32.0);
+        this.d = MathHelper.b(fa2.m * 32.0);
         this.e = (byte)(fa2.n * 128.0);
         this.f = (byte)(fa2.o * 128.0);
         this.g = (byte)(fa2.p * 128.0);
