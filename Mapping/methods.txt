@@ -1,0 +1,2 @@
+#Method mapping (Only txt file for now)
+#Example: Class name/Method name(Parameter) = Remapped Method name(Parameter)

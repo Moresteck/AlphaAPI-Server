@@ -1,3 +1,6 @@
+#Class mapping (Only txt file for now)
+#Example: Class Name = Remapped Class Name
+
 dq = EntityPlayerMP
 eq = EntityPlayer
 ic = EntityLiving

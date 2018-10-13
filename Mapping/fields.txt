@@ -1,0 +1,2 @@
+#Fields mapping (Only txt file for now)
+#Example: Class Name/Field Name = Remapped Field
