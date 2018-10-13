@@ -9,7 +9,7 @@ extends cl {
     private boolean b;
 
     protected eo(int n2, Class class_, boolean bl2) {
-        super(n2, Material.Packet20NamedEntitySpawn);
+        super(n2, Material.c);
         this.b = bl2;
         this.aZ = 4;
         this.a = class_;

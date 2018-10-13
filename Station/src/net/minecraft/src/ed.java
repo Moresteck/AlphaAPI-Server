@@ -139,7 +139,7 @@ public class ed {
                     if (hz2.c()) {
                         return 0;
                     }
-                    if (hz2 != Material.f && hz2 != Material.PlayerListBox) continue;
+                    if (hz2 != Material.f && hz2 != Material.g) continue;
                     return -1;
                 }
             }

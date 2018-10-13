@@ -76,7 +76,7 @@ public class en {
     public static en aq = new ht(65).a(26);
     public static en ar = new ig(66, 42).a(11);
     public static en as = new fd(67).a(42);
-    public static en at = new fn(68, Material.Packet20NamedEntitySpawn).a(43);
+    public static en at = new fn(68, Material.c).a(43);
     public static en au = new ak(69, 0).a(74);
     public static en av = new ak(70, Block.A.ba).a(75);
     public static en aw = new ak(71, Block.C.ba).a(76);

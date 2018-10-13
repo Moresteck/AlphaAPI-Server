@@ -55,7 +55,7 @@ extends Block {
         if (hz2 == Material.f) {
             return true;
         }
-        if (hz2 == Material.PlayerListBox) {
+        if (hz2 == Material.g) {
             return true;
         }
         return false;

@@ -387,7 +387,7 @@ public abstract class Entity {
     }
 
     public boolean o() {
-        return this.g.a(this.u.b(0.0, -0.4000000059604645, 0.0), Material.PlayerListBox);
+        return this.g.a(this.u.b(0.0, -0.4000000059604645, 0.0), Material.f);
     }
 
     public void a(float f2, float f3, float f4) {

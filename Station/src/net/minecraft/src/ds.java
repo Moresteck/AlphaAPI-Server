@@ -6,7 +6,7 @@ package net.minecraft.src;
 public class ds
 extends Block {
     protected ds(int n2) {
-        super(n2, Material.Packet20NamedEntitySpawn);
+        super(n2, Material.c);
         this.aZ = 59;
     }
 
@@ -23,7 +23,7 @@ extends Block {
         return this.aZ;
     }
 
-    public boolean a(World dp2, int n2, int n3, int n4, eq eq2) {
+    public boolean a(World dp2, int n2, int n3, int n4, EntityPlayer eq2) {
         eq2.z();
         return true;
     }

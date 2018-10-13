@@ -45,7 +45,7 @@ extends cg {
                     n5 = 0;
                 }
             }
-            if (this.bl == Material.PlayerListBox && n6 < 8 && n5 < 8 && n5 > n6 && random.nextInt(4) != 0) {
+            if (this.bl == Material.g && n6 < 8 && n5 < 8 && n5 > n6 && random.nextInt(4) != 0) {
                 n5 = n6;
                 bl2 = false;
             }
@@ -98,7 +98,7 @@ extends cg {
         if (this.l(dp2, n2, n3, n4)) {
             int n6 = dp2.a(n2, n3, n4);
             if (n6 > 0) {
-                if (this.bl == Material.PlayerListBox) {
+                if (this.bl == Material.g) {
                     this.h(dp2, n2, n3, n4);
                 } else {
                     Block.n[n6].a_(dp2, n2, n3, n4, dp2.b(n2, n3, n4));
@@ -206,7 +206,7 @@ extends cg {
         if (hz2 == this.bl) {
             return false;
         }
-        if (hz2 == Material.PlayerListBox) {
+        if (hz2 == Material.g) {
             return false;
         }
         return !this.k(dp2, n2, n3, n4);

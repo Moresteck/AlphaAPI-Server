@@ -8,10 +8,10 @@ extends Block {
     protected int d = 1;
 
     protected cg(int n2, Material hz2) {
-        super(n2, (hz2 == Material.PlayerListBox ? 14 : 12) * 16 + 13, hz2);
+        super(n2, (hz2 == Material.g ? 14 : 12) * 16 + 13, hz2);
         float f2 = 0.0f;
         float f3 = 0.0f;
-        if (hz2 == Material.PlayerListBox) {
+        if (hz2 == Material.g) {
             this.d = 2;
         }
         this.a(0.0f + f3, 0.0f + f2, 0.0f + f3, 1.0f + f3, 1.0f + f2, 1.0f + f3);
@@ -166,7 +166,7 @@ extends Block {
         if (this.bl == Material.f) {
             return 5;
         }
-        if (this.bl == Material.PlayerListBox) {
+        if (this.bl == Material.g) {
             return 30;
         }
         return 0;
@@ -188,7 +188,7 @@ extends Block {
         if (dp2.a(n2, n3, n4) != this.ba) {
             return;
         }
-        if (this.bl == Material.PlayerListBox) {
+        if (this.bl == Material.g) {
             boolean bl2 = false;
             if (bl2 || dp2.c(n2, n3, n4 - 1) == Material.f) {
                 bl2 = true;

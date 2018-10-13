@@ -18,7 +18,7 @@ extends Thread {
     public void run() {
         Object object = NetworkManager.a;
         synchronized (object) {
-            ++NetworkManager.Packet20NamedEntitySpawn;
+            ++NetworkManager.c;
         }
         try {
             while (NetworkManager.a(this.a)) {
@@ -28,7 +28,7 @@ extends Thread {
         finally {
             object = NetworkManager.a;
             synchronized (object) {
-                --NetworkManager.Packet20NamedEntitySpawn;
+                --NetworkManager.c;
             }
         }
     }

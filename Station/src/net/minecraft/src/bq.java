@@ -52,5 +52,9 @@ implements Comparable {
         }
         return 0;
     }
+
+	public int compareTo(Object arg0) {
+		return this.a((bq)arg0);
+	}
 }
 

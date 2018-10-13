@@ -6,7 +6,7 @@ import java.util.Random;
 public class ew
 extends Block {
     public ew(int n2, int n3) {
-        super(n2, n3, Material.Packet20NamedEntitySpawn);
+        super(n2, n3, Material.c);
     }
 
     public int a(int n2) {

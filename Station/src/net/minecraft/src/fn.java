@@ -18,7 +18,7 @@ extends en {
         if (n5 != 1) {
             return false;
         }
-        Block et2 = this.a == Material.Packet20NamedEntitySpawn ? Block.aE : Block.aL;
+        Block et2 = this.a == Material.c ? Block.aE : Block.aL;
         if (!et2.a(dp2, n2, ++n3, n4)) {
             return false;
         }

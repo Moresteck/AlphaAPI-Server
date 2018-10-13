@@ -26,7 +26,7 @@ extends JComponent {
         long l2 = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
         System.gc();
         this.c[0] = "Memory use: " + l2 / 1024L / 1024L + " mb (" + Runtime.getRuntime().freeMemory() * 100L / Runtime.getRuntime().maxMemory() + "% free)";
-        this.c[1] = "Threads: " + NetworkManager.b + " + " + NetworkManager.Packet20NamedEntitySpawn;
+        this.c[1] = "Threads: " + NetworkManager.b + " + " + NetworkManager.c;
         this.a[this.b++ & 255] = (int)(l2 * 100L / Runtime.getRuntime().maxMemory());
         this.repaint();
     }

@@ -8,7 +8,7 @@ extends cg {
     protected v(int n2, Material hz2) {
         super(n2, hz2);
         this.a(false);
-        if (hz2 == Material.PlayerListBox) {
+        if (hz2 == Material.g) {
             this.a(true);
         }
     }
@@ -30,7 +30,7 @@ extends cg {
     }
 
     public void a(World dp2, int n2, int n3, int n4, Random random) {
-        if (this.bl == Material.PlayerListBox) {
+        if (this.bl == Material.g) {
             int n5 = random.nextInt(3);
             for (int i2 = 0; i2 < n5; ++i2) {
                 int n6 = dp2.a(n2 += random.nextInt(3) - 1, ++n3, n4 += random.nextInt(3) - 1);
