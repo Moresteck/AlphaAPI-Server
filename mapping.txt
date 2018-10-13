@@ -33,3 +33,5 @@ bk = ThreadShutdown
 bi = ThreadCommandReader
 ey = ConsoleLogManager
 gj = ConsoleLogFormatter
+gc = ItemStack
+en = Item
