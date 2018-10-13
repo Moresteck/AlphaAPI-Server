@@ -69,7 +69,7 @@ extends EntityPlayer {
             }
             if (n2 != 0) {
                 this.af.remove(ih2);
-                this.a.b(new Packet51MapChunk(ih2.a * 16, 0, ih2.b * 16, 16, 128, 16, this.mcServer.WorldMngr));
+                this.a.b(new Packet51MapChunk(ih2.a * 16, 0, ih2.b * 16, 16, 128, 16, this.mcServer.world));
             }
         }
     }

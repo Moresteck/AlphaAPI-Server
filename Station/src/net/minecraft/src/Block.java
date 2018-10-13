@@ -70,7 +70,7 @@ public class Block {
     public static final Block an = new ew(47, 35).c(1.5f).a(f);
     public static final Block ao = new Block(48, 36, Material.d).c(2.0f).b(10.0f).a(i);
     public static final Block ap = new BlockObsidian(49, 37).c(10.0f).b(2000.0f).a(i);
-    public static final Block aq = new fp(50, 80).c(0.0f).a(0.9375f).a(f);
+    public static final Block aq = new BlockTorch(50, 80).c(0.0f).a(0.9375f).a(f);
     public static final hu ar = (hu)new hu(51, 31).c(0.0f).a(1.0f).a(f);
     public static final Block as = new bv(52, 65).c(5.0f).a(j);
     public static final Block at = new df(53, x);

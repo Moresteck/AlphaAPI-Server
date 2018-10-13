@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Random;
 
 public class bt
-extends fp {
+extends BlockTorch {
     private boolean a = false;
     private static List b = new ArrayList();
 

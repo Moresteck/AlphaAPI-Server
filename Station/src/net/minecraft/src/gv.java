@@ -6,7 +6,7 @@ package net.minecraft.src;
 public class gv
 extends Block {
     protected gv(int n2) {
-        super(n2, Material.Packet21PickupSpawn);
+        super(n2, Material.j);
         this.aZ = 48;
     }
 
