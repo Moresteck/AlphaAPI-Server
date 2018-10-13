@@ -8,11 +8,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
@@ -308,11 +304,11 @@ implements IBlockAccess {
         return this.E.a(n2, n3);
     }
 
-    public hv a(int n2, int n3) {
+    public Chunk a(int n2, int n3) {
         return this.b(n2 >> 4, n3 >> 4);
     }
 
-    public hv b(int n2, int n3) {
+    public Chunk b(int n2, int n3) {
         return this.E.b(n2, n3);
     }
 
@@ -326,8 +322,8 @@ implements IBlockAccess {
         if (n3 >= 128) {
             return false;
         }
-        hv hv2 = this.b(n2 >> 4, n4 >> 4);
-        return hv2.a(n2 & 15, n3, n4 & 15, n5, n6);
+        Chunk chunk2 = this.b(n2 >> 4, n4 >> 4);
+        return chunk2.a(n2 & 15, n3, n4 & 15, n5, n6);
     }
 
     public boolean a(int n2, int n3, int n4, int n5) {
@@ -340,8 +336,8 @@ implements IBlockAccess {
         if (n3 >= 128) {
             return false;
         }
-        hv hv2 = this.b(n2 >> 4, n4 >> 4);
-        return hv2.a(n2 & 15, n3, n4 & 15, n5);
+        Chunk chunk2 = this.b(n2 >> 4, n4 >> 4);
+        return chunk2.a(n2 & 15, n3, n4 & 15, n5);
     }
 
     public hz c(int n2, int n3, int n4) {
@@ -362,8 +358,8 @@ implements IBlockAccess {
         if (n3 >= 128) {
             return 0;
         }
-        hv hv2 = this.b(n2 >> 4, n4 >> 4);
-        return hv2.b(n2 &= 15, n3, n4 &= 15);
+        Chunk chunk2 = this.b(n2 >> 4, n4 >> 4);
+        return chunk2.b(n2 &= 15, n3, n4 &= 15);
     }
 
     public void b(int n2, int n3, int n4, int n5) {
@@ -380,8 +376,8 @@ implements IBlockAccess {
         if (n3 >= 128) {
             return false;
         }
-        hv hv2 = this.b(n2 >> 4, n4 >> 4);
-        hv2.b(n2 &= 15, n3, n4 &= 15, n5);
+        Chunk chunk2 = this.b(n2 >> 4, n4 >> 4);
+        chunk2.b(n2 &= 15, n3, n4 &= 15, n5);
         return true;
     }
 
@@ -489,8 +485,8 @@ implements IBlockAccess {
             }
             return n5;
         }
-        hv hv2 = this.b(n2 >> 4, n4 >> 4);
-        return hv2.c(n2 &= 15, n3, n4 &= 15, this.d);
+        Chunk chunk2 = this.b(n2 >> 4, n4 >> 4);
+        return chunk2.c(n2 &= 15, n3, n4 &= 15, this.d);
     }
 
     public boolean i(int n2, int n3, int n4) {
@@ -506,8 +502,8 @@ implements IBlockAccess {
         if (!this.g(n2 >> 4, n4 >> 4)) {
             return false;
         }
-        hv hv2 = this.b(n2 >> 4, n4 >> 4);
-        return hv2.c(n2 &= 15, n3, n4 &= 15);
+        Chunk chunk2 = this.b(n2 >> 4, n4 >> 4);
+        return chunk2.c(n2 &= 15, n3, n4 &= 15);
     }
 
     public int c(int n2, int n3) {
@@ -517,8 +513,8 @@ implements IBlockAccess {
         if (!this.g(n2 >> 4, n3 >> 4)) {
             return 0;
         }
-        hv hv2 = this.b(n2 >> 4, n3 >> 4);
-        return hv2.b(n2 & 15, n3 & 15);
+        Chunk chunk2 = this.b(n2 >> 4, n3 >> 4);
+        return chunk2.b(n2 & 15, n3 & 15);
     }
 
     public void a(cr cr2, int n2, int n3, int n4, int n5) {
@@ -547,8 +543,8 @@ implements IBlockAccess {
         if (!this.g(n5, n6)) {
             return 0;
         }
-        hv hv2 = this.b(n5, n6);
-        return hv2.a(cr2, n2 & 15, n3, n4 & 15);
+        Chunk chunk2 = this.b(n5, n6);
+        return chunk2.a(cr2, n2 & 15, n3, n4 & 15);
     }
 
     public void b(cr cr2, int n2, int n3, int n4, int n5) {
@@ -564,8 +560,8 @@ implements IBlockAccess {
         if (!this.g(n2 >> 4, n4 >> 4)) {
             return;
         }
-        hv hv2 = this.b(n2 >> 4, n4 >> 4);
-        hv2.a(cr2, n2 & 15, n3, n4 & 15, n5);
+        Chunk chunk2 = this.b(n2 >> 4, n4 >> 4);
+        chunk2.a(cr2, n2 & 15, n3, n4 & 15, n5);
         for (int i2 = 0; i2 < this.D.size(); ++i2) {
             ((ba)this.D.get(i2)).a(n2, n3, n4);
         }
@@ -813,11 +809,11 @@ implements IBlockAccess {
     }
 
     public int d(int n2, int n3) {
-        hv hv2 = this.a(n2, n3);
+        Chunk chunk2 = this.a(n2, n3);
         n2 &= 15;
         n3 &= 15;
         for (int i2 = 127; i2 > 0; --i2) {
-            int n4 = hv2.a(n2, i2, n3);
+            int n4 = chunk2.a(n2, i2, n3);
             if (n4 == 0 || !Block.n[n4].bl.c() && !Block.n[n4].bl.d()) {
                 continue;
             }
@@ -1103,24 +1099,24 @@ implements IBlockAccess {
     }
 
     public TileEntity k(int n2, int n3, int n4) {
-        hv hv2 = this.b(n2 >> 4, n4 >> 4);
-        if (hv2 != null) {
-            return hv2.d(n2 & 15, n3, n4 & 15);
+        Chunk chunk2 = this.b(n2 >> 4, n4 >> 4);
+        if (chunk2 != null) {
+            return chunk2.d(n2 & 15, n3, n4 & 15);
         }
         return null;
     }
 
     public void a(int n2, int n3, int n4, TileEntity ap2) {
-        hv hv2 = this.b(n2 >> 4, n4 >> 4);
-        if (hv2 != null) {
-            hv2.a(n2 & 15, n3, n4 & 15, ap2);
+        Chunk chunk2 = this.b(n2 >> 4, n4 >> 4);
+        if (chunk2 != null) {
+            chunk2.a(n2 & 15, n3, n4 & 15, ap2);
         }
     }
 
     public void l(int n2, int n3, int n4) {
-        hv hv2 = this.b(n2 >> 4, n4 >> 4);
-        if (hv2 != null) {
-            hv2.e(n2 & 15, n3, n4 & 15);
+        Chunk chunk2 = this.b(n2 >> 4, n4 >> 4);
+        if (chunk2 != null) {
+            chunk2.e(n2 & 15, n3, n4 & 15);
         }
     }
 
@@ -1223,7 +1219,7 @@ implements IBlockAccess {
             int n9;
             n2 = ((ih)object).a * 16;
             n4 = ((ih)object).b * 16;
-            hv hv2 = this.b(((ih)object).a, ((ih)object).b);
+            Chunk chunk2 = this.b(((ih)object).a, ((ih)object).b);
             if (this.J == 0) {
                 EntityPlayer entityplayer;
                 this.e = this.e * 3 + this.f;
@@ -1231,7 +1227,7 @@ implements IBlockAccess {
                 n3 = n5 & 15;
                 n8 = n5 >> 8 & 15;
                 n9 = n5 >> 16 & 127;
-                n7 = hv2.a(n3, n9, n8);
+                n7 = chunk2.a(n3, n9, n8);
                 if (n7 == 0 && this.h(n3, n9, n8) <= this.k.nextInt(8) && this.a(cr.a, n3, n9, n8) <= 0 && (entityplayer = this.a((double)n3 + 0.5, (double)n9 + 0.5, (double)n8 + 0.5, 8.0)) != null && entityplayer.d((double)(n3 += n2) + 0.5, (double)n9 + 0.5, (double)(n8 += n4) + 0.5) > 4.0) {
                     this.a((double)n3 + 0.5, (double)n9 + 0.5, (double)n8 + 0.5, "ambient.cave.cave", 0.7f, 0.8f + this.k.nextFloat() * 0.2f);
                     this.J = this.k.nextInt(12000) + 6000;
@@ -1243,12 +1239,12 @@ implements IBlockAccess {
                 n3 = n5 & 15;
                 n8 = n5 >> 8 & 15;
                 n9 = this.d(n3 + n2, n8 + n4);
-                if (n9 >= 0 && n9 < 128 && hv2.a(cr.b, n3, n9, n8) < 10) {
-                    n7 = hv2.a(n3, n9 - 1, n8);
-                    if (hv2.a(n3, n9, n8) == 0 && n7 != 0 && n7 != Block.aT.ba && Block.n[n7].bl.c()) {
+                if (n9 >= 0 && n9 < 128 && chunk2.a(cr.b, n3, n9, n8) < 10) {
+                    n7 = chunk2.a(n3, n9 - 1, n8);
+                    if (chunk2.a(n3, n9, n8) == 0 && n7 != 0 && n7 != Block.aT.ba && Block.n[n7].bl.c()) {
                         this.d(n3 + n2, n9, n8 + n4, Block.aS.ba);
                     }
-                    if (n7 == Block.B.ba && hv2.b(n3, n9 - 1, n8) == 0) {
+                    if (n7 == Block.B.ba && chunk2.b(n3, n9 - 1, n8) == 0) {
                         this.d(n3 + n2, n9 - 1, n8 + n4, Block.aT.ba);
                     }
                 }
@@ -1259,7 +1255,7 @@ implements IBlockAccess {
                 n8 = n3 & 15;
                 n9 = n3 >> 8 & 15;
                 n7 = n3 >> 16 & 127;
-                byte by2 = hv2.b[n8 << 11 | n9 << 7 | n7];
+                byte by2 = chunk2.blocks[n8 << 11 | n9 << 7 | n7];
                 if (!Block.o[by2]) continue;
                 Block.n[by2].a(this, n8 + n2, n7, n9 + n4, this.k);
             }

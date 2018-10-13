@@ -6,7 +6,6 @@ package net.minecraft.src;/*
 >>>>>>> b77d6455ae9338e01f6531751a545b600c4f01b2:Station/src/net/minecraft/src/ev.java
  * Decompiled with CFR 0_132.
  */
-import java.util.Random;
 
 public class EntitySlime
 extends EntityLiving {
@@ -123,8 +122,8 @@ extends EntityLiving {
     }
 
     public boolean a() {
-        hv hv2 = this.g.a(MathHelper.b(this.k), MathHelper.b(this.l));
-        return (this.ac == 1 || this.g.j > 0) && this.Q.nextInt(10) == 0 && hv2.a(987234911L).nextInt(100) == 0 && this.l < 16.0;
+        Chunk chunk2 = this.g.a(MathHelper.b(this.k), MathHelper.b(this.l));
+        return (this.ac == 1 || this.g.j > 0) && this.Q.nextInt(10) == 0 && chunk2.a(987234911L).nextInt(100) == 0 && this.l < 16.0;
     }
 
     protected float f() {

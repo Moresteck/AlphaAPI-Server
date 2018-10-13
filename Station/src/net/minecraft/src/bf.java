@@ -6,7 +6,7 @@ package net.minecraft.src;
 public interface bf {
     public boolean a(int var1, int var2);
 
-    public hv b(int var1, int var2);
+    public Chunk b(int var1, int var2);
 
     public void a(bf var1, int var2, int var3);
 

@@ -7,7 +7,7 @@ public class dj
 implements IBlockAccess {
     private int a;
     private int b;
-    private hv[][] c;
+    private Chunk[][] c;
     private World d;
 
     public dj(World dp2, int n2, int n3, int n4, int n5, int n6, int n7) {
@@ -16,7 +16,7 @@ implements IBlockAccess {
         this.b = n4 >> 4;
         int n8 = n5 >> 4;
         int n9 = n7 >> 4;
-        this.c = new hv[n8 - this.a + 1][n9 - this.b + 1];
+        this.c = new Chunk[n8 - this.a + 1][n9 - this.b + 1];
         for (int i2 = this.a; i2 <= n8; ++i2) {
             for (int i3 = this.b; i3 <= n9; ++i3) {
                 this.c[i2 - this.a][i3 - this.b] = dp2.b(i2, i3);
