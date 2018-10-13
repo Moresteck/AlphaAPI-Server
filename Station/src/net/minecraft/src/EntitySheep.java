@@ -1,4 +1,4 @@
-<<<<<<< HEAD:Station/src/net/minecraft/src/EntitySheep.java
+
 package net.minecraft.src;
 /*
 =======

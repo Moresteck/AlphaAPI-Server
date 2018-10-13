@@ -1,4 +1,4 @@
-<<<<<<< HEAD:Station/src/net/minecraft/src/EntityCreeper.java
+
 package net.minecraft.src;
 /*
 =======

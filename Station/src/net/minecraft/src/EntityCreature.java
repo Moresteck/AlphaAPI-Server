@@ -1,4 +1,4 @@
-<<<<<<< HEAD:Station/src/net/minecraft/src/EntityCreature.java
+
 package net.minecraft.src;
 /*
 =======
