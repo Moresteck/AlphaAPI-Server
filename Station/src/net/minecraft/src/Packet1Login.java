@@ -1,31 +1,33 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
-public class x
+public class Packet1Login
 extends Packet {
     public int a;
     public String b;
     public String c;
 
-    public x() {
+    public Packet1Login() {
     }
 
-    public x(String string, String string2, int n2) {
+    public Packet1Login(String string, String string2, int n2) {
         this.b = string;
         this.c = string2;
         this.a = n2;
     }
 
-    public void a(DataInputStream dataInputStream) {
+    public void a(DataInputStream dataInputStream) throws IOException {
         this.a = dataInputStream.readInt();
         this.b = dataInputStream.readUTF();
         this.c = dataInputStream.readUTF();
     }
 
-    public void a(DataOutputStream dataOutputStream) {
+    public void a(DataOutputStream dataOutputStream) throws IOException {
         dataOutputStream.writeInt(this.a);
         dataOutputStream.writeUTF(this.b);
         dataOutputStream.writeUTF(this.c);

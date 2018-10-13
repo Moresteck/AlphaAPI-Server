@@ -1,10 +1,12 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
-public class gp
+public class Packet14BlockDig
 extends Packet {
     public int a;
     public int b;
@@ -12,7 +14,7 @@ extends Packet {
     public int d;
     public int e;
 
-    public void a(DataInputStream dataInputStream) {
+    public void a(DataInputStream dataInputStream) throws IOException {
         this.e = dataInputStream.read();
         this.a = dataInputStream.readInt();
         this.b = dataInputStream.read();
@@ -20,7 +22,7 @@ extends Packet {
         this.d = dataInputStream.read();
     }
 
-    public void a(DataOutputStream dataOutputStream) {
+    public void a(DataOutputStream dataOutputStream) throws IOException {
         dataOutputStream.write(this.e);
         dataOutputStream.writeInt(this.a);
         dataOutputStream.write(this.b);

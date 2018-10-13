@@ -34,7 +34,7 @@ class ab {
             throw new IllegalStateException("Failed to add player. " + dq2 + " already is in chunk " + this.c + ", " + this.d);
         }
         dq2.ag.add(this.e);
-        dq2.a.b(new ct(this.e.a, this.e.b, true));
+        dq2.a.b(new Packet50PreChunk(this.e.a, this.e.b, true));
         this.b.add(dq2);
         dq2.af.add(this.e);
     }
@@ -55,7 +55,7 @@ class ab {
         }
         dq2.af.remove(this.e);
         if (dq2.ag.contains(this.e)) {
-            dq2.a.b(new ct(this.c, this.d, false));
+            dq2.a.b(new Packet50PreChunk(this.c, this.d, false));
         }
     }
 
@@ -108,7 +108,7 @@ class ab {
         }
         Packet ha2 = null;
         if (this.g == 1) {
-            ha2 = new eh(this.c * 16 + this.h, this.j, this.d * 16 + this.l, PlayerManager.a((PlayerManager)this.a).e);
+            ha2 = new Packet53BlockChange(this.c * 16 + this.h, this.j, this.d * 16 + this.l, PlayerManager.a((PlayerManager)this.a).e);
         } else if (this.g == 10) {
             this.j = this.j / 2 * 2;
             this.k = (this.k / 2 + 1) * 2;
@@ -118,9 +118,9 @@ class ab {
             int n5 = this.i - this.h + 1;
             int n6 = this.k - this.j + 2;
             int n7 = this.m - this.l + 1;
-            ha2 = new cs(n2, n3, n4, n5, n6, n7, PlayerManager.a((PlayerManager)this.a).e);
+            ha2 = new Packet51MapChunk(n2, n3, n4, n5, n6, n7, PlayerManager.a((PlayerManager)this.a).e);
         } else {
-            ha2 = new gs(this.c, this.d, this.f, this.g, PlayerManager.a((PlayerManager)this.a).e);
+            ha2 = new Packet52MultiBlockChange(this.c, this.d, this.f, this.g, PlayerManager.a((PlayerManager)this.a).e);
         }
         this.a(ha2);
         this.g = 0;

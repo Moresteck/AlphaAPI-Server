@@ -68,7 +68,7 @@ public class EntityTrackerEntry {
             int n8 = n3 - this.e;
             int n9 = n4 - this.f;
             Packet ha2 = null;
-            ha2 = n7 < -128 || n7 >= 128 || n8 < -128 || n8 >= 128 || n9 < -128 || n9 >= 128 ? new by(this.a.c, n2, n3, n4, (byte)n5, (byte)n6) : (bl2 && bl3 ? new bc(this.a.c, (byte)n7, (byte)n8, (byte)n9, (byte)n5, (byte)n6) : (bl2 ? new di(this.a.c, (byte)n7, (byte)n8, (byte)n9) : (bl3 ? new cq(this.a.c, (byte)n5, (byte)n6) : new el(this.a.c))));
+            ha2 = n7 < -128 || n7 >= 128 || n8 < -128 || n8 >= 128 || n9 < -128 || n9 >= 128 ? new Packet34EntityTeleport(this.a.c, n2, n3, n4, (byte)n5, (byte)n6) : (bl2 && bl3 ? new Packet33RelEntityMoveLook(this.a.c, (byte)n7, (byte)n8, (byte)n9, (byte)n5, (byte)n6) : (bl2 ? new Packet31RelEntityMove(this.a.c, (byte)n7, (byte)n8, (byte)n9) : (bl3 ? new Packet32EntityLook(this.a.c, (byte)n5, (byte)n6) : new Packet30Entity(this.a.c))));
             if (ha2 != null) {
                 this.a(ha2);
             }
@@ -88,7 +88,7 @@ public class EntityTrackerEntry {
     }
 
     public void a() {
-        this.a(new cm(this.a.c));
+        this.a(new Packet29DestroyEntity(this.a.c));
     }
 
     public void a(EntityPlayerMP entityplayermp) {
@@ -104,7 +104,7 @@ public class EntityTrackerEntry {
             }
         } else if (this.k.contains(entityplayermp)) {
             this.k.remove(entityplayermp);
-            entityplayermp.a.b(new cm(this.a.c));
+            entityplayermp.a.b(new Packet29DestroyEntity(this.a.c));
         }
     }
 
@@ -117,7 +117,7 @@ public class EntityTrackerEntry {
     private Packet b() {
         if (this.a instanceof fa) {
             fa fa2 = (fa)this.a;
-            j j2 = new j(fa2);
+            Packet21PickupSpawn j2 = new Packet21PickupSpawn(fa2);
             fa2.k = (double)j2.b / 32.0;
             fa2.l = (double)j2.c / 32.0;
             fa2.m = (double)j2.d / 32.0;
@@ -132,17 +132,17 @@ public class EntityTrackerEntry {
         if (this.a instanceof EntityMinecart) {
             EntityMinecart hs2 = (EntityMinecart)this.a;
             if (hs2.ad == 0) {
-                return new dd(this.a, 10);
+                return new Packet23VehicleSpawn(this.a, 10);
             }
             if (hs2.ad == 1) {
-                return new dd(this.a, 11);
+                return new Packet23VehicleSpawn(this.a, 11);
             }
             if (hs2.ad == 2) {
-                return new dd(this.a, 12);
+                return new Packet23VehicleSpawn(this.a, 12);
             }
         }
         if (this.a instanceof eg) {
-            return new dd(this.a, 1);
+            return new Packet23VehicleSpawn(this.a, 1);
         }
         throw new IllegalArgumentException("Don't know how to add " + this.a.getClass() + "!");
     }

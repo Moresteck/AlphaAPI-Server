@@ -9,7 +9,7 @@ extends en {
     }
 
     public boolean a(gc gc2, eq eq2, World dp2, int n2, int n3, int n4, int n5) {
-        bp bp2;
+        EntityPainting bp2;
         if (n5 == 0) {
             return false;
         }
@@ -26,7 +26,7 @@ extends en {
         if (n5 == 5) {
             n6 = 3;
         }
-        if ((bp2 = new bp(dp2, n2, n3, n4, n6)).b()) {
+        if ((bp2 = new EntityPainting(dp2, n2, n3, n4, n6)).b()) {
             dp2.a(bp2);
             --gc2.a;
         }

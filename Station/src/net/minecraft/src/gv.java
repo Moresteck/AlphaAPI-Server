@@ -4,7 +4,7 @@
 public class gv
 extends Block {
     protected gv(int n2) {
-        super(n2, hz.j);
+        super(n2, hz.Packet21PickupSpawn);
         this.aZ = 48;
     }
 

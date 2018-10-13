@@ -1,10 +1,12 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
-public class gs
+public class Packet52MultiBlockChange
 extends Packet {
     public int a;
     public int b;
@@ -13,11 +15,11 @@ extends Packet {
     public byte[] e;
     public int f;
 
-    public gs() {
+    public Packet52MultiBlockChange() {
         this.j = true;
     }
 
-    public gs(int n2, int n3, short[] arrs, int n4, World dp2) {
+    public Packet52MultiBlockChange(int n2, int n3, short[] arrs, int n4, World dp2) {
         this.j = true;
         this.a = n2;
         this.b = n3;
@@ -36,7 +38,7 @@ extends Packet {
         }
     }
 
-    public void a(DataInputStream dataInputStream) {
+    public void a(DataInputStream dataInputStream) throws IOException {
         this.a = dataInputStream.readInt();
         this.b = dataInputStream.readInt();
         this.f = dataInputStream.readShort() & 65535;
@@ -50,7 +52,7 @@ extends Packet {
         dataInputStream.readFully(this.e);
     }
 
-    public void a(DataOutputStream dataOutputStream) {
+    public void a(DataOutputStream dataOutputStream) throws IOException {
         dataOutputStream.writeInt(this.a);
         dataOutputStream.writeInt(this.b);
         dataOutputStream.writeShort((short)this.f);

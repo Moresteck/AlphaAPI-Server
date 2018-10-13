@@ -69,7 +69,7 @@ extends EntityPlayer {
             }
             if (n2 != 0) {
                 this.af.remove(ih2);
-                this.a.b(new cs(ih2.a * 16, 0, ih2.b * 16, 16, 128, 16, this.mcServer.WorldMngr));
+                this.a.b(new Packet51MapChunk(ih2.a * 16, 0, ih2.b * 16, 16, 128, 16, this.mcServer.WorldMngr));
             }
         }
     }
@@ -84,8 +84,8 @@ extends EntityPlayer {
 
     public void c(Entity db2, int n2) {
         if (!db2.A && db2 instanceof fa) {
-            this.a.b(new eb(((fa)db2).a, n2));
-            this.mcServer.entityTracker.a(db2, new bz(db2.c, this.c));
+            this.a.b(new Packet17AddToInventory(((fa)db2).a, n2));
+            this.mcServer.entityTracker.a(db2, new Packet22Collect(db2.c, this.c));
         }
         super.c(db2, n2);
     }
@@ -94,7 +94,7 @@ extends EntityPlayer {
         if (!this.an) {
             this.ao = -1;
             this.an = true;
-            this.mcServer.entityTracker.a(this, new n(this, 1));
+            this.mcServer.entityTracker.a(this, new Packet18ArmAnimation(this, 1));
         }
     }
 

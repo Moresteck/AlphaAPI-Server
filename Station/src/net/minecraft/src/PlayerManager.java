@@ -43,7 +43,7 @@ public class PlayerManager {
     }
 
     public void a(EntityPlayerMP entityplayermp) {
-        this.mcServer.configManager.a(new ax("\u00a7e" + entityplayermp.ap + " joined the game."));
+        this.mcServer.configManager.a(new Packet3Chat("\u00a7e" + entityplayermp.ap + " joined the game."));
         int n2 = (int)entityplayermp.k >> 4;
         int n3 = (int)entityplayermp.m >> 4;
         entityplayermp.ad = entityplayermp.k;
@@ -57,7 +57,7 @@ public class PlayerManager {
     }
 
     public void b(EntityPlayerMP entityplayermp) {
-        this.mcServer.configManager.a(new ax("\u00a7e" + entityplayermp.ap + " left the game."));
+        this.mcServer.configManager.a(new Packet3Chat("\u00a7e" + entityplayermp.ap + " left the game."));
         int n2 = (int)entityplayermp.k >> 4;
         int n3 = (int)entityplayermp.m >> 4;
         for (int i2 = n2 - 10; i2 <= n2 + 10; ++i2) {

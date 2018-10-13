@@ -6,7 +6,7 @@ import java.util.Random;
 public class cf
 extends Block {
     protected cf(int n2, int n3) {
-        super(n2, n3, hz.n);
+        super(n2, n3, hz.Packet18ArmAnimation);
     }
 
     public AxisAlignedBB d(World dp2, int n2, int n3, int n4) {

@@ -1,10 +1,12 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
-public class el
+public class Packet30Entity
 extends Packet {
     public int a;
     public byte b;
@@ -14,18 +16,18 @@ extends Packet {
     public byte f;
     public boolean g = false;
 
-    public el() {
+    public Packet30Entity() {
     }
 
-    public el(int n2) {
+    public Packet30Entity(int n2) {
         this.a = n2;
     }
 
-    public void a(DataInputStream dataInputStream) {
+    public void a(DataInputStream dataInputStream) throws IOException {
         this.a = dataInputStream.readInt();
     }
 
-    public void a(DataOutputStream dataOutputStream) {
+    public void a(DataOutputStream dataOutputStream) throws IOException {
         dataOutputStream.writeInt(this.a);
     }
 

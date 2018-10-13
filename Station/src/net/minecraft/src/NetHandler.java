@@ -3,7 +3,7 @@
  */
 package net.minecraft.src;
 public class NetHandler {
-    public void a(cs cs2) {
+    public void a(Packet51MapChunk cs2) {
     }
 
     public void a(Packet ha2) {
@@ -12,31 +12,31 @@ public class NetHandler {
     public void a(String string) {
     }
 
-    public void a(hx hx2) {
+    public void a(Packet255KickDisconnect hx2) {
         this.a((Packet)hx2);
     }
 
-    public void a(x x2) {
+    public void a(Packet1Login x2) {
         this.a((Packet)x2);
     }
 
-    public void a(fs fs2) {
+    public void a(Packet10Flying fs2) {
         this.a((Packet)fs2);
     }
 
-    public void a(gs gs2) {
+    public void a(Packet52MultiBlockChange gs2) {
         this.a((Packet)gs2);
     }
 
-    public void a(gp gp2) {
+    public void a(Packet14BlockDig gp2) {
         this.a((Packet)gp2);
     }
 
-    public void a(eh eh2) {
+    public void a(Packet53BlockChange eh2) {
         this.a((Packet)eh2);
     }
 
-    public void a(ct ct2) {
+    public void a(Packet50PreChunk ct2) {
         this.a((Packet)ct2);
     }
 
@@ -44,47 +44,47 @@ public class NetHandler {
         this.a((Packet)c2);
     }
 
-    public void a(el el2) {
+    public void a(Packet30Entity el2) {
         this.a((Packet)el2);
     }
 
-    public void a(by by2) {
+    public void a(Packet34EntityTeleport by2) {
         this.a((Packet)by2);
     }
 
-    public void a(es es2) {
+    public void a(Packet15Place es2) {
         this.a((Packet)es2);
     }
 
-    public void a(fi fi2) {
+    public void a(Packet16BlockItemSwitch fi2) {
         this.a((Packet)fi2);
     }
 
-    public void a(cm cm2) {
+    public void a(Packet29DestroyEntity cm2) {
         this.a((Packet)cm2);
     }
 
-    public void a(j j2) {
+    public void a(Packet21PickupSpawn j2) {
         this.a((Packet)j2);
     }
 
-    public void a(bz bz2) {
+    public void a(Packet22Collect bz2) {
         this.a((Packet)bz2);
     }
 
-    public void a(ax ax2) {
+    public void a(Packet3Chat ax2) {
         this.a((Packet)ax2);
     }
 
-    public void a(eb eb2) {
+    public void a(Packet17AddToInventory eb2) {
         this.a((Packet)eb2);
     }
 
-    public void a(dd dd2) {
+    public void a(Packet23VehicleSpawn dd2) {
         this.a((Packet)dd2);
     }
 
-    public void a(n n2) {
+    public void a(Packet18ArmAnimation n2) {
         this.a((Packet)n2);
     }
 }

@@ -1,10 +1,12 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
-public class dd
+public class Packet23VehicleSpawn
 extends Packet {
     public int a;
     public int b;
@@ -12,10 +14,10 @@ extends Packet {
     public int d;
     public int e;
 
-    public dd() {
+    public Packet23VehicleSpawn() {
     }
 
-    public dd(Entity db2, int n2) {
+    public Packet23VehicleSpawn(Entity db2, int n2) {
         this.a = db2.c;
         this.b = fw.b(db2.k * 32.0);
         this.c = fw.b(db2.l * 32.0);
@@ -23,7 +25,7 @@ extends Packet {
         this.e = n2;
     }
 
-    public void a(DataInputStream dataInputStream) {
+    public void a(DataInputStream dataInputStream) throws IOException {
         this.a = dataInputStream.readInt();
         this.e = dataInputStream.readByte();
         this.b = dataInputStream.readInt();
@@ -31,7 +33,7 @@ extends Packet {
         this.d = dataInputStream.readInt();
     }
 
-    public void a(DataOutputStream dataOutputStream) {
+    public void a(DataOutputStream dataOutputStream) throws IOException {
         dataOutputStream.writeInt(this.a);
         dataOutputStream.writeByte(this.e);
         dataOutputStream.writeInt(this.b);

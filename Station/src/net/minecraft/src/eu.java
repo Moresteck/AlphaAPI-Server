@@ -22,7 +22,7 @@ extends fu {
 
     public void b_() {
         super.b_();
-        if (this.g.j == 0) {
+        if (this.g.SEA == 0) {
             this.i();
         }
     }
@@ -46,7 +46,7 @@ extends fu {
     }
 
     protected void a(Entity db2, float f2) {
-        if ((double)f2 < 2.5 && db2.u.e > this.u.b && db2.u.b < this.u.e) {
+        if ((double)f2 < 2.5 && db2.u.e > this.u.b && db2.u.b < this.u.BOMB) {
             this.aQ = 20;
             db2.a(this, this.ae);
         }

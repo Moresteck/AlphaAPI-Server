@@ -1,3 +1,4 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
@@ -8,7 +9,7 @@ import java.util.zip.DataFormatException;
 import java.util.zip.Deflater;
 import java.util.zip.Inflater;
 
-public class cs
+public class Packet51MapChunk
 extends Packet {
     public int a;
     public int b;
@@ -19,14 +20,14 @@ extends Packet {
     public byte[] g;
     private int h;
 
-    public cs() {
+    public Packet51MapChunk() {
         this.j = true;
     }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
-    public cs(int n2, int n3, int n4, int n5, int n6, int n7, World dp2) {
+    public Packet51MapChunk(int n2, int n3, int n4, int n5, int n6, int n7, World dp2) {
         this.j = true;
         this.a = n2;
         this.b = n3;
@@ -47,7 +48,7 @@ extends Packet {
         }
     }
 
-    public void a(DataInputStream dataInputStream) {
+    public void a(DataInputStream dataInputStream) throws IOException {
         this.a = dataInputStream.readInt();
         this.b = dataInputStream.readShort();
         this.c = dataInputStream.readInt();
@@ -71,7 +72,7 @@ extends Packet {
         }
     }
 
-    public void a(DataOutputStream dataOutputStream) {
+    public void a(DataOutputStream dataOutputStream) throws IOException {
         dataOutputStream.writeInt(this.a);
         dataOutputStream.writeShort(this.b);
         dataOutputStream.writeInt(this.c);

@@ -31,12 +31,12 @@ extends NetHandler {
 
     public void b(String string) {
         log.info("Disconnecting " + this.b() + ": " + string);
-        this.b.a(new hx(string));
+        this.b.a(new Packet255KickDisconnect(string));
         this.b.c();
         this.c = true;
     }
 
-    public void a(x x2) {
+    public void a(Packet1Login x2) {
         this.f = x2.b;
         if (x2.a != 13) {
             this.b("Outdated client!");
@@ -46,7 +46,7 @@ extends NetHandler {
         if (dq2 != null) {
             log.info(this.b() + " logged in");
             hm hm2 = new hm(this.mcServer, this.b, dq2);
-            hm2.b(new x("", "", 0));
+            hm2.b(new Packet1Login("", "", 0));
             this.mcServer.configManager.a(dq2);
             hm2.a(dq2.k, dq2.l, dq2.m, dq2.q, dq2.r);
             this.mcServer.networkListener.a(hm2);

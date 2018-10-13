@@ -32,18 +32,18 @@ extends NetHandler {
     public void a() {
         this.b.a();
         if (this.f++ % 20 == 0) {
-            this.b.a(new ii());
+            this.b.a(new Packet0KeepAlive());
         }
     }
 
     public void b(String string) {
-        this.b.a(new hx(string));
+        this.b.a(new Packet255KickDisconnect(string));
         this.b.c();
         this.d.f.c(this.e);
         this.c = true;
     }
 
-    public void a(fs fs2) {
+    public void a(Packet10Flying fs2) {
         double d2;
         if (!this.j) {
             d2 = fs2.b - this.h;
@@ -115,10 +115,10 @@ extends NetHandler {
         this.h = d3;
         this.i = d4;
         this.e.b(d2, d3, d4, f2, f3);
-        this.e.a.b(new dh(d2, d3 + 1.6200000047683716, d3, d4, f2, f3, false));
+        this.e.a.b(new Packet13PlayerLookMove(d2, d3 + 1.6200000047683716, d3, d4, f2, f3, false));
     }
 
-    public void a(gp gp2) {
+    public void a(Packet14BlockDig gp2) {
         double d2;
         double d3;
         int n2;
@@ -149,8 +149,8 @@ extends NetHandler {
         int n4 = gp2.b;
         int n5 = gp2.c;
         int n6 = gp2.d;
-        int n7 = (int)fw.e(n3 - this.d.e.l);
-        if (n7 > (n2 = (int)fw.e(n5 - this.d.e.n))) {
+        int n7 = (int)fw.e(n3 - this.d.e.WANDERER);
+        if (n7 > (n2 = (int)fw.e(n5 - this.d.e.BUST))) {
             n2 = n7;
         }
         if (gp2.e == 0) {
@@ -164,25 +164,25 @@ extends NetHandler {
                 this.e.ac.a(n3, n4, n5, n6);
             }
         } else if (gp2.e == 3 && (d3 = (d4 = this.e.k - ((double)n3 + 0.5)) * d4 + (d2 = this.e.l - ((double)n4 + 0.5)) * d2 + (d5 = this.e.m - ((double)n5 + 0.5)) * d5) < 256.0) {
-            this.e.a.b(new eh(n3, n4, n5, this.d.e));
+            this.e.a.b(new Packet53BlockChange(n3, n4, n5, this.d.e));
         }
     }
 
-    public void a(es es2) {
+    public void a(Packet15Place es2) {
         int n2;
         int n3 = es2.b;
         int n4 = es2.c;
         int n5 = es2.d;
         int n6 = es2.e;
-        int n7 = (int)fw.e(n3 - this.d.e.l);
-        if (n7 > (n2 = (int)fw.e(n5 - this.d.e.n))) {
+        int n7 = (int)fw.e(n3 - this.d.e.WANDERER);
+        if (n7 > (n2 = (int)fw.e(n5 - this.d.e.BUST))) {
             n2 = n7;
         }
         if (n2 > 16) {
             gc gc2 = new gc(es2.a);
             this.e.ac.a(this.e, this.d.e, gc2, n3, n4, n5, n6);
         }
-        this.e.a.b(new eh(n3, n4, n5, this.d.e));
+        this.e.a.b(new Packet53BlockChange(n3, n4, n5, this.d.e));
     }
 
     public void a(String string) {
@@ -200,13 +200,13 @@ extends NetHandler {
         this.b.a(ha2);
     }
 
-    public void a(fi fi2) {
+    public void a(Packet16BlockItemSwitch fi2) {
         int n2 = fi2.b;
         this.e.ai.a[this.e.ai.d] = n2 == 0 ? null : new gc(n2);
-        this.d.k.a(this.e, new fi(this.e.c, n2));
+        this.d.k.a(this.e, new Packet16BlockItemSwitch(this.e.c, n2));
     }
 
-    public void a(j j2) {
+    public void a(Packet21PickupSpawn j2) {
         double d2 = (double)j2.b / 32.0;
         double d3 = (double)j2.c / 32.0;
         double d4 = (double)j2.d / 32.0;
@@ -218,7 +218,7 @@ extends NetHandler {
         this.d.e.a(fa2);
     }
 
-    public void a(ax ax2) {
+    public void a(Packet3Chat ax2) {
         String string = ax2.a;
         if (string.length() > 100) {
             this.b("Chat message too long");
@@ -235,7 +235,7 @@ extends NetHandler {
         } else {
             string = "<" + this.e.ap + "> " + string;
             a.info(string);
-            this.d.f.a(new ax(string));
+            this.d.f.a(new Packet3Chat(string));
         }
     }
 
@@ -243,11 +243,11 @@ extends NetHandler {
         if (string.toLowerCase().startsWith("/me ")) {
             string = "* " + this.e.ap + " " + string.substring(string.indexOf(" ")).trim();
             a.info(string);
-            this.d.f.a(new ax(string));
+            this.d.f.a(new Packet3Chat(string));
         } else if (string.toLowerCase().equalsIgnoreCase("/home")) {
             a.info(this.e.ap + " returned home");
-            int n2 = this.d.e.d(this.d.e.l, this.d.e.n);
-            this.a((double)this.d.e.l + 0.5, (double)n2 + 1.5, (double)this.d.e.n + 0.5, 0.0f, 0.0f);
+            int n2 = this.d.e.d(this.d.e.WANDERER, this.d.e.BUST);
+            this.a((double)this.d.e.WANDERER + 0.5, (double)n2 + 1.5, (double)this.d.e.BUST + 0.5, 0.0f, 0.0f);
         } else if (string.toLowerCase().equalsIgnoreCase("/away")) {
             Random random = new Random();
             a.info(this.e.ap + " went away");
@@ -257,7 +257,7 @@ extends NetHandler {
         } else if (string.toLowerCase().equalsIgnoreCase("/iron")) {
             if (MinecraftServer.b.containsKey(this.e.ap)) {
                 a.info(this.e.ap + " failed to iron!");
-                this.b(new ax("\u00a7cYou can't /iron again so soon!"));
+                this.b(new Packet3Chat("\u00a7cYou can't /iron again so soon!"));
             } else {
                 MinecraftServer.b.put(this.e.ap, 6000);
                 a.info(this.e.ap + " ironed!");
@@ -268,7 +268,7 @@ extends NetHandler {
         } else if (string.toLowerCase().equalsIgnoreCase("/wood")) {
             if (MinecraftServer.b.containsKey(this.e.ap)) {
                 a.info(this.e.ap + " failed to wood!");
-                this.b(new ax("\u00a7cYou can't /wood again so soon!"));
+                this.b(new Packet3Chat("\u00a7cYou can't /wood again so soon!"));
             } else {
                 MinecraftServer.b.put(this.e.ap, 6000);
                 a.info(this.e.ap + " wooded!");
@@ -277,17 +277,17 @@ extends NetHandler {
                 }
             }
         } else {
-            this.b(new ax("\u00a79Unknown command"));
+            this.b(new Packet3Chat("\u00a79Unknown command"));
         }
     }
 
-    public void a(n n2) {
+    public void a(Packet18ArmAnimation n2) {
         if (n2.b == 1) {
             this.e.y();
         }
     }
 
-    public void a(hx hx2) {
+    public void a(Packet255KickDisconnect hx2) {
         this.b.a("Quitting");
     }
 

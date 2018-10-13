@@ -1,10 +1,12 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
-public class by
+public class Packet34EntityTeleport
 extends Packet {
     public int a;
     public int b;
@@ -13,10 +15,10 @@ extends Packet {
     public byte e;
     public byte f;
 
-    public by() {
+    public Packet34EntityTeleport() {
     }
 
-    public by(Entity db2) {
+    public Packet34EntityTeleport(Entity db2) {
         this.a = db2.c;
         this.b = fw.b(db2.k * 32.0);
         this.c = fw.b(db2.l * 32.0);
@@ -25,7 +27,7 @@ extends Packet {
         this.f = (byte)(db2.r * 256.0f / 360.0f);
     }
 
-    public by(int n2, int n3, int n4, int n5, byte by2, byte by3) {
+    public Packet34EntityTeleport(int n2, int n3, int n4, int n5, byte by2, byte by3) {
         this.a = n2;
         this.b = n3;
         this.c = n4;
@@ -34,7 +36,7 @@ extends Packet {
         this.f = by3;
     }
 
-    public void a(DataInputStream dataInputStream) {
+    public void a(DataInputStream dataInputStream) throws IOException {
         this.a = dataInputStream.readInt();
         this.b = dataInputStream.readInt();
         this.c = dataInputStream.readInt();
@@ -43,7 +45,7 @@ extends Packet {
         this.f = (byte)dataInputStream.read();
     }
 
-    public void a(DataOutputStream dataOutputStream) {
+    public void a(DataOutputStream dataOutputStream) throws IOException {
         dataOutputStream.writeInt(this.a);
         dataOutputStream.writeInt(this.b);
         dataOutputStream.writeInt(this.c);

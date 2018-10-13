@@ -1,16 +1,18 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
-public class bc
-extends el {
-    public bc() {
+public class Packet33RelEntityMoveLook
+extends Packet30Entity {
+    public Packet33RelEntityMoveLook() {
         this.g = true;
     }
 
-    public bc(int n2, byte by2, byte by3, byte by4, byte by5, byte by6) {
+    public Packet33RelEntityMoveLook(int n2, byte by2, byte by3, byte by4, byte by5, byte by6) {
         super(n2);
         this.b = by2;
         this.c = by3;
@@ -20,7 +22,7 @@ extends el {
         this.g = true;
     }
 
-    public void a(DataInputStream dataInputStream) {
+    public void a(DataInputStream dataInputStream) throws IOException {
         super.a(dataInputStream);
         this.b = dataInputStream.readByte();
         this.c = dataInputStream.readByte();
@@ -29,7 +31,7 @@ extends el {
         this.f = dataInputStream.readByte();
     }
 
-    public void a(DataOutputStream dataOutputStream) {
+    public void a(DataOutputStream dataOutputStream) throws IOException {
         super.a(dataOutputStream);
         dataOutputStream.writeByte(this.b);
         dataOutputStream.writeByte(this.c);

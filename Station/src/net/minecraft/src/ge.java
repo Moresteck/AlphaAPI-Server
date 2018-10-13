@@ -56,7 +56,7 @@ public class ge {
         ge.a(da.class, "Arrow");
         ge.a(av.class, "Snowball");
         ge.a(fa.class, "Item");
-        ge.a(bp.class, "Painting");
+        ge.a(EntityPainting.class, "Painting");
         ge.a(EntityLiving.class, "Mob");
         ge.a(eu.class, "Monster");
         ge.a(ei.class, "Creeper");

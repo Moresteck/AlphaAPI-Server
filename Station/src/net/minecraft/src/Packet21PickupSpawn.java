@@ -1,10 +1,12 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
-public class j
+public class Packet21PickupSpawn
 extends Packet {
     public int a;
     public int b;
@@ -16,10 +18,10 @@ extends Packet {
     public int h;
     public int i;
 
-    public j() {
+    public Packet21PickupSpawn() {
     }
 
-    public j(fa fa2) {
+    public Packet21PickupSpawn(fa fa2) {
         this.a = fa2.c;
         this.h = fa2.a.c;
         this.i = fa2.a.a;
@@ -31,7 +33,7 @@ extends Packet {
         this.g = (byte)(fa2.p * 128.0);
     }
 
-    public void a(DataInputStream dataInputStream) {
+    public void a(DataInputStream dataInputStream) throws IOException {
         this.a = dataInputStream.readInt();
         this.h = dataInputStream.readShort();
         this.i = dataInputStream.readByte();
@@ -43,7 +45,7 @@ extends Packet {
         this.g = dataInputStream.readByte();
     }
 
-    public void a(DataOutputStream dataOutputStream) {
+    public void a(DataOutputStream dataOutputStream) throws IOException {
         dataOutputStream.writeInt(this.a);
         dataOutputStream.writeShort(this.h);
         dataOutputStream.writeByte(this.i);

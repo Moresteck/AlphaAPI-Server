@@ -1,30 +1,28 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
-public class bz
+public class Packet29DestroyEntity
 extends Packet {
     public int a;
-    public int b;
 
-    public bz() {
+    public Packet29DestroyEntity() {
     }
 
-    public bz(int n2, int n3) {
+    public Packet29DestroyEntity(int n2) {
         this.a = n2;
-        this.b = n3;
     }
 
-    public void a(DataInputStream dataInputStream) {
+    public void a(DataInputStream dataInputStream) throws IOException {
         this.a = dataInputStream.readInt();
-        this.b = dataInputStream.readInt();
     }
 
-    public void a(DataOutputStream dataOutputStream) {
+    public void a(DataOutputStream dataOutputStream) throws IOException {
         dataOutputStream.writeInt(this.a);
-        dataOutputStream.writeInt(this.b);
     }
 
     public void a(NetHandler dy2) {
@@ -32,7 +30,7 @@ extends Packet {
     }
 
     public int a() {
-        return 8;
+        return 4;
     }
 }
 

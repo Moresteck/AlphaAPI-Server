@@ -19,7 +19,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import net.minecraft.src.Vec3D;
-import net.minecraft.src.ax;
+import net.minecraft.src.Packet3Chat;
 import net.minecraft.src.ThreadServerApplication;
 import net.minecraft.src.ThreadCommandReader;
 import net.minecraft.src.ThreadShutdown;
@@ -308,7 +308,7 @@ implements Runnable {
             if (string.toLowerCase().startsWith("say ")) {
                 string = string.substring(string.indexOf(" ")).trim();
                 log.info("[Server] " + string);
-                this.configManager.a(new ax("\u00a7d[Server] " + string));
+                this.configManager.a(new Packet3Chat("\u00a7d[Server] " + string));
                 continue;
             }
             log.warning("Unknown console command. Type \"help\" for help.");

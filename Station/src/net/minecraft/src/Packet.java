@@ -71,33 +71,33 @@ public abstract class Packet {
     public abstract int a();
 
     static {
-        Packet.a(0, ii.class);
-        Packet.a(1, x.class);
-        Packet.a(3, ax.class);
-        Packet.a(10, fs.class);
-        Packet.a(11, w.class);
-        Packet.a(12, fk.class);
-        Packet.a(13, dh.class);
-        Packet.a(14, gp.class);
-        Packet.a(15, es.class);
-        Packet.a(16, fi.class);
-        Packet.a(17, eb.class);
-        Packet.a(18, n.class);
+        Packet.a(0, Packet0KeepAlive.class);
+        Packet.a(1, Packet1Login.class);
+        Packet.a(3, Packet3Chat.class);
+        Packet.a(10, Packet10Flying.class);
+        Packet.a(11, Packet11PlayerPosition.class);
+        Packet.a(12, Packet12PlayerLook.class);
+        Packet.a(13, Packet13PlayerLookMove.class);
+        Packet.a(14, Packet14BlockDig.class);
+        Packet.a(15, Packet15Place.class);
+        Packet.a(16, Packet16BlockItemSwitch.class);
+        Packet.a(17, Packet17AddToInventory.class);
+        Packet.a(18, Packet18ArmAnimation.class);
         Packet.a(20, Packet20NamedEntitySpawn.class);
-        Packet.a(21, j.class);
-        Packet.a(22, bz.class);
-        Packet.a(23, dd.class);
-        Packet.a(29, cm.class);
-        Packet.a(30, el.class);
-        Packet.a(31, di.class);
-        Packet.a(32, cq.class);
-        Packet.a(33, bc.class);
-        Packet.a(34, by.class);
-        Packet.a(50, ct.class);
-        Packet.a(51, cs.class);
-        Packet.a(52, gs.class);
-        Packet.a(53, eh.class);
-        Packet.a(255, hx.class);
+        Packet.a(21, Packet21PickupSpawn.class);
+        Packet.a(22, Packet22Collect.class);
+        Packet.a(23, Packet23VehicleSpawn.class);
+        Packet.a(29, Packet29DestroyEntity.class);
+        Packet.a(30, Packet30Entity.class);
+        Packet.a(31, Packet31RelEntityMove.class);
+        Packet.a(32, Packet32EntityLook.class);
+        Packet.a(33, Packet33RelEntityMoveLook.class);
+        Packet.a(34, Packet34EntityTeleport.class);
+        Packet.a(50, Packet50PreChunk.class);
+        Packet.a(51, Packet51MapChunk.class);
+        Packet.a(52, Packet52MultiBlockChange.class);
+        Packet.a(53, Packet53BlockChange.class);
+        Packet.a(255, Packet255KickDisconnect.class);
     }
 }
 

@@ -1,10 +1,12 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
-public class fs
+public class Packet10Flying
 extends Packet {
     public double a;
     public double b;
@@ -20,11 +22,11 @@ extends Packet {
         dy2.a(this);
     }
 
-    public void a(DataInputStream dataInputStream) {
+    public void a(DataInputStream dataInputStream) throws IOException {
         this.g = dataInputStream.read() != 0;
     }
 
-    public void a(DataOutputStream dataOutputStream) {
+    public void a(DataOutputStream dataOutputStream) throws IOException {
         dataOutputStream.write(this.g ? 1 : 0);
     }
 

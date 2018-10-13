@@ -4,23 +4,24 @@
 package net.minecraft.src;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
-public class ax
+public class Packet3Chat
 extends Packet {
     public String a;
 
-    public ax() {
+    public Packet3Chat() {
     }
 
-    public ax(String string) {
+    public Packet3Chat(String string) {
         this.a = string;
     }
 
-    public void a(DataInputStream dataInputStream) {
+    public void a(DataInputStream dataInputStream) throws IOException {
         this.a = dataInputStream.readUTF();
     }
 
-    public void a(DataOutputStream dataOutputStream) {
+    public void a(DataOutputStream dataOutputStream) throws IOException {
         dataOutputStream.writeUTF(this.a);
     }
 

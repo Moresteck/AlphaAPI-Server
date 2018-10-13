@@ -1,42 +1,42 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
-public class bp
+public class EntityPainting
 extends Entity {
     private int ac = 0;
     public int a = 0;
     private int ad;
     private int ae;
     private int af;
-    public fx b;
+    public Painting b;
 
-    public bp(World dp2) {
+    public EntityPainting(World dp2) {
         super(dp2);
         this.B = 0.0f;
         this.a(0.5f, 0.5f);
     }
 
-    public bp(World dp2, int n2, int n3, int n4, int n5) {
+    public EntityPainting(World dp2, int n2, int n3, int n4, int n5) {
         this(dp2);
         this.ad = n2;
         this.ae = n3;
         this.af = n4;
-        ArrayList<fx> arrayList = new ArrayList<fx>();
-        fx[] arrfx = fx.values();
+        ArrayList<Painting> arrayList = new ArrayList<Painting>();
+        Painting[] arrfx = Painting.values();
         int n6 = arrfx.length;
         for (int i2 = 0; i2 < n6; ++i2) {
-            fx fx2;
+            Painting fx2;
             this.b = fx2 = arrfx[i2];
             this.a(n5);
             if (!this.b()) continue;
             arrayList.add(fx2);
         }
         if (arrayList.size() > 0) {
-            this.b = (fx)((Object)arrayList.get(this.Q.nextInt(arrayList.size())));
+            this.b = (Painting)((Object)arrayList.get(this.Q.nextInt(arrayList.size())));
         }
         this.a(n5);
     }
@@ -138,7 +138,7 @@ extends Entity {
         }
         List list = this.g.b(this, this.u);
         for (n2 = 0; n2 < list.size(); ++n2) {
-            if (!(list.get(n2) instanceof bp)) continue;
+            if (!(list.get(n2) instanceof EntityPainting)) continue;
             return false;
         }
         return true;
@@ -156,7 +156,7 @@ extends Entity {
 
     public void a(r r2) {
         r2.a("Dir", (byte)this.a);
-        r2.a("Motive", this.b.t);
+        r2.a("Motive", this.b.name);
         r2.a("TileX", this.ad);
         r2.a("TileY", this.ae);
         r2.a("TileZ", this.af);
@@ -168,12 +168,12 @@ extends Entity {
         this.ae = r2.d("TileY");
         this.af = r2.d("TileZ");
         String string = r2.h("Motive");
-        for (fx fx2 : fx.values()) {
-            if (!fx2.t.equals(string)) continue;
+        for (Painting fx2 : Painting.values()) {
+            if (!fx2.name.equals(string)) continue;
             this.b = fx2;
         }
         if (this.b == null) {
-            this.b = fx.a;
+            this.b = Painting.KEBAB;
         }
         this.a(this.a);
     }

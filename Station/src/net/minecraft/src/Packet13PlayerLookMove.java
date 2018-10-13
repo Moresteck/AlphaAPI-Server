@@ -1,17 +1,19 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
-public class dh
-extends fs {
-    public dh() {
+public class Packet13PlayerLookMove
+extends Packet10Flying {
+    public Packet13PlayerLookMove() {
         this.i = true;
         this.h = true;
     }
 
-    public dh(double d2, double d3, double d4, double d5, float f2, float f3, boolean bl2) {
+    public Packet13PlayerLookMove(double d2, double d3, double d4, double d5, float f2, float f3, boolean bl2) {
         this.a = d2;
         this.b = d3;
         this.d = d4;
@@ -23,7 +25,7 @@ extends fs {
         this.h = true;
     }
 
-    public void a(DataInputStream dataInputStream) {
+    public void a(DataInputStream dataInputStream) throws IOException {
         this.a = dataInputStream.readDouble();
         this.b = dataInputStream.readDouble();
         this.d = dataInputStream.readDouble();
@@ -33,7 +35,7 @@ extends fs {
         super.a(dataInputStream);
     }
 
-    public void a(DataOutputStream dataOutputStream) {
+    public void a(DataOutputStream dataOutputStream) throws IOException {
         dataOutputStream.writeDouble(this.a);
         dataOutputStream.writeDouble(this.b);
         dataOutputStream.writeDouble(this.d);

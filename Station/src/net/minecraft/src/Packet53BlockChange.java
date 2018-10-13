@@ -1,10 +1,12 @@
+package net.minecraft.src;
 /*
  * Decompiled with CFR 0_132.
  */
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
-public class eh
+public class Packet53BlockChange
 extends Packet {
     public int a;
     public int b;
@@ -12,11 +14,11 @@ extends Packet {
     public int d;
     public int e;
 
-    public eh() {
+    public Packet53BlockChange() {
         this.j = true;
     }
 
-    public eh(int n2, int n3, int n4, World dp2) {
+    public Packet53BlockChange(int n2, int n3, int n4, World dp2) {
         this.j = true;
         this.a = n2;
         this.b = n3;
@@ -25,7 +27,7 @@ extends Packet {
         this.e = dp2.b(n2, n3, n4);
     }
 
-    public void a(DataInputStream dataInputStream) {
+    public void a(DataInputStream dataInputStream) throws IOException {
         this.a = dataInputStream.readInt();
         this.b = dataInputStream.read();
         this.c = dataInputStream.readInt();
@@ -33,7 +35,7 @@ extends Packet {
         this.e = dataInputStream.read();
     }
 
-    public void a(DataOutputStream dataOutputStream) {
+    public void a(DataOutputStream dataOutputStream) throws IOException {
         dataOutputStream.writeInt(this.a);
         dataOutputStream.write(this.b);
         dataOutputStream.writeInt(this.c);
