@@ -1,4 +1,8 @@
 package net.minecraft.src;
+<<<<<<< HEAD:Station/src/net/minecraft/src/EntityCow.java
+=======
+
+>>>>>>> b77d6455ae9338e01f6531751a545b600c4f01b2:Station/src/net/minecraft/src/au.java
 /*
  * Decompiled with CFR 0_132.
  */

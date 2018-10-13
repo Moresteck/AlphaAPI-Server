@@ -1,4 +1,12 @@
+<<<<<<< HEAD:Station/src/net/minecraft/src/EntityTypes.java
 package net.minecraft.src;
+=======
+package net.minecraft.src;/*
+ * Decompiled with CFR 0_132.
+ */
+import java.io.PrintStream;
+import java.lang.reflect.Constructor;
+>>>>>>> b77d6455ae9338e01f6531751a545b600c4f01b2:Station/src/net/minecraft/src/ge.java
 import java.util.HashMap;
 import java.util.Map;
 
