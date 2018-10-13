@@ -4,10 +4,6 @@ package net.minecraft.src;/*
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.PrintStream;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
 
 // ChunkFile ?
 public class ec
@@ -119,7 +115,7 @@ implements am {
             for (Object object : hv2.m[i2]) {
                 hv2.r = true;
                 r3 = new r();
-                if (!object.c(r3)) continue;
+                if (!((Entity)object).c(r3)) continue;
                 de2.a(r3);
             }
         }
@@ -127,7 +123,7 @@ implements am {
         de de3 = new de();
         for (Object object : hv2.l.values()) {
             r3 = new r();
-            object.b(r3);
+            ((Entity)object).b(r3);
             de3.a(r3);
         }
         r2.a("TileEntities", de3);

@@ -15,7 +15,7 @@ extends WindowAdapter {
 
     public void windowClosing(WindowEvent windowEvent) {
         this.a.a();
-        while (!this.a.g) {
+        while (!this.a.serverStopped) {
             try {
                 Thread.sleep(100L);
             }

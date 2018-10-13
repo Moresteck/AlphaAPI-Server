@@ -5,26 +5,26 @@ package net.minecraft.src;
  */
 class gw
 extends Thread {
-    final /* synthetic */ aw a;
+    final /* synthetic */ NetworkManager a;
 
-    gw(aw aw2) {
+    gw(NetworkManager aw2) {
         this.a = aw2;
     }
 
     public void run() {
         try {
             Thread.sleep(5000L);
-            if (aw.e(this.a).isAlive()) {
+            if (NetworkManager.e(this.a).isAlive()) {
                 try {
-                    aw.e(this.a).stop();
+                    NetworkManager.e(this.a).stop();
                 }
                 catch (Throwable throwable) {
                     // empty catch block
                 }
             }
-            if (aw.f(this.a).isAlive()) {
+            if (NetworkManager.f(this.a).isAlive()) {
                 try {
-                    aw.f(this.a).stop();
+                    NetworkManager.f(this.a).stop();
                 }
                 catch (Throwable throwable) {}
             }

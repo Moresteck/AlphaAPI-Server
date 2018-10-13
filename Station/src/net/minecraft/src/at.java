@@ -72,7 +72,7 @@ extends Block {
             list = dp2.a(EntityLiving.class, AxisAlignedBB.b((float)n2 + f2, n3, (float)n4 + f2, (float)(n2 + 1) - f2, (double)n3 + 0.25, (float)(n4 + 1) - f2));
         }
         if (this.a == ck.Packet20NamedEntitySpawn) {
-            list = dp2.a(eq.class, AxisAlignedBB.b((float)n2 + f2, n3, (float)n4 + f2, (float)(n2 + 1) - f2, (double)n3 + 0.25, (float)(n4 + 1) - f2));
+            list = dp2.a(EntityPlayer.class, AxisAlignedBB.b((float)n2 + f2, n3, (float)n4 + f2, (float)(n2 + 1) - f2, (double)n3 + 0.25, (float)(n4 + 1) - f2));
         }
         if (list.size() > 0) {
             bl3 = true;

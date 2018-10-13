@@ -13,7 +13,7 @@ extends en {
         this.a(Block.n[n2 + 256].a(2));
     }
 
-    public boolean a(gc gc2, eq eq2, World dp2, int n2, int n3, int n4, int n5) {
+    public boolean a(gc gc2, EntityPlayer eq2, World dp2, int n2, int n3, int n4, int n5) {
         if (dp2.a(n2, n3, n4) == Block.aS.ba) {
             n5 = 0;
         } else {

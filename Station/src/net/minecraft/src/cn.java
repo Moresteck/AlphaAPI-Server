@@ -11,9 +11,9 @@ extends Thread {
     final /* synthetic */ NetworkListenThread b;
 
     cn(NetworkListenThread cv2, String string, MinecraftServer minecraftServer) {
+    	super(string);
         this.b = cv2;
         this.a = minecraftServer;
-        super(string);
     }
 
     public void run() {

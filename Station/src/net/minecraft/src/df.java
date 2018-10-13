@@ -133,7 +133,7 @@ extends Block {
         return Block.n[n5].a() == 10;
     }
 
-    public void b(World dp2, int n2, int n3, int n4, eq eq2) {
+    public void b(World dp2, int n2, int n3, int n4, EntityPlayer eq2) {
         this.a.b(dp2, n2, n3, n4, eq2);
     }
 
@@ -202,7 +202,7 @@ extends Block {
         this.a.a(dp2, n2, n3, n4, random);
     }
 
-    public boolean a(World dp2, int n2, int n3, int n4, eq eq2) {
+    public boolean a(World dp2, int n2, int n3, int n4, EntityPlayer eq2) {
         return this.a.a(dp2, n2, n3, n4, eq2);
     }
 

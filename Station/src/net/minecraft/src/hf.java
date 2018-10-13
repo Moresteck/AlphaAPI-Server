@@ -1,7 +1,6 @@
 package net.minecraft.src;/*
  * Decompiled with CFR 0_132.
  */
-import java.io.IOException;
 
 public class hf
 implements bf {
@@ -110,7 +109,7 @@ implements bf {
             hv2.s = this.g.b;
             this.e.a(this.g, hv2);
         }
-        catch (IOException iOException) {
+        catch (Exception iOException) {
             iOException.printStackTrace();
         }
     }

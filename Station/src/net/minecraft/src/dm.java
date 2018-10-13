@@ -56,7 +56,7 @@ extends cl {
         return this.aZ;
     }
 
-    public boolean a(World dp2, int n2, int n3, int n4, eq eq2) {
+    public boolean a(World dp2, int n2, int n3, int n4, EntityPlayer eq2) {
         BlockFurnace cx2 = (BlockFurnace)dp2.k(n2, n3, n4);
         eq2.a(cx2);
         return true;

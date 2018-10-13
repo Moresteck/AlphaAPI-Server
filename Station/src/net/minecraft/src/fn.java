@@ -14,7 +14,7 @@ extends en {
         this.aR = 1;
     }
 
-    public boolean a(gc gc2, eq eq2, World dp2, int n2, int n3, int n4, int n5) {
+    public boolean a(gc gc2, EntityPlayer eq2, World dp2, int n2, int n3, int n4, int n5) {
         if (n5 != 1) {
             return false;
         }

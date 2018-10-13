@@ -1,17 +1,15 @@
 package net.minecraft.src;/*
  * Decompiled with CFR 0_132.
  */
-import java.io.PrintStream;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Random;
 import java.util.logging.Logger;
+
 import net.minecraft.server.MinecraftServer;
 
 public class hm
 extends NetHandler {
     public static Logger a = Logger.getLogger("Minecraft");
-    public aw b;
+    public NetworkManager b;
     public boolean c = false;
     private MinecraftServer d;
     private EntityPlayerMP e;
@@ -21,7 +19,7 @@ extends NetHandler {
     private double i;
     private boolean j = true;
 
-    public hm(MinecraftServer minecraftServer, aw aw2, EntityPlayerMP dq2) {
+    public hm(MinecraftServer minecraftServer, NetworkManager aw2, EntityPlayerMP dq2) {
         this.d = minecraftServer;
         this.b = aw2;
         aw2.a(this);
@@ -39,7 +37,7 @@ extends NetHandler {
     public void b(String string) {
         this.b.a(new Packet255KickDisconnect(string));
         this.b.c();
-        this.d.f.c(this.e);
+        this.d.configManager.c(this.e);
         this.c = true;
     }
 
@@ -84,7 +82,7 @@ extends NetHandler {
             double d6 = d4 - this.e.l;
             double d7 = d5 - this.e.m;
             float f4 = 0.0625f;
-            boolean bl3 = this.d.e.a((Entity)this.e, this.e.u.b().e(f4, f4, f4)).size() == 0;
+            boolean bl3 = this.d.world.a((Entity)this.e, this.e.u.b().e(f4, f4, f4)).size() == 0;
             this.e.c(d3, d6, d7);
             d3 = d2 - this.e.k;
             d6 = d4 - this.e.l;
@@ -99,13 +97,13 @@ extends NetHandler {
                 a.warning(this.e.ap + " moved wrongly!");
             }
             this.e.b(d2, d4, d5, f2, f3);
-            boolean bl5 = bl2 = this.d.e.a((Entity)this.e, this.e.u.b().e(f4, f4, f4)).size() == 0;
+            boolean bl5 = bl2 = this.d.world.a((Entity)this.e, this.e.u.b().e(f4, f4, f4)).size() == 0;
             if (bl3 && (bl4 || !bl2)) {
                 this.a(this.g, this.h, this.i, f2, f3);
                 return;
             }
             this.e.v = fs2.g;
-            this.d.f.b(this.e);
+            this.d.configManager.b(this.e);
         }
     }
 
@@ -149,8 +147,8 @@ extends NetHandler {
         int n4 = gp2.b;
         int n5 = gp2.c;
         int n6 = gp2.d;
-        int n7 = (int)MathHelper.e(n3 - this.d.e.WANDERER);
-        if (n7 > (n2 = (int)MathHelper.e(n5 - this.d.e.BUST))) {
+        int n7 = (int)MathHelper.e(n3 - this.d.world.l);
+        if (n7 > (n2 = (int)MathHelper.e(n5 - this.d.world.n))) {
             n2 = n7;
         }
         if (gp2.e == 0) {
@@ -164,7 +162,7 @@ extends NetHandler {
                 this.e.ac.a(n3, n4, n5, n6);
             }
         } else if (gp2.e == 3 && (d3 = (d4 = this.e.k - ((double)n3 + 0.5)) * d4 + (d2 = this.e.l - ((double)n4 + 0.5)) * d2 + (d5 = this.e.m - ((double)n5 + 0.5)) * d5) < 256.0) {
-            this.e.a.b(new Packet53BlockChange(n3, n4, n5, this.d.e));
+            this.e.a.b(new Packet53BlockChange(n3, n4, n5, this.d.world));
         }
     }
 
@@ -174,20 +172,20 @@ extends NetHandler {
         int n4 = es2.c;
         int n5 = es2.d;
         int n6 = es2.e;
-        int n7 = (int)MathHelper.e(n3 - this.d.e.WANDERER);
-        if (n7 > (n2 = (int)MathHelper.e(n5 - this.d.e.BUST))) {
+        int n7 = (int)MathHelper.e(n3 - this.d.world.l);
+        if (n7 > (n2 = (int)MathHelper.e(n5 - this.d.world.n))) {
             n2 = n7;
         }
         if (n2 > 16) {
             gc gc2 = new gc(es2.a);
-            this.e.ac.a(this.e, this.d.e, gc2, n3, n4, n5, n6);
+            this.e.ac.a(this.e, this.d.world, gc2, n3, n4, n5, n6);
         }
-        this.e.a.b(new Packet53BlockChange(n3, n4, n5, this.d.e));
+        this.e.a.b(new Packet53BlockChange(n3, n4, n5, this.d.world));
     }
 
     public void a(String string) {
         a.info(this.e.ap + " lost connection: " + string);
-        this.d.f.c(this.e);
+        this.d.configManager.c(this.e);
         this.c = true;
     }
 
@@ -203,19 +201,19 @@ extends NetHandler {
     public void a(Packet16BlockItemSwitch fi2) {
         int n2 = fi2.b;
         this.e.ai.a[this.e.ai.d] = n2 == 0 ? null : new gc(n2);
-        this.d.k.a(this.e, new Packet16BlockItemSwitch(this.e.c, n2));
+        this.d.entityTracker.a(this.e, new Packet16BlockItemSwitch(this.e.c, n2));
     }
 
     public void a(Packet21PickupSpawn j2) {
         double d2 = (double)j2.b / 32.0;
         double d3 = (double)j2.c / 32.0;
         double d4 = (double)j2.d / 32.0;
-        fa fa2 = new fa(this.d.e, d2, d3, d4, new gc(j2.h, j2.i));
+        fa fa2 = new fa(this.d.world, d2, d3, d4, new gc(j2.h, j2.i));
         fa2.n = (double)j2.e / 128.0;
         fa2.o = (double)j2.f / 128.0;
         fa2.p = (double)j2.g / 128.0;
         fa2.ac = 10;
-        this.d.e.a(fa2);
+        this.d.world.a(fa2);
     }
 
     public void a(Packet3Chat ax2) {
@@ -235,7 +233,7 @@ extends NetHandler {
         } else {
             string = "<" + this.e.ap + "> " + string;
             a.info(string);
-            this.d.f.a(new Packet3Chat(string));
+            this.d.configManager.a(new Packet3Chat(string));
         }
     }
 
@@ -243,11 +241,11 @@ extends NetHandler {
         if (string.toLowerCase().startsWith("/me ")) {
             string = "* " + this.e.ap + " " + string.substring(string.indexOf(" ")).trim();
             a.info(string);
-            this.d.f.a(new Packet3Chat(string));
+            this.d.configManager.a(new Packet3Chat(string));
         } else if (string.toLowerCase().equalsIgnoreCase("/home")) {
             a.info(this.e.ap + " returned home");
-            int n2 = this.d.e.d(this.d.e.WANDERER, this.d.e.BUST);
-            this.a((double)this.d.e.WANDERER + 0.5, (double)n2 + 1.5, (double)this.d.e.BUST + 0.5, 0.0f, 0.0f);
+            int n2 = this.d.world.d(this.d.world.l, this.d.world.n);
+            this.a((double)this.d.world.l + 0.5, (double)n2 + 1.5, (double)this.d.world.n + 0.5, 0.0f, 0.0f);
         } else if (string.toLowerCase().equalsIgnoreCase("/away")) {
             Random random = new Random();
             a.info(this.e.ap + " went away");
@@ -255,22 +253,22 @@ extends NetHandler {
             double d3 = Math.random() * 10000.0 - 5000.0;
             this.a(d2, 80.0, d3, random.nextFloat() * 360.0f, 0.0f);
         } else if (string.toLowerCase().equalsIgnoreCase("/iron")) {
-            if (MinecraftServer.b.containsKey(this.e.ap)) {
+            if (MinecraftServer.hashStory.containsKey(this.e.ap)) {
                 a.info(this.e.ap + " failed to iron!");
                 this.b(new Packet3Chat("\u00a7cYou can't /iron again so soon!"));
             } else {
-                MinecraftServer.b.put(this.e.ap, 6000);
+                MinecraftServer.hashStory.put(this.e.ap, 6000);
                 a.info(this.e.ap + " ironed!");
                 for (int i2 = 0; i2 < 4; ++i2) {
                     this.e.a(new gc(en.m, 1));
                 }
             }
         } else if (string.toLowerCase().equalsIgnoreCase("/wood")) {
-            if (MinecraftServer.b.containsKey(this.e.ap)) {
+            if (MinecraftServer.hashStory.containsKey(this.e.ap)) {
                 a.info(this.e.ap + " failed to wood!");
                 this.b(new Packet3Chat("\u00a7cYou can't /wood again so soon!"));
             } else {
-                MinecraftServer.b.put(this.e.ap, 6000);
+                MinecraftServer.hashStory.put(this.e.ap, 6000);
                 a.info(this.e.ap + " wooded!");
                 for (int i3 = 0; i3 < 4; ++i3) {
                     this.e.a(new gc(Block.y, 1));

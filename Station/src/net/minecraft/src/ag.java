@@ -124,11 +124,11 @@ extends Block {
         }
     }
 
-    public void b(World dp2, int n2, int n3, int n4, eq eq2) {
+    public void b(World dp2, int n2, int n3, int n4, EntityPlayer eq2) {
         this.a(dp2, n2, n3, n4, eq2);
     }
 
-    public boolean a(World dp2, int n2, int n3, int n4, eq eq2) {
+    public boolean a(World dp2, int n2, int n3, int n4, EntityPlayer eq2) {
         int n5 = dp2.b(n2, n3, n4);
         int n6 = n5 & 7;
         int n7 = 8 - (n5 & 8);

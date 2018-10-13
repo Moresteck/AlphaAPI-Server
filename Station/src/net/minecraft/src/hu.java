@@ -56,7 +56,7 @@ extends Block {
             }
             return;
         }
-        if (!this.b(dp2, n2, n3 - 1, n4) && n5 == 15 && random.nextInt(4) == 0) {
+        if (!this.be(dp2, n2, n3 - 1, n4) && n5 == 15 && random.nextInt(4) == 0) {
             dp2.d(n2, n3, n4, 0);
             return;
         }
@@ -101,22 +101,22 @@ extends Block {
     }
 
     private boolean g(World dp2, int n2, int n3, int n4) {
-        if (this.b(dp2, n2 + 1, n3, n4)) {
+        if (this.be(dp2, n2 + 1, n3, n4)) {
             return true;
         }
-        if (this.b(dp2, n2 - 1, n3, n4)) {
+        if (this.be(dp2, n2 - 1, n3, n4)) {
             return true;
         }
-        if (this.b(dp2, n2, n3 - 1, n4)) {
+        if (this.be(dp2, n2, n3 - 1, n4)) {
             return true;
         }
-        if (this.b(dp2, n2, n3 + 1, n4)) {
+        if (this.be(dp2, n2, n3 + 1, n4)) {
             return true;
         }
-        if (this.b(dp2, n2, n3, n4 - 1)) {
+        if (this.be(dp2, n2, n3, n4 - 1)) {
             return true;
         }
-        if (this.b(dp2, n2, n3, n4 + 1)) {
+        if (this.be(dp2, n2, n3, n4 + 1)) {
             return true;
         }
         return false;
@@ -140,7 +140,7 @@ extends Block {
         return false;
     }
 
-    public boolean b(IBlockAccess hb2, int n2, int n3, int n4) {
+    public boolean be(IBlockAccess hb2, int n2, int n3, int n4) {
         return this.a[hb2.a(n2, n3, n4)] > 0;
     }
 

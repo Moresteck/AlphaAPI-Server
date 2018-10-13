@@ -3,13 +3,14 @@ package net.minecraft.src;/*
  */
 import java.io.DataInput;
 import java.io.DataOutput;
+import java.io.IOException;
 
 public abstract class ft {
     private String a = null;
 
-    abstract void a(DataOutput var1);
+    abstract void a(DataOutput var1) throws IOException;
 
-    abstract void a(DataInput var1);
+    abstract void a(DataInput var1) throws IOException;
 
     public abstract byte a();
 
@@ -25,7 +26,7 @@ public abstract class ft {
         return this;
     }
 
-    public static ft b(DataInput dataInput) {
+    public static ft b(DataInput dataInput) throws IOException {
         byte by2 = dataInput.readByte();
         if (by2 == 0) {
             return new hq();
@@ -36,7 +37,7 @@ public abstract class ft {
         return ft2;
     }
 
-    public static void a(ft ft2, DataOutput dataOutput) {
+    public static void a(ft ft2, DataOutput dataOutput) throws IOException {
         dataOutput.writeByte(ft2.a());
         if (ft2.a() == 0) {
             return;

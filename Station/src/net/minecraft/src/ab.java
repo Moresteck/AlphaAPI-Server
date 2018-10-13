@@ -26,7 +26,7 @@ class ab {
         this.c = n2;
         this.d = n3;
         this.e = new ih(n2, n3);
-        PlayerManager.a((PlayerManager)gr2).e.u.d(n2, n3);
+        PlayerManager.a((PlayerManager)gr2).world.u.d(n2, n3);
     }
 
     public void a(EntityPlayerMP dq2) {
@@ -51,7 +51,7 @@ class ab {
             if (this.g > 0) {
                 PlayerManager.c(this.a).remove(this);
             }
-            PlayerManager.a((PlayerManager)this.a).e.u.c(this.c, this.d);
+            PlayerManager.a((PlayerManager)this.a).world.u.c(this.c, this.d);
         }
         dq2.af.remove(this.e);
         if (dq2.ag.contains(this.e)) {
@@ -108,7 +108,7 @@ class ab {
         }
         Packet ha2 = null;
         if (this.g == 1) {
-            ha2 = new Packet53BlockChange(this.c * 16 + this.h, this.j, this.d * 16 + this.l, PlayerManager.a((PlayerManager)this.a).e);
+            ha2 = new Packet53BlockChange(this.c * 16 + this.h, this.j, this.d * 16 + this.l, PlayerManager.a((PlayerManager)this.a).world);
         } else if (this.g == 10) {
             this.j = this.j / 2 * 2;
             this.k = (this.k / 2 + 1) * 2;
@@ -118,9 +118,9 @@ class ab {
             int n5 = this.i - this.h + 1;
             int n6 = this.k - this.j + 2;
             int n7 = this.m - this.l + 1;
-            ha2 = new Packet51MapChunk(n2, n3, n4, n5, n6, n7, PlayerManager.a((PlayerManager)this.a).e);
+            ha2 = new Packet51MapChunk(n2, n3, n4, n5, n6, n7, PlayerManager.a((PlayerManager)this.a).world);
         } else {
-            ha2 = new Packet52MultiBlockChange(this.c, this.d, this.f, this.g, PlayerManager.a((PlayerManager)this.a).e);
+            ha2 = new Packet52MultiBlockChange(this.c, this.d, this.f, this.g, PlayerManager.a((PlayerManager)this.a).world);
         }
         this.a(ha2);
         this.g = 0;

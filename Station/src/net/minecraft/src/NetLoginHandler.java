@@ -2,23 +2,24 @@
  * Decompiled with CFR 0_132.
  */
 package net.minecraft.src;
+import java.io.IOException;
 import java.net.Socket;
-import java.net.SocketAddress;
 import java.util.logging.Logger;
+
 import net.minecraft.server.MinecraftServer;
 
 public class NetLoginHandler
 extends NetHandler {
     public static Logger log = Logger.getLogger("Minecraft");
-    public aw b;
+    public NetworkManager b;
     public boolean c = false;
     private MinecraftServer mcServer;
     private int e = 0;
     private String f = null;
 
-    public NetLoginHandler(MinecraftServer minecraftServer, Socket socket, String string) {
+    public NetLoginHandler(MinecraftServer minecraftServer, Socket socket, String string) throws IOException {
         this.mcServer = minecraftServer;
-        this.b = new aw(socket, string, this);
+        this.b = new NetworkManager(socket, string, this);
     }
 
     public void a() {

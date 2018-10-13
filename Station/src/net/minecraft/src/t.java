@@ -18,7 +18,7 @@ implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
         String string = this.a.getText().trim();
         if (string.length() > 0) {
-            ServerGUI.a(this.b).a(string);
+            ServerGUI.getMinecraftServer(this.b).a(string);
         }
         this.a.setText("");
     }

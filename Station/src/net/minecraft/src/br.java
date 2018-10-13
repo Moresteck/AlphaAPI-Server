@@ -31,10 +31,10 @@ public class br {
                     double d8 = (float)n4 / ((float)n7 - 1.0f) * 2.0f - 1.0f;
                     double d9 = (float)n2 / ((float)n7 - 1.0f) * 2.0f - 1.0f;
                     double d10 = (float)n5 / ((float)n7 - 1.0f) * 2.0f - 1.0f;
-                    object = Math.sqrt(d8 * d8 + d9 * d9 + d10 * d10);
-                    d8 /= object;
-                    d9 /= object;
-                    d10 /= object;
+                    double obj = Math.sqrt(d8 * d8 + d9 * d9 + d10 * d10);
+                    d8 /= obj;
+                    d9 /= obj;
+                    d10 /= obj;
                     d6 = d2;
                     d5 = d3;
                     d7 = d4;
@@ -65,20 +65,20 @@ public class br {
         List list = dp2.b(db2, AxisAlignedBB.b(n4, n5, n11, n2, n10, n12));
         Vec3D as2 = Vec3D.b(d2, d3, d4);
         for (int i2 = 0; i2 < list.size(); ++i2) {
-            object = (Entity)list.get(i2);
-            double d11 = object.e(d2, d3, d4) / (double)f2;
+            Entity obj = (Entity)list.get(i2);
+            double d11 = obj.e(d2, d3, d4) / (double)f2;
             if (d11 > 1.0) continue;
-            d6 = object.k - d2;
-            d5 = object.l - d3;
-            d7 = object.m - d4;
+            d6 = obj.k - d2;
+            d5 = obj.l - d3;
+            d7 = obj.m - d4;
             f4 = MathHelper.a(d6 * d6 + d5 * d5 + d7 * d7);
-            n6 = (int)dp2.a(as2, object.u);
+            n6 = (int)dp2.a(as2, obj.u);
             n3 = (int)((1.0 - d11) * n6);
-            object.a(db2, (n3 * n3 + n3) / 2.0 * 8.0 * (double)f2 + 1.0);
+            obj.a(db2, (int)((n3 * n3 + n3) / 2.0 * 8.0 * (double)f2 + 1.0));
             f3 = n3;
-            object.n += (d6 /= f4) * f3;
-            object.o += (d5 /= f4) * f3;
-            object.p += (d7 /= f4) * f3;
+            obj.n += (d6 /= f4) * f3;
+            obj.o += (d5 /= f4) * f3;
+            obj.p += (d7 /= f4) * f3;
         }
         f2 = f5;
         ArrayList<gf> arrayList = new ArrayList<gf>();
@@ -94,8 +94,8 @@ public class br {
                 f4 = (float)n14 + dp2.k.nextFloat();
                 n6 = (int)((float)n15 + dp2.k.nextFloat());
                 n3 = (int)(d7 - d2);
-                f3 = f4 - d3;
-                int n17 = n6 - d4;
+                f3 = (float) (f4 - d3);
+                double n17 = n6 - d4;
                 double d12 = MathHelper.a((double)(n3 * n3 + f3 * f3 + n17 * n17));
                 n3 /= d12;
                 f3 /= d12;

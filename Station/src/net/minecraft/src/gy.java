@@ -5,30 +5,30 @@ package net.minecraft.src;
  */
 class gy
 extends Thread {
-    final /* synthetic */ aw a;
+    final /* synthetic */ NetworkManager a;
 
-    gy(aw aw2, String string) {
+    gy(NetworkManager aw2, String string) {
+    	super(string);
         this.a = aw2;
-        super(string);
     }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
     public void run() {
-        Object object = aw.a;
+        Object object = NetworkManager.a;
         synchronized (object) {
-            ++aw.b;
+            ++NetworkManager.b;
         }
         try {
-            while (aw.a(this.a) && !aw.b(this.a)) {
-                aw.c(this.a);
+            while (NetworkManager.a(this.a) && !NetworkManager.b(this.a)) {
+                NetworkManager.c(this.a);
             }
         }
         finally {
-            object = aw.a;
+            object = NetworkManager.a;
             synchronized (object) {
-                --aw.b;
+                --NetworkManager.b;
             }
         }
     }

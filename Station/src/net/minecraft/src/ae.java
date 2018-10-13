@@ -4,12 +4,12 @@ package net.minecraft.src;
  * Decompiled with CFR 0_132.
  */
 public class ae
-implements if {
+implements IInventory {
     private String a;
-    private if b;
-    private if c;
+    private IInventory b;
+    private IInventory c;
 
-    public ae(String string, if if_, if if_2) {
+    public ae(String string, IInventory if_, IInventory if_2) {
         this.a = string;
         this.b = if_;
         this.c = if_2;

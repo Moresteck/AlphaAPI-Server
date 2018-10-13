@@ -48,7 +48,7 @@ public class EntityTracker {
         EntityTrackerEntry fl2 = new EntityTrackerEntry(db2, n2, n3);
         this.trackedEntitySet.add(fl2);
         this.b.a(db2.c, fl2);
-        fl2.b(this.mcServer.WorldMngr.i);
+        fl2.b(this.mcServer.world.i);
     }
 
     public void b(Entity db2) {
@@ -63,7 +63,7 @@ public class EntityTracker {
         ArrayList<EntityPlayerMP> arrayList = new ArrayList<EntityPlayerMP>();
         for (Iterator iterator = this.trackedEntitySet.iterator(); iterator.hasNext();) {
         	EntityTrackerEntry entitytrackerentry = (EntityTrackerEntry)iterator.next();
-            entitytrackerentry.a(this.mcServer.WorldMngr.i);
+            entitytrackerentry.a(this.mcServer.world.i);
             if (entitytrackerentry.j && (entitytrackerentry.a instanceof EntityPlayerMP))
             	arrayList.add((EntityPlayerMP)entitytrackerentry.a);
         }

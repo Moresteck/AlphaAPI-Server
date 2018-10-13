@@ -3,6 +3,7 @@ package net.minecraft.src;/*
  */
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
@@ -11,7 +12,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class aw {
+public class NetworkManager {
     public static final Object a = new Object();
     public static int b;
     public static int c;
@@ -33,7 +34,7 @@ public class aw {
     private int s = 0;
     private int t = 0;
 
-    public aw(Socket socket, String string, NetHandler dy2) {
+    public NetworkManager(Socket socket, String string, NetHandler dy2) throws IOException {
         this.e = socket;
         this.l = dy2;
         socket.setTrafficClass(24);
@@ -193,27 +194,27 @@ public class aw {
         return this.k.size();
     }
 
-    static /* synthetic */ boolean a(aw aw2) {
+    static /* synthetic */ boolean a(NetworkManager aw2) {
         return aw2.h;
     }
 
-    static /* synthetic */ boolean b(aw aw2) {
+    static /* synthetic */ boolean b(NetworkManager aw2) {
         return aw2.m;
     }
 
-    static /* synthetic */ void c(aw aw2) {
+    static /* synthetic */ void c(NetworkManager aw2) {
         aw2.f();
     }
 
-    static /* synthetic */ void d(aw aw2) {
+    static /* synthetic */ void d(NetworkManager aw2) {
         aw2.e();
     }
 
-    static /* synthetic */ Thread e(aw aw2) {
+    static /* synthetic */ Thread e(NetworkManager aw2) {
         return aw2.o;
     }
 
-    static /* synthetic */ Thread f(aw aw2) {
+    static /* synthetic */ Thread f(NetworkManager aw2) {
         return aw2.n;
     }
 }

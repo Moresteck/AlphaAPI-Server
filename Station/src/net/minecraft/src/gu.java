@@ -3,6 +3,7 @@ package net.minecraft.src;/*
  */
 import java.io.DataInput;
 import java.io.DataOutput;
+import java.io.IOException;
 
 public class gu
 extends ft {
@@ -18,11 +19,11 @@ extends ft {
         }
     }
 
-    void a(DataOutput dataOutput) {
+    void a(DataOutput dataOutput) throws IOException {
         dataOutput.writeUTF(this.a);
     }
 
-    void a(DataInput dataInput) {
+    void a(DataInput dataInput) throws IOException {
         this.a = dataInput.readUTF();
     }
 

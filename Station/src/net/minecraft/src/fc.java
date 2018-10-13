@@ -3,6 +3,7 @@ package net.minecraft.src;/*
  */
 import java.io.DataInput;
 import java.io.DataOutput;
+import java.io.IOException;
 
 public class fc
 extends ft {
@@ -15,12 +16,12 @@ extends ft {
         this.a = arrby;
     }
 
-    void a(DataOutput dataOutput) {
+    void a(DataOutput dataOutput) throws IOException {
         dataOutput.writeInt(this.a.length);
         dataOutput.write(this.a);
     }
 
-    void a(DataInput dataInput) {
+    void a(DataInput dataInput) throws IOException {
         int n2 = dataInput.readInt();
         this.a = new byte[n2];
         dataInput.readFully(this.a);

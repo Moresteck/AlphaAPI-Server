@@ -89,9 +89,9 @@ extends Block {
         return 0;
     }
 
-    private Vec3D c(IBlockAccess hb2, int n2, int n3, int n4) {
+    private Vec3D vec(IBlockAccess hb2, int n2, int n3, int n4) {
         int n5;
-        Vec3D as2 = as.b(0.0, 0.0, 0.0);
+        Vec3D as2 = Vec3D.b(0.0, 0.0, 0.0);
         int n6 = this.b(hb2, n2, n3, n4);
         for (n5 = 0; n5 < 4; ++n5) {
             int n7;
@@ -156,7 +156,7 @@ extends Block {
     }
 
     public void a(World dp2, int n2, int n3, int n4, Entity db2, Vec3D as2) {
-        Vec3D as3 = this.c(dp2, n2, n3, n4);
+        Vec3D as3 = this.vec(dp2, n2, n3, n4);
         as2.a += as3.a;
         as2.b += as3.b;
         as2.c += as3.c;

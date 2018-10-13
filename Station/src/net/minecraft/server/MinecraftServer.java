@@ -43,7 +43,7 @@ implements Runnable {
     public static HashMap hashStory = new HashMap();
     public NetworkListenThread networkListener;
     public PropertyManager propertyManager;
-    public WorldServer WorldMngr;
+    public WorldServer world;
     public ServerConfigurationManager configManager;
     private boolean serverRunning = true;
     public boolean serverStopped = false;
@@ -94,8 +94,8 @@ implements Runnable {
 
     private void initWorld(String name) {
         log.info("Preparing start region");
-        this.WorldMngr = new WorldServer(new File("."), name);
-        this.WorldMngr.a(new dr(this));
+        this.world = new WorldServer(new File("."), name);
+        this.world.a(new dr(this));
         int n2 = 10;
         for (int i2 = - n2; i2 <= n2; ++i2) {
             this.outputPercentRemaining("Preparing spawn area", (i2 + n2) * 100 / (n2 + n2 + 1));
@@ -103,7 +103,7 @@ implements Runnable {
                 if (!this.serverRunning) {
                     return;
                 }
-                this.WorldMngr.u.d((this.WorldMngr.l >> 4) + i2, (this.WorldMngr.n >> 4) + i3);
+                this.world.u.d((this.world.l >> 4) + i2, (this.world.n >> 4) + i3);
             }
         }
         this.clearCurrentTask();
@@ -122,12 +122,12 @@ implements Runnable {
 
     private void saveServerWorld() {
         log.info("Saving chunks");
-        this.WorldMngr.a(true, null);
+        this.world.a(true, null);
     }
 
     private void stopServer() {
         log.info("Stopping server");
-        if (this.WorldMngr != null) {
+        if (this.world != null) {
             this.saveServerWorld();
         }
     }
@@ -211,10 +211,10 @@ implements Runnable {
         AxisAlignedBB.a();
         Vec3D.a();
         ++this.deathTime;
-        this.WorldMngr.e();
-        while (this.WorldMngr.c()) {
+        this.world.e();
+        while (this.world.c()) {
         }
-        this.WorldMngr.b();
+        this.world.b();
         this.networkListener.a();
         this.configManager.b();
         this.entityTracker.a();

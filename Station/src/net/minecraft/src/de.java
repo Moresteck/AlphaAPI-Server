@@ -3,6 +3,7 @@ package net.minecraft.src;/*
  */
 import java.io.DataInput;
 import java.io.DataOutput;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +12,7 @@ extends ft {
     private List a = new ArrayList();
     private byte b;
 
-    void a(DataOutput dataOutput) {
+    void a(DataOutput dataOutput) throws IOException {
         this.b = this.a.size() > 0 ? ((ft)this.a.get(0)).a() : (byte)1;
         dataOutput.writeByte(this.b);
         dataOutput.writeInt(this.a.size());
@@ -20,7 +21,7 @@ extends ft {
         }
     }
 
-    void a(DataInput dataInput) {
+    void a(DataInput dataInput) throws IOException {
         this.b = dataInput.readByte();
         int n2 = dataInput.readInt();
         this.a = new ArrayList();

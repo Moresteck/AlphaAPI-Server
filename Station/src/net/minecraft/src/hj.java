@@ -1,7 +1,6 @@
 package net.minecraft.src;/*
  * Decompiled with CFR 0_132.
  */
-import java.util.Random;
 
 public class hj
 extends en {
@@ -11,7 +10,7 @@ extends en {
         this.aS = 64;
     }
 
-    public boolean a(gc gc2, eq eq2, World dp2, int n2, int n3, int n4, int n5) {
+    public boolean a(gc gc2, EntityPlayer eq2, World dp2, int n2, int n3, int n4, int n5) {
         int n6;
         if (n5 == 0) {
             --n3;

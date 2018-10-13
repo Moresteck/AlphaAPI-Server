@@ -13,7 +13,7 @@ extends Block {
         return this.aZ + (n2 == 1 ? 1 : 0);
     }
 
-    public boolean a(World dp2, int n2, int n3, int n4, eq eq2) {
+    public boolean a(World dp2, int n2, int n3, int n4, EntityPlayer eq2) {
         int n5 = dp2.b(n2, n3, n4);
         if (n5 > 0) {
             this.f(dp2, n2, n3, n4, n5);

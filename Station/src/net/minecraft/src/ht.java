@@ -10,7 +10,7 @@ extends en {
         this.aS = 64;
     }
 
-    public boolean a(gc gc2, eq eq2, World dp2, int n2, int n3, int n4, int n5) {
+    public boolean a(gc gc2, EntityPlayer eq2, World dp2, int n2, int n3, int n4, int n5) {
         EntityPainting bp2;
         if (n5 == 0) {
             return false;

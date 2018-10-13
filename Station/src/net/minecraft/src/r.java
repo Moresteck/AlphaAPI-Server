@@ -3,7 +3,7 @@ package net.minecraft.src;/*
  */
 import java.io.DataInput;
 import java.io.DataOutput;
-import java.util.Collection;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,14 +11,14 @@ public class r
 extends ft {
     private Map a = new HashMap();
 
-    void a(DataOutput dataOutput) {
-        for (ft ft2 : this.a.values()) {
-            ft.a(ft2, dataOutput);
+    void a(DataOutput dataOutput) throws IOException {
+        for (Object ft2 : this.a.values()) {
+            ft.a(((ft)ft2), dataOutput);
         }
         dataOutput.writeByte(0);
     }
 
-    void a(DataInput dataInput) {
+    void a(DataInput dataInput) throws IOException {
         ft ft2;
         this.a.clear();
         while ((ft2 = ft.b(dataInput)).a() != 0) {

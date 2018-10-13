@@ -4,8 +4,8 @@ package net.minecraft.src;
  * Decompiled with CFR 0_132.
  */
 public class gn
-extends ap
-implements if {
+extends TileEntity
+implements IInventory {
     private gc[] e = new gc[36];
 
     public int a() {

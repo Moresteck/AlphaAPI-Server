@@ -162,7 +162,7 @@ extends Entity {
         this.a = new gc(r3);
     }
 
-    public void a(eq eq2) {
+    public void a(EntityPlayer eq2) {
         if (this.g.t) {
             return;
         }

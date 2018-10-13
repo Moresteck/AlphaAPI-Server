@@ -136,7 +136,7 @@ extends Entity {
         this.af = r2.b("inGround") == 1;
     }
 
-    public void a(eq eq2) {
+    public void a(EntityPlayer eq2) {
         if (this.af && this.ag == eq2 && this.a <= 0 && eq2.ai.a(new gc(en.j.aQ, 1))) {
             this.g.a(this, "random.pop", 0.2f, ((this.Q.nextFloat() - this.Q.nextFloat()) * 0.7f + 1.0f) * 2.0f);
             eq2.c(this, 1);

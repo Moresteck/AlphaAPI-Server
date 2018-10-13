@@ -5,6 +5,7 @@ package net.minecraft.src;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
+
 import net.minecraft.server.MinecraftServer;
 
 public class ServerConfigurationManager {
@@ -25,7 +26,7 @@ public class ServerConfigurationManager {
 
     public void a(EntityPlayerMP entityplayermp) {
         this.playerEntities.add(entityplayermp);
-        this.mcServer.WorldMngr.a(entityplayermp);
+        this.mcServer.world.a(entityplayermp);
         this.playerManager.a(entityplayermp);
     }
 
@@ -34,7 +35,7 @@ public class ServerConfigurationManager {
     }
 
     public void c(EntityPlayerMP entityplayermp) {
-        this.mcServer.WorldMngr.d(entityplayermp);
+        this.mcServer.world.d(entityplayermp);
         this.playerEntities.remove(entityplayermp);
         this.playerManager.b(entityplayermp);
     }
@@ -49,7 +50,7 @@ public class ServerConfigurationManager {
             if (!entityplayermp.ap.equalsIgnoreCase(string)) continue;
             entityplayermp.a.b("You logged in from another location");
         }
-        return new EntityPlayerMP(this.mcServer, this.mcServer.WorldMngr, string, new hw(this.mcServer.WorldMngr));
+        return new EntityPlayerMP(this.mcServer, this.mcServer.world, string, new hw(this.mcServer.world));
     }
 
     public void b() {

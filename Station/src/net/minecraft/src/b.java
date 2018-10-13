@@ -25,7 +25,7 @@ extends cl {
         return this.aZ;
     }
 
-    public boolean a(dp dp2, int n2, int n3, int n4) {
+    public boolean a(World dp2, int n2, int n3, int n4) {
         int n5 = 0;
         if (dp2.a(n2 - 1, n3, n4) == this.ba) {
             ++n5;
@@ -57,7 +57,7 @@ extends cl {
         return true;
     }
 
-    private boolean g(dp dp2, int n2, int n3, int n4) {
+    private boolean g(World dp2, int n2, int n3, int n4) {
         if (dp2.a(n2, n3, n4) != this.ba) {
             return false;
         }
@@ -76,7 +76,7 @@ extends cl {
         return false;
     }
 
-    public void b(dp dp2, int n2, int n3, int n4) {
+    public void b(World dp2, int n2, int n3, int n4) {
         gn gn2 = (gn)dp2.k(n2, n3, n4);
         for (int i2 = 0; i2 < gn2.a(); ++i2) {
             gc gc2 = gn2.a(i2);
@@ -101,8 +101,8 @@ extends cl {
         super.b(dp2, n2, n3, n4);
     }
 
-    public boolean a(dp dp2, int n2, int n3, int n4, eq eq2) {
-        if if_ = (gn)dp2.k(n2, n3, n4);
+    public boolean a(World dp2, int n2, int n3, int n4, EntityPlayer eq2) {
+        IInventory if_ = (gn)dp2.k(n2, n3, n4);
         if (dp2.d(n2, n3 + 1, n4)) {
             return true;
         }
@@ -134,7 +134,7 @@ extends cl {
         return true;
     }
 
-    protected ap a_() {
+    protected TileEntity a_() {
         return new gn();
     }
 }

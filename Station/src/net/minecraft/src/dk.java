@@ -3,6 +3,7 @@ package net.minecraft.src;/*
  */
 import java.io.DataInput;
 import java.io.DataOutput;
+import java.io.IOException;
 
 public class dk
 extends ft {
@@ -15,11 +16,11 @@ extends ft {
         this.a = d2;
     }
 
-    void a(DataOutput dataOutput) {
+    void a(DataOutput dataOutput) throws IOException {
         dataOutput.writeDouble(this.a);
     }
 
-    void a(DataInput dataInput) {
+    void a(DataInput dataInput) throws IOException {
         this.a = dataInput.readDouble();
     }
 

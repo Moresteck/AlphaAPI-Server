@@ -15,10 +15,10 @@ public class af {
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
-    public static r a(InputStream inputStream) {
+    public static r a(InputStream inputStream) throws IOException {
         DataInputStream dataInputStream = new DataInputStream(new GZIPInputStream(inputStream));
         try {
-            r r2 = af.a(dataInputStream);
+            r r2 = af.a((DataInput)dataInputStream);
             return r2;
         }
         finally {
@@ -29,17 +29,17 @@ public class af {
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
-    public static void a(r r2, OutputStream outputStream) {
+    public static void a(r r2, OutputStream outputStream) throws IOException {
         DataOutputStream dataOutputStream = new DataOutputStream(new GZIPOutputStream(outputStream));
         try {
-            af.a(r2, dataOutputStream);
+            af.a(r2, (DataOutput)dataOutputStream);
         }
         finally {
             dataOutputStream.close();
         }
     }
 
-    public static r a(DataInput dataInput) {
+    public static r a(DataInput dataInput) throws IOException {
         ft ft2 = ft.b(dataInput);
         if (ft2 instanceof r) {
             return (r)ft2;
@@ -47,7 +47,7 @@ public class af {
         throw new IOException("Root tag must be a named compound tag");
     }
 
-    public static void a(r r2, DataOutput dataOutput) {
+    public static void a(r r2, DataOutput dataOutput) throws IOException {
         ft.a(r2, dataOutput);
     }
 }

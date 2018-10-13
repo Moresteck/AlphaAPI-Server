@@ -5,17 +5,17 @@ package net.minecraft.src;
  */
 class gx
 extends Thread {
-    final /* synthetic */ aw a;
+    final /* synthetic */ NetworkManager a;
 
-    gx(aw aw2) {
+    gx(NetworkManager aw2) {
         this.a = aw2;
     }
 
     public void run() {
         try {
             Thread.sleep(2000L);
-            if (aw.a(this.a)) {
-                aw.f(this.a).interrupt();
+            if (NetworkManager.a(this.a)) {
+                NetworkManager.f(this.a).interrupt();
                 this.a.a("Connection closed");
             }
         }

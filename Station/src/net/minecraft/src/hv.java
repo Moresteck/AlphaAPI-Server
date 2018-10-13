@@ -1,9 +1,7 @@
 package net.minecraft.src;/*
  * Decompiled with CFR 0_132.
  */
-import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

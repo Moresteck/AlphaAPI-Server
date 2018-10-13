@@ -1,11 +1,9 @@
 package net.minecraft.src;/*
  * Decompiled with CFR 0_132.
  */
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -122,7 +120,7 @@ implements bf {
             hv2.s = this.g.b;
             this.d.a(this.g, hv2);
         }
-        catch (IOException iOException) {
+        catch (Exception iOException) {
             iOException.printStackTrace();
         }
     }

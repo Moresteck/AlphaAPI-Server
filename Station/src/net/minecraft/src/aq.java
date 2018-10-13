@@ -19,7 +19,7 @@ extends Block {
         return 30;
     }
 
-    public void b(World dp2, int n2, int n3, int n4, eq eq2) {
+    public void b(World dp2, int n2, int n3, int n4, EntityPlayer eq2) {
         this.g(dp2, n2, n3, n4);
         super.b(dp2, n2, n3, n4, eq2);
     }
@@ -29,7 +29,7 @@ extends Block {
         super.b(dp2, n2, n3, n4, db2);
     }
 
-    public boolean a(World dp2, int n2, int n3, int n4, eq eq2) {
+    public boolean a(World dp2, int n2, int n3, int n4, EntityPlayer eq2) {
         this.g(dp2, n2, n3, n4);
         return super.a(dp2, n2, n3, n4, eq2);
     }
