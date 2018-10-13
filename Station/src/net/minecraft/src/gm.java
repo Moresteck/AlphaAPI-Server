@@ -6,7 +6,7 @@ import java.util.Random;
 public class gm
 extends Block {
     protected gm(int n2, int n3) {
-        super(n2, n3, hz.s);
+        super(n2, n3, Material.s);
         this.a(0.0f, 0.0f, 0.0f, 1.0f, 0.125f, 1.0f);
         this.a(true);
     }
@@ -52,7 +52,7 @@ extends Block {
     }
 
     public boolean a(IBlockAccess hb2, int n2, int n3, int n4, int n5) {
-        hz hz2 = hb2.c(n2, n3, n4);
+        Material hz2 = hb2.c(n2, n3, n4);
         if (n5 == 1) {
             return true;
         }

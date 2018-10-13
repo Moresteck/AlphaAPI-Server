@@ -6,7 +6,7 @@ package net.minecraft.src;
 public class al
 extends Block {
     protected al(int n2, int n3) {
-        super(n2, n3, hz.b);
+        super(n2, n3, Material.b);
     }
 }
 

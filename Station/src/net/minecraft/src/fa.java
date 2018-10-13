@@ -40,7 +40,7 @@ extends Entity {
         this.i = this.l;
         this.j = this.m;
         this.o -= 0.03999999910593033;
-        if (this.g.c(MathHelper.b(this.k), MathHelper.b(this.l), MathHelper.b(this.m)) == hz.PlayerListBox) {
+        if (this.g.c(MathHelper.b(this.k), MathHelper.b(this.l), MathHelper.b(this.m)) == Material.PlayerListBox) {
             this.o = 0.20000000298023224;
             this.n = (this.Q.nextFloat() - this.Q.nextFloat()) * 0.2f;
             this.p = (this.Q.nextFloat() - this.Q.nextFloat()) * 0.2f;
@@ -71,7 +71,7 @@ extends Entity {
     }
 
     public boolean m() {
-        return this.g.a(this.u, hz.f, this);
+        return this.g.a(this.u, Material.f, this);
     }
 
     private boolean g(double d2, double d3, double d4) {

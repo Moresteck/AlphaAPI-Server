@@ -4,7 +4,7 @@ package net.minecraft.src;
  * Decompiled with CFR 0_132.
  */
 public class cu
-extends hz {
+extends Material {
     public boolean d() {
         return true;
     }

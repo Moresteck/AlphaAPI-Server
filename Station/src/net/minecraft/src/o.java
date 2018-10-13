@@ -7,7 +7,7 @@ public class o
 extends Block {
     protected boolean a;
 
-    protected o(int n2, int n3, hz hz2, boolean bl2) {
+    protected o(int n2, int n3, Material hz2, boolean bl2) {
         super(n2, n3, hz2);
         this.a = bl2;
     }

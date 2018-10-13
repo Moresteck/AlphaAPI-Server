@@ -6,7 +6,7 @@ import java.util.Random;
 public class y
 extends Block {
     public y(int n2, int n3) {
-        super(n2, n3, hz.p);
+        super(n2, n3, Material.p);
     }
 
     public int a(int n2) {

@@ -6,7 +6,7 @@ import java.util.Random;
 public class aj
 extends Block {
     protected aj(int n2, int n3) {
-        super(n2, n3, hz.u);
+        super(n2, n3, Material.u);
         this.a(true);
     }
 

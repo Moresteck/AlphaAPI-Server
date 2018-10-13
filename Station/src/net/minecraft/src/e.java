@@ -14,7 +14,7 @@ extends ay {
     }
 
     public boolean a(World dp2, Random random, int n2, int n3, int n4) {
-        if (dp2.c(n2, n3, n4) != hz.f) {
+        if (dp2.c(n2, n3, n4) != Material.f) {
             return false;
         }
         float f2 = random.nextFloat() * 3.1415927f;

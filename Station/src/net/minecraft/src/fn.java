@@ -5,9 +5,9 @@ package net.minecraft.src;
  */
 public class fn
 extends en {
-    private hz a;
+    private Material a;
 
-    public fn(int n2, hz hz2) {
+    public fn(int n2, Material hz2) {
         super(n2);
         this.a = hz2;
         this.aS = 64;
@@ -18,7 +18,7 @@ extends en {
         if (n5 != 1) {
             return false;
         }
-        Block et2 = this.a == hz.Packet20NamedEntitySpawn ? Block.aE : Block.aL;
+        Block et2 = this.a == Material.Packet20NamedEntitySpawn ? Block.aE : Block.aL;
         if (!et2.a(dp2, n2, ++n3, n4)) {
             return false;
         }

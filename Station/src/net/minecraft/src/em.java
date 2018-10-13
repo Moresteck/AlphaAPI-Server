@@ -8,7 +8,7 @@ extends Block {
     public static boolean a = false;
 
     public em(int n2, int n3) {
-        super(n2, n3, hz.m);
+        super(n2, n3, Material.m);
     }
 
     public void e(World dp2, int n2, int n3, int n4) {
@@ -51,11 +51,11 @@ extends Block {
         if (n5 == Block.ar.ba) {
             return true;
         }
-        hz hz2 = Block.n[n5].bl;
-        if (hz2 == hz.f) {
+        Material hz2 = Block.n[n5].bl;
+        if (hz2 == Material.f) {
             return true;
         }
-        if (hz2 == hz.PlayerListBox) {
+        if (hz2 == Material.PlayerListBox) {
             return true;
         }
         return false;

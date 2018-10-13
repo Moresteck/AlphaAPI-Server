@@ -6,7 +6,7 @@ import java.util.Random;
 public class fp
 extends Block {
     protected fp(int n2, int n3) {
-        super(n2, n3, hz.Packet18ArmAnimation);
+        super(n2, n3, Material.Packet18ArmAnimation);
         this.a(true);
     }
 

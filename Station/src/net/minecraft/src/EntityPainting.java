@@ -131,7 +131,7 @@ extends Entity {
         n6 = MathHelper.b(this.l - (double)((float)this.b.v / 32.0f));
         for (int i2 = 0; i2 < n3; ++i2) {
             for (n2 = 0; n2 < n4; ++n2) {
-                hz hz2 = this.a == 0 || this.a == 2 ? this.g.c(n5 + i2, n6 + n2, this.af) : this.g.c(this.ad, n6 + n2, n7 + i2);
+                Material hz2 = this.a == 0 || this.a == 2 ? this.g.c(n5 + i2, n6 + n2, this.af) : this.g.c(this.ad, n6 + n2, n7 + i2);
                 if (hz2.a()) continue;
                 return false;
             }

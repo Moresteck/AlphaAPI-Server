@@ -24,14 +24,14 @@ public class Block {
     public static final Block t = new cw(1, 1).c(1.5f).b(10.0f).a(i);
     public static final gl u = (gl)new gl(2).c(0.6f).a(h);
     public static final Block v = new al(3, 2).c(0.5f).a(g);
-    public static final Block w = new Block(4, 16, hz.d).c(2.0f).b(10.0f).a(i);
-    public static final Block x = new Block(5, 4, hz.c).c(2.0f).b(5.0f).a(f);
+    public static final Block w = new Block(4, 16, Material.d).c(2.0f).b(10.0f).a(i);
+    public static final Block x = new Block(5, 4, Material.c).c(2.0f).b(5.0f).a(f);
     public static final Block y = new ex(6, 15).c(0.0f).a(h);
-    public static final Block z = new Block(7, 17, hz.d).c(-1.0f).b(6000000.0f).a(i);
-    public static final Block A = new ai(8, hz.f).c(100.0f).c(3);
-    public static final Block B = new v(9, hz.f).c(100.0f).c(3);
-    public static final Block C = new ai(10, hz.g).c(0.0f).a(1.0f).c(255);
-    public static final Block D = new v(11, hz.g).c(100.0f).a(1.0f).c(255);
+    public static final Block z = new Block(7, 17, Material.d).c(-1.0f).b(6000000.0f).a(i);
+    public static final Block A = new ai(8, Material.f).c(100.0f).c(3);
+    public static final Block B = new v(9, Material.f).c(100.0f).c(3);
+    public static final Block C = new ai(10, Material.g).c(0.0f).a(1.0f).c(255);
+    public static final Block D = new v(11, Material.g).c(100.0f).a(1.0f).c(255);
     public static final Block E = new em(12, 18).c(0.5f).a(m);
     public static final Block F = new i(13, 19).c(0.6f).a(g);
     public static final Block G = new f(14, 32).c(3.0f).b(5.0f).a(i);
@@ -40,7 +40,7 @@ public class Block {
     public static final Block J = new fh(17).c(2.0f).a(f);
     public static final bn K = (bn)new bn(18, 52).c(0.2f).c(1).a(h);
     public static final Block L = new gv(19).c(0.6f).a(h);
-    public static final Block M = new dt(20, 49, hz.o, false).c(0.3f).a(k);
+    public static final Block M = new dt(20, 49, Material.o, false).c(0.3f).a(k);
     public static final Block N = null;
     public static final Block O = null;
     public static final Block P = null;
@@ -55,7 +55,7 @@ public class Block {
     public static final Block Y = null;
     public static final Block Z = null;
     public static final Block aa = null;
-    public static final Block ab = new Block(35, 64, hz.k).c(0.8f).a(l);
+    public static final Block ab = new Block(35, 64, Material.k).c(0.8f).a(l);
     public static final Block ac = null;
     public static final gb ad = (gb)new gb(37, 13).c(0.0f).a(h);
     public static final gb ae = (gb)new gb(38, 12).c(0.0f).a(h);
@@ -65,10 +65,10 @@ public class Block {
     public static final Block ai = new h(42, 38).c(5.0f).b(10.0f).a(j);
     public static final Block aj = new hy(43, true).c(2.0f).b(10.0f).a(i);
     public static final Block ak = new hy(44, false).c(2.0f).b(10.0f).a(i);
-    public static final Block al = new Block(45, 7, hz.d).c(2.0f).b(10.0f).a(i);
+    public static final Block al = new Block(45, 7, Material.d).c(2.0f).b(10.0f).a(i);
     public static final Block am = new y(46, 8).c(0.0f).a(h);
     public static final Block an = new ew(47, 35).c(1.5f).a(f);
-    public static final Block ao = new Block(48, 36, hz.d).c(2.0f).b(10.0f).a(i);
+    public static final Block ao = new Block(48, 36, Material.d).c(2.0f).b(10.0f).a(i);
     public static final Block ap = new BlockObsidian(49, 37).c(10.0f).b(2000.0f).a(i);
     public static final Block aq = new fp(50, 80).c(0.0f).a(0.9375f).a(f);
     public static final hu ar = (hu)new hu(51, 31).c(0.0f).a(1.0f).a(f);
@@ -84,14 +84,14 @@ public class Block {
     public static final Block aB = new dm(61, false).c(3.5f).a(i);
     public static final Block aC = new dm(62, true).c(3.5f).a(i).a(0.875f);
     public static final Block aD = new eo(63, hp.class, true).c(1.0f).a(f);
-    public static final Block aE = new hn(64, hz.c).c(3.0f).a(f);
+    public static final Block aE = new hn(64, Material.c).c(3.0f).a(f);
     public static final Block aF = new cf(65, 83).c(0.4f).a(f);
     public static final Block aG = new ar(66, 128).c(0.7f).a(j);
     public static final Block aH = new df(67, w);
     public static final Block aI = new eo(68, hp.class, false).c(1.0f).a(f);
     public static final Block aJ = new hd(69, 96).c(0.5f).a(f);
     public static final Block aK = new at(70, Block.t.aZ, ck.b).c(0.5f).a(i);
-    public static final Block aL = new hn(71, hz.e).c(5.0f).a(j);
+    public static final Block aL = new hn(71, Material.e).c(5.0f).a(j);
     public static final Block aM = new at(72, Block.x.aZ, ck.a).c(0.5f).a(f);
     public static final Block aN = new aq(73, 51, false).c(3.0f).b(5.0f).a(i);
     public static final Block aO = new aq(74, 51, true).a(0.625f).c(3.0f).b(5.0f).a(i);
@@ -117,10 +117,10 @@ public class Block {
     public double bi;
     public bl bj = e;
     public float bk = 1.0f;
-    public final hz bl;
+    public final Material bl;
     public float bm = 0.6f;
 
-    protected Block(int n2, hz hz2) {
+    protected Block(int n2, Material hz2) {
         if (n[n2] != null) {
             throw new IllegalArgumentException("Slot " + n2 + " is already occupied by " + n[n2] + " when adding " + this);
         }
@@ -133,7 +133,7 @@ public class Block {
         Block.r[n2] = this.f();
     }
 
-    protected Block(int n2, int n3, hz hz2) {
+    protected Block(int n2, int n3, Material hz2) {
         this(n2, hz2);
         this.aZ = n3;
     }

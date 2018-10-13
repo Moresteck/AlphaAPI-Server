@@ -163,7 +163,7 @@ implements IInventory {
             return 0;
         }
         int n2 = gc2.a().aQ;
-        if (n2 < 256 && Block.n[n2].bl == hz.c) {
+        if (n2 < 256 && Block.n[n2].bl == Material.c) {
             return 300;
         }
         if (n2 == en.B.aQ) {

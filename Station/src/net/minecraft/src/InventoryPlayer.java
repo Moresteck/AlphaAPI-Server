@@ -126,7 +126,7 @@ implements IInventory {
     }
 
     public boolean b(Block et2) {
-        if (et2.bl != hz.d && et2.bl != hz.e && et2.bl != hz.t && et2.bl != hz.s) {
+        if (et2.bl != Material.d && et2.bl != Material.e && et2.bl != Material.t && et2.bl != Material.s) {
             return true;
         }
         gc gc2 = this.a(this.d);

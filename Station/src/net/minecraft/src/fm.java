@@ -6,7 +6,7 @@ import java.util.Random;
 public class fm
 extends Block {
     protected fm(int n2) {
-        super(n2, hz.b);
+        super(n2, Material.b);
         this.aZ = 87;
         this.a(true);
         this.a(0.0f, 0.0f, 0.0f, 1.0f, 0.9375f, 1.0f);
@@ -57,7 +57,7 @@ extends Block {
         for (int i2 = n2 - 4; i2 <= n2 + 4; ++i2) {
             for (int i3 = n3; i3 <= n3 + 1; ++i3) {
                 for (int i4 = n4 - 4; i4 <= n4 + 4; ++i4) {
-                    if (dp2.c(i2, i3, i4) != hz.f) continue;
+                    if (dp2.c(i2, i3, i4) != Material.f) continue;
                     return true;
                 }
             }
@@ -67,7 +67,7 @@ extends Block {
 
     public void b(World dp2, int n2, int n3, int n4, int n5) {
         super.b(dp2, n2, n3, n4, n5);
-        hz hz2 = dp2.c(n2, n3 + 1, n4);
+        Material hz2 = dp2.c(n2, n3 + 1, n4);
         if (hz2.a()) {
             dp2.d(n2, n3, n4, Block.v.ba);
         }

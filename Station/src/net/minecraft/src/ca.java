@@ -6,7 +6,7 @@ import java.util.Random;
 public class ca
 extends Block {
     protected ca(int n2, int n3) {
-        super(n2, hz.i);
+        super(n2, Material.i);
         this.aZ = n3;
         float f2 = 0.375f;
         this.a(0.5f - f2, 0.0f, 0.5f - f2, 0.5f + f2, 1.0f, 0.5f + f2);
@@ -39,16 +39,16 @@ extends Block {
         if (n5 != Block.u.ba && n5 != Block.v.ba) {
             return false;
         }
-        if (dp2.c(n2 - 1, n3 - 1, n4) == hz.f) {
+        if (dp2.c(n2 - 1, n3 - 1, n4) == Material.f) {
             return true;
         }
-        if (dp2.c(n2 + 1, n3 - 1, n4) == hz.f) {
+        if (dp2.c(n2 + 1, n3 - 1, n4) == Material.f) {
             return true;
         }
-        if (dp2.c(n2, n3 - 1, n4 - 1) == hz.f) {
+        if (dp2.c(n2, n3 - 1, n4 - 1) == Material.f) {
             return true;
         }
-        if (dp2.c(n2, n3 - 1, n4 + 1) == hz.f) {
+        if (dp2.c(n2, n3 - 1, n4 + 1) == Material.f) {
             return true;
         }
         return false;

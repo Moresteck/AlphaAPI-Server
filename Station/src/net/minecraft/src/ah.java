@@ -29,10 +29,10 @@ extends ci {
         if (et2 == Block.aN || et2 == Block.aO) {
             return this.aW >= 2;
         }
-        if (et2.bl == hz.d) {
+        if (et2.bl == Material.d) {
             return true;
         }
-        if (et2.bl == hz.e) {
+        if (et2.bl == Material.e) {
             return true;
         }
         return false;

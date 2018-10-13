@@ -135,11 +135,11 @@ public class ed {
         for (int i2 = n2; i2 < n2 + a2.a; ++i2) {
             for (int i3 = n3; i3 < n3 + a2.b; ++i3) {
                 for (int i4 = n4; i4 < n4 + a2.c; ++i4) {
-                    hz hz2 = this.a.c(n2, n3, n4);
+                    Material hz2 = this.a.c(n2, n3, n4);
                     if (hz2.c()) {
                         return 0;
                     }
-                    if (hz2 != hz.f && hz2 != hz.PlayerListBox) continue;
+                    if (hz2 != Material.f && hz2 != Material.PlayerListBox) continue;
                     return -1;
                 }
             }

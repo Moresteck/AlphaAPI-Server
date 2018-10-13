@@ -12,7 +12,7 @@ extends en {
 
     public boolean a(gc gc2, EntityPlayer eq2, World dp2, int n2, int n3, int n4, int n5) {
         int n6 = dp2.a(n2, n3, n4);
-        hz hz2 = dp2.c(n2, n3 + 1, n4);
+        Material hz2 = dp2.c(n2, n3 + 1, n4);
         if (!hz2.a() && n6 == Block.u.ba || n6 == Block.v.ba) {
             Block et2 = Block.aA;
             dp2.a((float)n2 + 0.5f, (float)n3 + 0.5f, (float)n4 + 0.5f, et2.bj.c(), (et2.bj.a() + 1.0f) / 2.0f, et2.bj.b() * 0.8f);

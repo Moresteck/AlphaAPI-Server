@@ -5,11 +5,11 @@ package net.minecraft.src;
  */
 public abstract class cl
 extends Block {
-    protected cl(int n2, hz hz2) {
+    protected cl(int n2, Material hz2) {
         super(n2, hz2);
     }
 
-    protected cl(int n2, int n3, hz hz2) {
+    protected cl(int n2, int n3, Material hz2) {
         super(n2, n3, hz2);
     }
 

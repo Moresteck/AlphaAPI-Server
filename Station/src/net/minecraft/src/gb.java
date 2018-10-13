@@ -6,7 +6,7 @@ import java.util.Random;
 public class gb
 extends Block {
     protected gb(int n2, int n3) {
-        super(n2, hz.i);
+        super(n2, Material.i);
         this.aZ = n3;
         this.a(true);
         float f2 = 0.2f;

@@ -75,7 +75,7 @@ extends Entity {
             double d6 = this.u.b + (this.u.e - this.u.b) * (double)(i2 + 0) / (double)n2 - 0.125;
             double d7 = this.u.b + (this.u.e - this.u.b) * (double)(i2 + 1) / (double)n2 - 0.125;
             AxisAlignedBB cy2 = AxisAlignedBB.b(this.u.a, d6, this.u.c, this.u.d, d7, this.u.f);
-            if (!this.g.b(cy2, hz.f)) continue;
+            if (!this.g.b(cy2, Material.f)) continue;
             d5 += 1.0 / (double)n2;
         }
         double d8 = d5 * 2.0 - 1.0;

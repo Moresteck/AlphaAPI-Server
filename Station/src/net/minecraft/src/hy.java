@@ -8,7 +8,7 @@ extends Block {
     private boolean a;
 
     public hy(int n2, boolean bl2) {
-        super(n2, 6, hz.d);
+        super(n2, 6, Material.d);
         this.a = bl2;
         if (!bl2) {
             this.a(0.0f, 0.0f, 0.0f, 1.0f, 0.5f, 1.0f);

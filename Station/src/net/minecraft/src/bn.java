@@ -9,7 +9,7 @@ extends o {
     private int c = 0;
 
     protected bn(int n2, int n3) {
-        super(n2, n3, hz.h, false);
+        super(n2, n3, Material.h, false);
         this.b = n3;
         this.a(true);
     }

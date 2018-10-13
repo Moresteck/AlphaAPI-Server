@@ -48,10 +48,10 @@ implements IBlockAccess {
         return this.c[n5][n6].b(n2 & 15, n3, n4 & 15);
     }
 
-    public hz c(int n2, int n3, int n4) {
+    public Material c(int n2, int n3, int n4) {
         int n5 = this.a(n2, n3, n4);
         if (n5 == 0) {
-            return hz.a;
+            return Material.a;
         }
         return Block.n[n5].bl;
     }

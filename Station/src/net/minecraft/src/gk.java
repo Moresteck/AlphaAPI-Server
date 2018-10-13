@@ -7,7 +7,7 @@ public class gk
 extends Block {
     private boolean a;
 
-    protected gk(int n2, int n3, hz hz2, boolean bl2) {
+    protected gk(int n2, int n3, Material hz2, boolean bl2) {
         super(n2, n3, hz2);
         this.a = bl2;
     }

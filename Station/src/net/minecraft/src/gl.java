@@ -6,7 +6,7 @@ import java.util.Random;
 public class gl
 extends Block {
     protected gl(int n2) {
-        super(n2, hz.b);
+        super(n2, Material.b);
         this.aZ = 3;
         this.a(true);
     }

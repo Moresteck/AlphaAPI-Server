@@ -8,7 +8,7 @@ extends cl {
     private Random a = new Random();
 
     protected b(int n2) {
-        super(n2, hz.c);
+        super(n2, Material.c);
         this.aZ = 26;
     }
 

@@ -7,11 +7,11 @@ public abstract class cg
 extends Block {
     protected int d = 1;
 
-    protected cg(int n2, hz hz2) {
-        super(n2, (hz2 == hz.PlayerListBox ? 14 : 12) * 16 + 13, hz2);
+    protected cg(int n2, Material hz2) {
+        super(n2, (hz2 == Material.PlayerListBox ? 14 : 12) * 16 + 13, hz2);
         float f2 = 0.0f;
         float f3 = 0.0f;
-        if (hz2 == hz.PlayerListBox) {
+        if (hz2 == Material.PlayerListBox) {
             this.d = 2;
         }
         this.a(0.0f + f3, 0.0f + f2, 0.0f + f3, 1.0f + f3, 1.0f + f2, 1.0f + f3);
@@ -60,11 +60,11 @@ extends Block {
     }
 
     public boolean a(IBlockAccess hb2, int n2, int n3, int n4, int n5) {
-        hz hz2 = hb2.c(n2, n3, n4);
+        Material hz2 = hb2.c(n2, n3, n4);
         if (hz2 == this.bl) {
             return false;
         }
-        if (hz2 == hz.r) {
+        if (hz2 == Material.r) {
             return false;
         }
         if (n5 == 1) {
@@ -163,10 +163,10 @@ extends Block {
     }
 
     public int c() {
-        if (this.bl == hz.f) {
+        if (this.bl == Material.f) {
             return 5;
         }
-        if (this.bl == hz.PlayerListBox) {
+        if (this.bl == Material.PlayerListBox) {
             return 30;
         }
         return 0;
@@ -188,21 +188,21 @@ extends Block {
         if (dp2.a(n2, n3, n4) != this.ba) {
             return;
         }
-        if (this.bl == hz.PlayerListBox) {
+        if (this.bl == Material.PlayerListBox) {
             boolean bl2 = false;
-            if (bl2 || dp2.c(n2, n3, n4 - 1) == hz.f) {
+            if (bl2 || dp2.c(n2, n3, n4 - 1) == Material.f) {
                 bl2 = true;
             }
-            if (bl2 || dp2.c(n2, n3, n4 + 1) == hz.f) {
+            if (bl2 || dp2.c(n2, n3, n4 + 1) == Material.f) {
                 bl2 = true;
             }
-            if (bl2 || dp2.c(n2 - 1, n3, n4) == hz.f) {
+            if (bl2 || dp2.c(n2 - 1, n3, n4) == Material.f) {
                 bl2 = true;
             }
-            if (bl2 || dp2.c(n2 + 1, n3, n4) == hz.f) {
+            if (bl2 || dp2.c(n2 + 1, n3, n4) == Material.f) {
                 bl2 = true;
             }
-            if (bl2 || dp2.c(n2, n3 + 1, n4) == hz.f) {
+            if (bl2 || dp2.c(n2, n3 + 1, n4) == Material.f) {
                 bl2 = true;
             }
             if (bl2) {

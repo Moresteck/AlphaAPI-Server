@@ -5,10 +5,10 @@ import java.util.Random;
 
 public class hn
 extends Block {
-    protected hn(int n2, hz hz2) {
+    protected hn(int n2, Material hz2) {
         super(n2, hz2);
         this.aZ = 97;
-        if (hz2 == hz.e) {
+        if (hz2 == Material.e) {
             ++this.aZ;
         }
         float f2 = 0.5f;
@@ -55,7 +55,7 @@ extends Block {
     }
 
     public boolean a(World dp2, int n2, int n3, int n4, EntityPlayer eq2) {
-        if (this.bl == hz.e) {
+        if (this.bl == Material.e) {
             return true;
         }
         int n5 = dp2.b(n2, n3, n4);
@@ -138,7 +138,7 @@ extends Block {
         if ((n2 & 8) != 0) {
             return 0;
         }
-        if (this.bl == hz.e) {
+        if (this.bl == Material.e) {
             return en.az.aQ;
         }
         return en.at.aQ;

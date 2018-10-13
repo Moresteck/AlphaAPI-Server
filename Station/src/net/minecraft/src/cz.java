@@ -8,7 +8,7 @@ extends Block {
     private boolean a = true;
 
     public cz(int n2, int n3) {
-        super(n2, n3, hz.Packet18ArmAnimation);
+        super(n2, n3, Material.Packet18ArmAnimation);
         this.a(0.0f, 0.0f, 0.0f, 1.0f, 0.0625f, 1.0f);
     }
 

@@ -9,7 +9,7 @@ extends cg {
     boolean[] b = new boolean[4];
     int[] c = new int[4];
 
-    protected ai(int n2, hz hz2) {
+    protected ai(int n2, Material hz2) {
         super(n2, hz2);
     }
 
@@ -38,14 +38,14 @@ extends cg {
                 int n8 = this.g(dp2, n2, n3 + 1, n4);
                 n5 = n8 >= 8 ? n8 : n8 + 8;
             }
-            if (this.a >= 2 && this.bl == hz.f) {
+            if (this.a >= 2 && this.bl == Material.f) {
                 if (dp2.d(n2, n3 - 1, n4)) {
                     n5 = 0;
                 } else if (dp2.c(n2, n3 - 1, n4) == this.bl && dp2.b(n2, n3, n4) == 0) {
                     n5 = 0;
                 }
             }
-            if (this.bl == hz.PlayerListBox && n6 < 8 && n5 < 8 && n5 > n6 && random.nextInt(4) != 0) {
+            if (this.bl == Material.PlayerListBox && n6 < 8 && n5 < 8 && n5 > n6 && random.nextInt(4) != 0) {
                 n5 = n6;
                 bl2 = false;
             }
@@ -98,7 +98,7 @@ extends cg {
         if (this.l(dp2, n2, n3, n4)) {
             int n6 = dp2.a(n2, n3, n4);
             if (n6 > 0) {
-                if (this.bl == hz.PlayerListBox) {
+                if (this.bl == Material.PlayerListBox) {
                     this.h(dp2, n2, n3, n4);
                 } else {
                     Block.n[n6].a_(dp2, n2, n3, n4, dp2.b(n2, n3, n4));
@@ -180,7 +180,7 @@ extends cg {
         if (n5 == 0) {
             return false;
         }
-        hz hz2 = Block.n[n5].bl;
+        Material hz2 = Block.n[n5].bl;
         if (hz2.a()) {
             return true;
         }
@@ -202,11 +202,11 @@ extends cg {
     }
 
     private boolean l(World dp2, int n2, int n3, int n4) {
-        hz hz2 = dp2.c(n2, n3, n4);
+        Material hz2 = dp2.c(n2, n3, n4);
         if (hz2 == this.bl) {
             return false;
         }
-        if (hz2 == hz.PlayerListBox) {
+        if (hz2 == Material.PlayerListBox) {
             return false;
         }
         return !this.k(dp2, n2, n3, n4);

@@ -138,7 +138,7 @@ extends EntityLiving {
 
     public float a(Block et2) {
         float f2 = this.ai.a(et2);
-        if (this.a(hz.f)) {
+        if (this.a(Material.f)) {
             f2 /= 5.0f;
         }
         if (!this.v) {

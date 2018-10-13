@@ -7,7 +7,7 @@ public class dc
 extends ay {
     public boolean a(World dp2, Random random, int n2, int n3, int n4) {
         int n5;
-        hz hz2;
+        Material hz2;
         int n6;
         int n7;
         int n8 = 3;
@@ -56,7 +56,7 @@ extends ay {
             for (n6 = 0; n6 < 3; ++n6) {
                 int n12;
                 n5 = n2 + random.nextInt(n9 * 2 + 1) - n9;
-                if (dp2.a(n5, (int)(hz2 = (hz)n3), n12 = n4 + random.nextInt(n10 * 2 + 1) - n10) != 0) continue;
+                if (dp2.a(n5, (int)(hz2 = (Material)n3), n12 = n4 + random.nextInt(n10 * 2 + 1) - n10) != 0) continue;
                 int n13 = 0;
                 if (dp2.c(n5 - 1, (int)hz2, n12).a()) {
                     ++n13;

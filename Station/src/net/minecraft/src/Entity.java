@@ -365,10 +365,10 @@ public abstract class Entity {
     }
 
     public boolean m() {
-        return this.g.a(this.u.b(0.0, -0.4000000059604645, 0.0), hz.f, this);
+        return this.g.a(this.u.b(0.0, -0.4000000059604645, 0.0), Material.f, this);
     }
 
-    public boolean a(hz hz2) {
+    public boolean a(Material hz2) {
         int n2;
         int n3;
         double d2 = this.l + (double)this.n();
@@ -387,7 +387,7 @@ public abstract class Entity {
     }
 
     public boolean o() {
-        return this.g.a(this.u.b(0.0, -0.4000000059604645, 0.0), hz.PlayerListBox);
+        return this.g.a(this.u.b(0.0, -0.4000000059604645, 0.0), Material.PlayerListBox);
     }
 
     public void a(float f2, float f3, float f4) {

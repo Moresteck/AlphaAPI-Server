@@ -6,7 +6,7 @@ package net.minecraft.src;
 public class h
 extends Block {
     public h(int n2, int n3) {
-        super(n2, hz.e);
+        super(n2, Material.e);
         this.aZ = n3;
     }
 

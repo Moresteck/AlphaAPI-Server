@@ -8,7 +8,7 @@ extends cl {
     private final boolean a;
 
     protected dm(int n2, boolean bl2) {
-        super(n2, hz.d);
+        super(n2, Material.d);
         this.a = bl2;
         this.aZ = 45;
     }

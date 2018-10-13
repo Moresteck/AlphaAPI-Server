@@ -8,7 +8,7 @@ extends Block {
     private boolean a;
 
     public aq(int n2, int n3, boolean bl2) {
-        super(n2, n3, hz.d);
+        super(n2, n3, Material.d);
         if (bl2) {
             this.a(true);
         }

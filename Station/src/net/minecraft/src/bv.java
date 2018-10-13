@@ -6,7 +6,7 @@ import java.util.Random;
 public class bv
 extends cl {
     protected bv(int n2, int n3) {
-        super(n2, n3, hz.d);
+        super(n2, n3, Material.d);
     }
 
     protected TileEntity a_() {

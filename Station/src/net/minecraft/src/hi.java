@@ -550,7 +550,7 @@ implements bf {
             for (n5 = n10 + 8 + 0; n5 < n10 + 8 + 16; ++n5) {
                 for (n9 = n11 + 8 + 0; n9 < n11 + 8 + 16; ++n9) {
                     n4 = this.p.d(n5, n9);
-                    if (n4 <= 0 || n4 >= 128 || this.p.a(n5, n4, n9) != 0 || !this.p.c(n5, n4 - 1, n9).c() || this.p.c(n5, n4 - 1, n9) == hz.r) continue;
+                    if (n4 <= 0 || n4 >= 128 || this.p.a(n5, n4, n9) != 0 || !this.p.c(n5, n4 - 1, n9).c() || this.p.c(n5, n4 - 1, n9) == Material.r) continue;
                     this.p.d(n5, n4, n9, Block.aS.ba);
                 }
             }

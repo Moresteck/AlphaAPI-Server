@@ -6,7 +6,7 @@ package net.minecraft.src;
 public class ds
 extends Block {
     protected ds(int n2) {
-        super(n2, hz.Packet20NamedEntitySpawn);
+        super(n2, Material.Packet20NamedEntitySpawn);
         this.aZ = 59;
     }
 

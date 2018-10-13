@@ -6,7 +6,7 @@ import java.util.Random;
 public class co
 extends Block {
     public co(int n2, int n3) {
-        super(n2, n3, hz.v);
+        super(n2, n3, Material.v);
     }
 
     public int a(int n2, Random random) {

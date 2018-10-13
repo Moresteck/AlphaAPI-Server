@@ -6,7 +6,7 @@ import java.util.Random;
 public class m
 extends gk {
     public m(int n2, int n3) {
-        super(n2, n3, hz.r, false);
+        super(n2, n3, Material.r, false);
         this.bm = 0.98f;
         this.a(true);
     }
@@ -16,7 +16,7 @@ extends gk {
     }
 
     public void b(World dp2, int n2, int n3, int n4) {
-        hz hz2 = dp2.c(n2, n3 - 1, n4);
+        Material hz2 = dp2.c(n2, n3 - 1, n4);
         if (hz2.c() || hz2.d()) {
             dp2.d(n2, n3, n4, Block.A.ba);
         }

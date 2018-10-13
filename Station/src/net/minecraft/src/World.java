@@ -340,10 +340,10 @@ implements IBlockAccess {
         return chunk2.a(n2 & 15, n3, n4 & 15, n5);
     }
 
-    public hz c(int n2, int n3, int n4) {
+    public Material c(int n2, int n3, int n4) {
         int n5 = this.a(n2, n3, n4);
         if (n5 == 0) {
-            return hz.a;
+            return Material.a;
         }
         return Block.n[n5].bl;
     }
@@ -992,7 +992,7 @@ implements IBlockAccess {
         return false;
     }
 
-    public boolean a(AxisAlignedBB cy2, hz hz2, Entity db2) {
+    public boolean a(AxisAlignedBB cy2, Material hz2, Entity db2) {
         int n2 = MathHelper.b(cy2.a);
         int n3 = MathHelper.b(cy2.d + 1.0);
         int n4 = MathHelper.b(cy2.b);
@@ -1022,7 +1022,7 @@ implements IBlockAccess {
         return bl2;
     }
 
-    public boolean a(AxisAlignedBB cy2, hz hz2) {
+    public boolean a(AxisAlignedBB cy2, Material hz2) {
         int n2 = MathHelper.b(cy2.a);
         int n3 = MathHelper.b(cy2.d + 1.0);
         int n4 = MathHelper.b(cy2.b);
@@ -1041,7 +1041,7 @@ implements IBlockAccess {
         return false;
     }
 
-    public boolean b(AxisAlignedBB cy2, hz hz2) {
+    public boolean b(AxisAlignedBB cy2, Material hz2) {
         int n2 = MathHelper.b(cy2.a);
         int n3 = MathHelper.b(cy2.d + 1.0);
         int n4 = MathHelper.b(cy2.b);

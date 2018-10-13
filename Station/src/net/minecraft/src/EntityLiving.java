@@ -97,7 +97,7 @@ extends Entity {
         if (this.r() && this.s()) {
             this.a(null, 1);
         }
-        if (this.r() && this.a(hz.f)) {
+        if (this.r() && this.a(Material.f)) {
             --this.X;
             if (this.X == -20) {
                 this.X = 0;

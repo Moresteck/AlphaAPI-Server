@@ -9,7 +9,7 @@ extends Block {
     private ck a;
 
     protected at(int n2, int n3, ck ck2) {
-        super(n2, n3, hz.d);
+        super(n2, n3, Material.d);
         this.a = ck2;
         this.a(true);
         float f2 = 0.0625f;

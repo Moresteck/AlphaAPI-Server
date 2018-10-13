@@ -76,13 +76,13 @@ public class en {
     public static en aq = new ht(65).a(26);
     public static en ar = new ig(66, 42).a(11);
     public static en as = new fd(67).a(42);
-    public static en at = new fn(68, hz.Packet20NamedEntitySpawn).a(43);
+    public static en at = new fn(68, Material.Packet20NamedEntitySpawn).a(43);
     public static en au = new ak(69, 0).a(74);
     public static en av = new ak(70, Block.A.ba).a(75);
     public static en aw = new ak(71, Block.C.ba).a(76);
     public static en ax = new ce(72, 0).a(135);
     public static en ay = new cp(73).a(104);
-    public static en az = new fn(74, hz.e).a(44);
+    public static en az = new fn(74, Material.e).a(44);
     public static en aA = new fr(75).a(56);
     public static en aB = new cb(76).a(14);
     public static en aC = new ff(77).a(136);

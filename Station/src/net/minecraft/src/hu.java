@@ -9,7 +9,7 @@ extends Block {
     private int[] b = new int[256];
 
     protected hu(int n2, int n3) {
-        super(n2, n3, hz.l);
+        super(n2, n3, Material.l);
         this.a(Block.x.ba, 5, 20);
         this.a(Block.J.ba, 5, 5);
         this.a(Block.K.ba, 30, 60);
