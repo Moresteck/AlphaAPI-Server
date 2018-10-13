@@ -1,4 +1,4 @@
-/*
+package net.minecraft.src;/*
  * Decompiled with CFR 0_132.
  */
 import java.util.logging.Formatter;
