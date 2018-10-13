@@ -27,14 +27,14 @@ extends Packet {
         this.c = new short[n4];
         this.d = new byte[n4];
         this.e = new byte[n4];
-        hv hv2 = dp2.b(n2, n3);
+        Chunk chunk2 = dp2.b(n2, n3);
         for (int i2 = 0; i2 < n4; ++i2) {
             int n5 = arrs[i2] >> 12 & 15;
             int n6 = arrs[i2] >> 8 & 15;
             int n7 = arrs[i2] & 255;
             this.c[i2] = arrs[i2];
-            this.d[i2] = (byte)hv2.a(n5, n7, n6);
-            this.e[i2] = (byte)hv2.b(n5, n7, n6);
+            this.d[i2] = (byte) chunk2.a(n5, n7, n6);
+            this.e[i2] = (byte) chunk2.b(n5, n7, n6);
         }
     }
 

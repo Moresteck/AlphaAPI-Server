@@ -4,17 +4,17 @@ package net.minecraft.src;/*
 
 public class hf
 implements bf {
-    private hv c;
+    private Chunk c;
     private bf d;
     private am e;
-    private hv[] f = new hv[1024];
+    private Chunk[] f = new Chunk[1024];
     private World g;
     int a = -999999999;
     int b = -999999999;
-    private hv h;
+    private Chunk h;
 
     public hf(World dp2, am am2, bf bf2) {
-        this.c = new hv(dp2, new byte[32768], 0, 0);
+        this.c = new Chunk(dp2, new byte[32768], 0, 0);
         this.c.q = true;
         this.c.p = true;
         this.g = dp2;
@@ -32,7 +32,7 @@ implements bf {
         return this.f[n6] != null && (this.f[n6] == this.c || this.f[n6].a(n2, n3));
     }
 
-    public hv b(int n2, int n3) {
+    public Chunk b(int n2, int n3) {
         if (n2 == this.a && n3 == this.b && this.h != null) {
             return this.h;
         }
@@ -40,16 +40,16 @@ implements bf {
         int n5 = n3 & 31;
         int n6 = n4 + n5 * 32;
         if (!this.a(n2, n3)) {
-            hv hv2;
+            Chunk chunk2;
             if (this.f[n6] != null) {
                 this.f[n6].d();
                 this.b(this.f[n6]);
                 this.a(this.f[n6]);
             }
-            if ((hv2 = this.c(n2, n3)) == null) {
-                hv2 = this.d == null ? this.c : this.d.b(n2, n3);
+            if ((chunk2 = this.c(n2, n3)) == null) {
+                chunk2 = this.d == null ? this.c : this.d.b(n2, n3);
             }
-            this.f[n6] = hv2;
+            this.f[n6] = chunk2;
             if (this.f[n6] != null) {
                 this.f[n6].c();
             }
@@ -72,16 +72,16 @@ implements bf {
         return this.f[n6];
     }
 
-    private hv c(int n2, int n3) {
+    private Chunk c(int n2, int n3) {
         if (this.e == null) {
             return null;
         }
         try {
-            hv hv2 = this.e.a(this.g, n2, n3);
-            if (hv2 != null) {
-                hv2.s = this.g.b;
+            Chunk chunk2 = this.e.a(this.g, n2, n3);
+            if (chunk2 != null) {
+                chunk2.lastSaveTime = this.g.b;
             }
-            return hv2;
+            return chunk2;
         }
         catch (Exception exception) {
             exception.printStackTrace();
@@ -89,25 +89,25 @@ implements bf {
         }
     }
 
-    private void a(hv hv2) {
+    private void a(Chunk chunk2) {
         if (this.e == null) {
             return;
         }
         try {
-            this.e.b(this.g, hv2);
+            this.e.b(this.g, chunk2);
         }
         catch (Exception exception) {
             exception.printStackTrace();
         }
     }
 
-    private void b(hv hv2) {
+    private void b(Chunk chunk2) {
         if (this.e == null) {
             return;
         }
         try {
-            hv2.s = this.g.b;
-            this.e.a(this.g, hv2);
+            chunk2.lastSaveTime = this.g.b;
+            this.e.a(this.g, chunk2);
         }
         catch (Exception iOException) {
             iOException.printStackTrace();
@@ -115,12 +115,12 @@ implements bf {
     }
 
     public void a(bf bf2, int n2, int n3) {
-        hv hv2 = this.b(n2, n3);
-        if (!hv2.n) {
-            hv2.n = true;
+        Chunk chunk2 = this.b(n2, n3);
+        if (!chunk2.n) {
+            chunk2.n = true;
             if (this.d != null) {
                 this.d.a(bf2, n2, n3);
-                hv2.e();
+                chunk2.e();
             }
         }
     }
@@ -143,7 +143,7 @@ implements bf {
             }
             if (!this.f[i2].a(bl2)) continue;
             this.b(this.f[i2]);
-            this.f[i2].o = false;
+            this.f[i2].isModified = false;
             if (++n3 == 2 && !bl2) {
                 return false;
             }

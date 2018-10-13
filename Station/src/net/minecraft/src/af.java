@@ -44,7 +44,7 @@ public class af {
         if (ft2 instanceof r) {
             return (r)ft2;
         }
-        throw new IOException("Root tag must be a named compound tag");
+        throw new IOException("Root tag must be isLit named compound tag");
     }
 
     public static void a(r r2, DataOutput dataOutput) throws IOException {

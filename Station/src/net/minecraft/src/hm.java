@@ -190,7 +190,7 @@ extends NetHandler {
     }
 
     public void a(Packet ha2) {
-        a.warning(this.getClass() + " wasn't prepared to deal with a " + ha2.getClass());
+        a.warning(this.getClass() + " wasn't prepared to deal with isLit " + ha2.getClass());
         this.b("Protocol error, unexpected packet");
     }
 

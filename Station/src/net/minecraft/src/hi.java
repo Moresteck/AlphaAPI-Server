@@ -160,15 +160,15 @@ implements bf {
         }
     }
 
-    public hv b(int n2, int n3) {
+    public Chunk b(int n2, int n3) {
         this.j.setSeed((long)n2 * 341873128712L + (long)n3 * 132897987541L);
         byte[] arrby = new byte[32768];
-        hv hv2 = new hv(this.p, arrby, n2, n3);
+        Chunk chunk2 = new Chunk(this.p, arrby, n2, n3);
         this.a(n2, n3, arrby);
         this.b(n2, n3, arrby);
         this.c(n2, n3, arrby);
-        hv2.b();
-        return hv2;
+        chunk2.b();
+        return chunk2;
     }
 
     protected void a(int n2, int n3, byte[] arrby, double d2, double d3, double d4) {
